@@ -1,0 +1,8 @@
+{
+  "id": "cepr", "display_name": "CEPR", "version": "0.1", "status": "enabled",
+  "provider_url": "https://cepr.org/", "docs_url": "https://cepr.org/search",
+  "capabilities": {"keyword_search": true, "metadata": true, "abstracts": true, "citation_counts": false, "citation_graph": false, "author_lookup": true, "open_access_links": true},
+  "query": {"method": "GET", "base_url": "https://cepr.org", "endpoint": "/search", "auth": "manual", "parameters": [{"name": "query", "required": true, "description": "CEPR site-search query."}]},
+  "response_mapping": {}, "limits": {"automation": "disabled"},
+  "notes": "Manual web-search adapter for CEPR discussion papers and policy publications."
+}

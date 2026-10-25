@@ -1,0 +1,8 @@
+{
+  "id": "wanfang", "display_name": "Wanfang Data", "version": "0.1", "status": "enabled",
+  "provider_url": "https://www.wanfangdata.com.cn/", "docs_url": "https://s.wanfangdata.com.cn/paper",
+  "capabilities": {"keyword_search": true, "metadata": true, "abstracts": true, "citation_counts": true, "citation_graph": false, "author_lookup": true, "open_access_links": false},
+  "query": {"method": "GET", "base_url": "https://s.wanfangdata.com.cn", "endpoint": "/paper", "auth": "manual", "parameters": [{"name": "q", "required": true, "description": "Chinese keywords for Wanfang web search."}]},
+  "response_mapping": {}, "limits": {"automation": "disabled", "institutional_access_may_be_required": true},
+  "notes": "Manual Chinese-literature search. Do not bypass login, paywalls, CAPTCHA, or institutional authorization."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "arxiv",
+  "display_name": "arXiv",
+  "version": "0.1",
+  "status": "enabled",
+  "provider_url": "https://arxiv.org/",
+  "docs_url": "https://info.arxiv.org/help/api/index.html",
+  "capabilities": {
+    "keyword_search": true,
+    "metadata": true,
+    "abstracts": true,
+    "citation_counts": false,
+    "citation_graph": false,
+    "author_lookup": true,
+    "open_access_links": true
+  },
+  "query": {
+    "method": "GET",
+    "base_url": "https://export.arxiv.org",
+    "endpoint": "/api/query",
+    "auth": "none",
+    "parameters": [
+      { "name": "search_query", "required": true, "description": "arXiv fielded search expression." },
+      { "name": "start", "required": false, "description": "Pagination offset." },
+      { "name": "max_results", "required": false, "description": "Number of records." },
+      { "name": "sortBy", "required": false, "description": "Sort field." },
+      { "name": "sortOrder", "required": false, "description": "Ascending or descending." }
+    ]
+  },
+  "response_mapping": {
+    "entry.id": "source_record_ids.arxiv",
+    "entry.title": "title",
+    "entry.author.name": "authors",
+    "entry.published": "year",
+    "entry.summary": "abstract",
+    "entry.arxiv:doi": "doi",
+    "entry.link": "url"
+  },
+  "limits": {
+    "default_limit": 20,
+    "rate_limit_note": "Follow the arXiv API terms, throttle repeated calls, and acknowledge arXiv data use."
+  },
+  "notes": "No API key required. Most useful for quantitative economics, econometrics, finance, and computing-adjacent work."
+}

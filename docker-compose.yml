@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  aca-web:
+    build: .
+    image: aca-web:latest
+    container_name: aca-web
+    restart: unless-stopped
+    ports:
+      - "8088:8088"
+    env_file:
+      - .env
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      # SQLite 状态库（项目/会话/运行留痕）
+      - aca-data:/app/data
+      # 上传的数据集与资料库文件
+      - aca-uploads:/app/part2-empirical-research/data/uploads
+      - aca-library:/app/part2-empirical-research/data/library_uploads
+      # 产出物（表格/图/稿件/Word）
+      - aca-deliverables:/app/part2-empirical-research/deliverables
+
+  # 可选：记忆服务。若不需要，整段删除即可，主流程自动降级。
+  # 需要你提供 ReMe 镜像；这里只留占位，默认不启动（profiles: reme 才起）。
+  reme:
+    # ⚠️ 镜像地址请替换为你实际部署 ReMe 所用的镜像；默认不在启动列表里
+    image: your-registry/reme:latest
+    profiles: ["reme"]
+    restart: unless-stopped
+    ports:
+      - "2333:2333"
+    volumes:
+      - aca-reme:/app/data
+
+volumes:
+  aca-data:
+  aca-uploads:
+  aca-library:
+  aca-deliverables:
+  aca-reme:

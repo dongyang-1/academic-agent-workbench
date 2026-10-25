@@ -1,0 +1,43 @@
+{
+  "id": "datacite",
+  "display_name": "DataCite",
+  "version": "0.1",
+  "status": "enabled",
+  "provider_url": "https://datacite.org/",
+  "docs_url": "https://support.datacite.org/docs/api",
+  "capabilities": {
+    "keyword_search": true,
+    "metadata": true,
+    "abstracts": true,
+    "citation_counts": true,
+    "citation_graph": false,
+    "author_lookup": false,
+    "open_access_links": true
+  },
+  "query": {
+    "method": "GET",
+    "base_url": "https://api.datacite.org",
+    "endpoint": "/dois",
+    "auth": "none",
+    "parameters": [
+      { "name": "query", "required": true, "description": "Metadata query using DataCite search syntax." },
+      { "name": "page[size]", "required": false, "description": "Number of DOI records." },
+      { "name": "sort", "required": false, "description": "Sort order such as -published." }
+    ]
+  },
+  "response_mapping": {
+    "id": "source_record_ids.datacite",
+    "attributes.doi": "doi",
+    "attributes.titles[0].title": "title",
+    "attributes.creators": "authors",
+    "attributes.publicationYear": "year",
+    "attributes.publisher": "venue",
+    "attributes.url": "url",
+    "attributes.descriptions": "abstract"
+  },
+  "limits": {
+    "default_limit": 20,
+    "rate_limit_note": "Public reads need no authentication; identify high-volume clients with contact information."
+  },
+  "notes": "No API key required for public metadata retrieval. Stronger for datasets, repositories, reports, and non-journal outputs than for conventional economics journals."
+}

@@ -1,0 +1,22 @@
+version: 0.2
+environment:
+  semantic_scholar_api_key_env_var: SEMANTIC_SCHOLAR_API_KEY
+  openalex_api_key_env_var: OPENALEX_API_KEY
+  core_api_key_env_var: CORE_API_KEY
+  contact_email_env_var: LITERATURE_SEARCH_CONTACT_EMAIL
+runtime_defaults:
+  default_source_ids:
+    - crossref
+    - nber
+    - datacite
+    - arxiv
+    - core
+    - openalex
+  default_records_per_source: 20
+  default_sort: latest-first
+  request_timeout_seconds: 30
+  max_retries: 2
+  nber_cache_ttl_days: 7
+security:
+  commit_api_keys: false
+  write_raw_api_responses_to: "C:\\Users\\16638\\vs code\\_ai_temp\\"

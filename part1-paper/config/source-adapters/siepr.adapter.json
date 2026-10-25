@@ -1,0 +1,8 @@
+{
+  "id": "siepr", "display_name": "Stanford SIEPR", "version": "0.1", "status": "enabled",
+  "provider_url": "https://siepr.stanford.edu/research/publications/working-papers", "docs_url": "https://siepr.stanford.edu/research/publications/working-papers",
+  "capabilities": {"keyword_search": true, "metadata": true, "abstracts": true, "citation_counts": false, "citation_graph": false, "author_lookup": false, "open_access_links": true},
+  "query": {"method": "GET", "base_url": "https://siepr.stanford.edu", "endpoint": "/search", "auth": "manual", "parameters": [{"name": "search", "required": true, "description": "Official site search."}]},
+  "response_mapping": {}, "limits": {"mode": "manual-web"},
+  "notes": "Official university working-paper search. Manual verification avoids brittle HTML scraping."
+}

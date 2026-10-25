@@ -1,0 +1,28 @@
+# 密钥与本地配置 —— 绝不进镜像
+.env
+_llm_config.json
+config.local.json
+
+# 运行期产物（云端用数据卷挂载，不打包）
+data/*.db
+data/*.db-shm
+data/*.db-wal
+part2-empirical-research/data/uploads/
+part2-empirical-research/data/library_uploads/
+part2-empirical-research/deliverables/
+**/__pycache__/
+**/*.pyc
+
+# 体积大且与运行无关
+part3-文献综述/格式/*.zip
+**/_ai_temp/
+**/.DS_Store
+.git/
+.venv/
+venv/
+node_modules/
+
+# 本机专属说明
+启动工作台.command
+安装常驻服务.command
+卸载常驻服务.command

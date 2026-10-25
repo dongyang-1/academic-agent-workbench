@@ -1,0 +1,42 @@
+{
+  "id": "nber",
+  "display_name": "NBER Working Papers",
+  "version": "0.1",
+  "status": "enabled",
+  "provider_url": "https://www.nber.org/papers",
+  "docs_url": "https://www.nber.org/research/data/nber-working-papers-and-chapters-metadata",
+  "capabilities": {
+    "keyword_search": true,
+    "metadata": true,
+    "abstracts": true,
+    "citation_counts": false,
+    "citation_graph": false,
+    "author_lookup": false,
+    "open_access_links": true
+  },
+  "query": {
+    "method": "GET",
+    "base_url": "https://data.nber.org",
+    "endpoint": "/nber_paper_chapter_metadata/tsv/",
+    "auth": "none",
+    "parameters": [
+      { "name": "local_query", "required": true, "description": "Local keyword match over downloaded title and abstract metadata." },
+      { "name": "cache_ttl", "required": false, "description": "Refresh official TSV metadata after seven days." }
+    ]
+  },
+  "response_mapping": {
+    "ref.paper": "source_record_ids.nber",
+    "ref.title": "title",
+    "auths.name": "authors",
+    "date.issue_date": "year",
+    "ref.doi": "doi",
+    "abs.abstract": "abstract",
+    "jel.jel": "jel_codes"
+  },
+  "limits": {
+    "default_limit": 20,
+    "cache_ttl_days": 7,
+    "cache_location": "workspace/_ai_temp/economics-research-agent-cache/nber"
+  },
+  "notes": "No API key required. The runtime downloads official weekly TSV metadata and performs reproducible local keyword search."
+}

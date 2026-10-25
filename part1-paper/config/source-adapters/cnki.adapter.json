@@ -1,0 +1,8 @@
+{
+  "id": "cnki", "display_name": "CNKI", "version": "0.1", "status": "enabled",
+  "provider_url": "https://www.cnki.net/", "docs_url": "https://kns.cnki.net/",
+  "capabilities": {"keyword_search": true, "metadata": true, "abstracts": true, "citation_counts": true, "citation_graph": true, "author_lookup": true, "open_access_links": false},
+  "query": {"method": "GET", "base_url": "https://kns.cnki.net", "endpoint": "/kns8s/defaultresult/index", "auth": "manual", "parameters": [{"name": "kw", "required": true, "description": "Chinese keywords for the CNKI web interface."}]},
+  "response_mapping": {}, "limits": {"automation": "disabled", "institutional_access_may_be_required": true},
+  "notes": "Manual Chinese-literature search. Do not bypass login, paywalls, CAPTCHA, or institutional authorization."
+}

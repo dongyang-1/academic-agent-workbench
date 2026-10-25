@@ -1,0 +1,37 @@
+{
+  "id": "econbiz",
+  "display_name": "EconBiz",
+  "version": "0.1",
+  "status": "enabled",
+  "provider_url": "https://www.econbiz.de/",
+  "docs_url": "https://api.econbiz.de/",
+  "capabilities": {
+    "keyword_search": true,
+    "metadata": true,
+    "abstracts": true,
+    "citation_counts": false,
+    "citation_graph": false,
+    "author_lookup": false,
+    "open_access_links": true
+  },
+  "query": {
+    "method": "GET",
+    "base_url": "https://api.econbiz.de/v1",
+    "endpoint": "/search",
+    "auth": "none",
+    "parameters": [
+      {"name": "q", "required": true, "description": "EconBiz keyword query."},
+      {"name": "size", "required": false, "description": "Number of results."},
+      {"name": "sort", "required": false, "description": "Result order."}
+    ]
+  },
+  "response_mapping": {
+    "hits.hits[].title": "title",
+    "hits.hits[].creator": "authors",
+    "hits.hits[].date": "year",
+    "hits.hits[].series": "venue",
+    "hits.hits[].identifier_url": "url"
+  },
+  "limits": {"default_limit": 20},
+  "notes": "Public economics and business metadata API. Date filtering is applied locally after retrieval."
+}

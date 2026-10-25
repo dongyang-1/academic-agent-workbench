@@ -1,0 +1,8 @@
+{
+  "id": "lse-cep", "display_name": "LSE Centre for Economic Performance", "version": "0.1", "status": "enabled",
+  "provider_url": "https://cep.lse.ac.uk/", "docs_url": "https://cep.lse.ac.uk/_new/publications/",
+  "capabilities": {"keyword_search": true, "metadata": true, "abstracts": true, "citation_counts": false, "citation_graph": false, "author_lookup": false, "open_access_links": true},
+  "query": {"method": "GET", "base_url": "https://cep.lse.ac.uk", "endpoint": "/_new/publications/results/default.asp", "auth": "manual", "parameters": [{"name": "keyword", "required": true, "description": "Official publications search."}]},
+  "response_mapping": {}, "limits": {"mode": "manual-web"},
+  "notes": "Official university research-centre publication search. Manual verification avoids brittle HTML scraping."
+}

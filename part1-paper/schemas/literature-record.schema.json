@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/economics-research-agent/literature-record.schema.json",
+  "title": "LiteratureRecord",
+  "type": "object",
+  "required": ["record_id", "title", "authors", "year", "retrieval_sources", "verification_status"],
+  "properties": {
+    "record_id": { "type": "string" },
+    "title": { "type": "string" },
+    "authors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "year": { "type": ["integer", "string", "null"] },
+    "venue": { "type": ["string", "null"] },
+    "issn": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "journal_ranking": {
+      "type": "object",
+      "required": ["scheme_id", "scheme_name", "source_document", "level", "status"],
+      "properties": {
+        "scheme_id": { "type": "string" },
+        "scheme_name": { "type": "string" },
+        "source_document": { "type": "string" },
+        "level": { "type": "string", "enum": ["TOP", "一级A", "一级B", "二级A", "二级B", "三级", "待核验"] },
+        "category": { "type": ["string", "null"] },
+        "scope": { "type": ["string", "null"] },
+        "status": { "type": "string", "enum": ["matched-explicit-list", "unmatched"] },
+        "match_method": { "type": ["string", "null"] },
+        "matched_title": { "type": ["string", "null"] },
+        "matched_value": { "type": ["string", "null"] },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "source": { "type": ["string", "null"] },
+    "doi": { "type": ["string", "null"] },
+    "external_ids": {
+      "type": "object",
+      "additionalProperties": { "type": ["string", "number", "null"] }
+    },
+    "source_record_ids": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "url": { "type": ["string", "null"], "format": "uri" },
+    "abstract": { "type": ["string", "null"] },
+    "abstract_snippet": { "type": ["string", "null"] },
+    "jel_codes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "methods": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "publication_types": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "fields_of_study": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "data_context": { "type": ["string", "null"] },
+    "citation_count": { "type": ["integer", "null"], "minimum": 0 },
+    "reference_count": { "type": ["integer", "null"], "minimum": 0 },
+    "influential_citation_count": { "type": ["integer", "null"], "minimum": 0 },
+    "is_open_access": { "type": ["boolean", "null"] },
+    "open_access_pdf_url": { "type": ["string", "null"], "format": "uri" },
+    "retrieval_source": { "type": "string" },
+    "retrieval_sources": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "retrieval_query": { "type": ["string", "null"] },
+    "dedupe_key": { "type": ["string", "null"] },
+    "relevance_note": { "type": ["string", "null"] },
+    "quality_scores": {
+      "type": "object",
+      "properties": {
+        "topic_relevance": { "type": "integer", "minimum": 0, "maximum": 30 },
+        "method_value": { "type": "integer", "minimum": 0, "maximum": 25 },
+        "data_relevance": { "type": "integer", "minimum": 0, "maximum": 15 },
+        "source_quality": { "type": "integer", "minimum": 0, "maximum": 10 },
+        "evidence_completeness": { "type": "integer", "minimum": 0, "maximum": 10 },
+        "open_materials": { "type": "integer", "minimum": 0, "maximum": 10 }
+      },
+      "additionalProperties": false
+    },
+    "total_score": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+    "evidence_depth": {
+      "type": "string",
+      "enum": ["metadata-only", "abstract-available", "fulltext-link", "fulltext-checked"]
+    },
+    "screening_status": {
+      "type": "string",
+      "enum": ["unscreened", "include", "maybe", "exclude"]
+    },
+    "screening_reason": { "type": ["string", "null"] },
+    "verification_status": {
+      "type": "string",
+      "enum": ["verified", "metadata-only", "inferred", "needs-check"]
+    },
+    "source_specific": {
+      "type": "object",
+      "description": "Provider-specific metadata that should not be required by downstream modules.",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

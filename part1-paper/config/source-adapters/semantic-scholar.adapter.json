@@ -1,0 +1,72 @@
+{
+  "id": "semantic-scholar",
+  "display_name": "Semantic Scholar",
+  "version": "0.1",
+  "status": "planned",
+  "provider_url": "https://www.semanticscholar.org/",
+  "docs_url": "https://api.semanticscholar.org/api-docs/graph",
+  "capabilities": {
+    "keyword_search": true,
+    "metadata": true,
+    "abstracts": true,
+    "citation_counts": true,
+    "citation_graph": true,
+    "author_lookup": true,
+    "open_access_links": true
+  },
+  "query": {
+    "method": "GET",
+    "base_url": "https://api.semanticscholar.org/graph/v1",
+    "endpoint": "/paper/search",
+    "auth": "api-key",
+    "api_key_env_var": "SEMANTIC_SCHOLAR_API_KEY",
+    "api_key_header": "x-api-key",
+    "parameters": [
+      {
+        "name": "query",
+        "required": true,
+        "description": "Keyword query generated from concept blocks."
+      },
+      {
+        "name": "limit",
+        "required": false,
+        "description": "Requested number of records."
+      },
+      {
+        "name": "offset",
+        "required": false,
+        "description": "Pagination offset."
+      },
+      {
+        "name": "fields",
+        "required": false,
+        "description": "Comma-separated Semantic Scholar fields to return."
+      }
+    ]
+  },
+  "response_mapping": {
+    "paperId": "source_record_ids.semantic-scholar",
+    "title": "title",
+    "authors[].name": "authors",
+    "year": "year",
+    "venue": "venue",
+    "url": "url",
+    "externalIds.DOI": "doi",
+    "externalIds": "external_ids",
+    "abstract": "abstract",
+    "citationCount": "citation_count",
+    "referenceCount": "reference_count",
+    "influentialCitationCount": "influential_citation_count",
+    "fieldsOfStudy": "fields_of_study",
+    "publicationTypes": "publication_types",
+    "openAccessPdf.url": "open_access_pdf_url",
+    "isOpenAccess": "is_open_access"
+  },
+  "limits": {
+    "default_limit": 20,
+    "recommended_max_records_per_topic": 100,
+    "rate_limit_note": "Verify current rate limits in official docs before production execution.",
+    "api_key_note": "Read the key from SEMANTIC_SCHOLAR_API_KEY. Never store the key in repository files."
+  },
+  "notes": "Configured but not enabled until the project receives an API key. Keep Semantic Scholar specific data in source_specific."
+}

@@ -1,0 +1,65 @@
+version: 0.4
+default_source_ids:
+  - crossref
+  - nber
+  - datacite
+  - arxiv
+  - core
+  - openalex
+source_adapters:
+  - id: crossref
+    name: Crossref
+    status: enabled
+    adapter_config: config/source-adapters/crossref.adapter.json
+    docs_url: https://www.crossref.org/documentation/retrieve-metadata/rest-api/
+    best_for: [broad DOI metadata, journal and working-paper discovery]
+  - id: nber
+    name: NBER Working Papers
+    status: enabled
+    adapter_config: config/source-adapters/nber.adapter.json
+    docs_url: https://www.nber.org/research/data/nber-working-papers-and-chapters-metadata
+    best_for: [frontier economics working papers, JEL metadata]
+  - id: datacite
+    name: DataCite
+    status: enabled
+    adapter_config: config/source-adapters/datacite.adapter.json
+    docs_url: https://support.datacite.org/docs/api
+    best_for: [datasets, reports, repository outputs, DOI enrichment]
+  - id: arxiv
+    name: arXiv
+    status: enabled
+    adapter_config: config/source-adapters/arxiv.adapter.json
+    docs_url: https://info.arxiv.org/help/api/index.html
+    best_for: [quantitative economics, econometrics, finance and computing preprints]
+  - id: core
+    name: CORE
+    status: enabled
+    adapter_config: config/source-adapters/core.adapter.json
+    docs_url: https://api.core.ac.uk/docs/v3
+    best_for: [open-access metadata, abstracts, repository full-text links]
+  - id: openalex
+    name: OpenAlex
+    status: enabled
+    adapter_config: config/source-adapters/openalex.adapter.json
+    docs_url: https://developers.openalex.org/api-reference/introduction
+    best_for: [broad scholarly discovery, citation metadata, topics, open-access links]
+  - id: semantic-scholar
+    name: Semantic Scholar
+    status: planned
+    adapter_config: config/source-adapters/semantic-scholar.adapter.json
+    adapter_spec: skills/literature-search/references/semantic-scholar-adapter.md
+    docs_url: https://api.semanticscholar.org/api-docs/graph
+    notes: Enable after SEMANTIC_SCHOLAR_API_KEY is available.
+manual_web_adapters:
+  - {id: google-scholar, adapter_config: config/source-adapters/google-scholar.adapter.json}
+  - {id: ssrn, adapter_config: config/source-adapters/ssrn.adapter.json}
+  - {id: ideas-repec, adapter_config: config/source-adapters/ideas-repec.adapter.json}
+  - {id: econpapers, adapter_config: config/source-adapters/econpapers.adapter.json}
+  - {id: cepr, adapter_config: config/source-adapters/cepr.adapter.json}
+  - {id: iza, adapter_config: config/source-adapters/iza.adapter.json}
+  - {id: cnki, adapter_config: config/source-adapters/cnki.adapter.json}
+  - {id: wanfang, adapter_config: config/source-adapters/wanfang.adapter.json}
+planned_source_slots:
+  - id: econlit
+    name: EconLit
+    status: planned-institutional

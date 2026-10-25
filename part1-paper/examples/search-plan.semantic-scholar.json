@@ -1,0 +1,63 @@
+{
+  "research_question": "监管沙盒与创新的关系",
+  "scope": {
+    "field": "financial economics, regulation, innovation economics",
+    "time_range": "2015-2026",
+    "geography": null,
+    "methods": ["policy evaluation", "difference-in-differences", "panel data"]
+  },
+  "concept_blocks": [
+    {
+      "concept": "regulatory_sandbox",
+      "terms": [
+        "regulatory sandbox",
+        "fintech regulatory sandbox",
+        "financial regulatory sandbox",
+        "innovation sandbox"
+      ]
+    },
+    {
+      "concept": "innovation",
+      "terms": [
+        "innovation",
+        "financial innovation",
+        "fintech innovation",
+        "startup innovation",
+        "patent",
+        "new product development"
+      ]
+    },
+    {
+      "concept": "field",
+      "terms": [
+        "financial regulation",
+        "fintech",
+        "innovation economics",
+        "regulatory policy"
+      ]
+    }
+  ],
+  "sources": ["semantic-scholar"],
+  "source_policy": {
+    "preferred_sources": ["semantic-scholar"],
+    "allowed_sources": ["semantic-scholar"],
+    "excluded_sources": [],
+    "max_records_per_source": 20,
+    "require_search_log": true
+  },
+  "adapter_options": {
+    "semantic-scholar": {
+      "limit": 20,
+      "ranking_policy": "latest-first",
+      "api_key_env_var": "SEMANTIC_SCHOLAR_API_KEY",
+      "fields": "paperId,title,authors,year,venue,abstract,url,externalIds,citationCount,referenceCount,fieldsOfStudy,publicationTypes,openAccessPdf,isOpenAccess"
+    }
+  },
+  "output_requirements": [
+    "candidate papers",
+    "search strings",
+    "search log",
+    "coverage notes",
+    "latest literature first"
+  ]
+}

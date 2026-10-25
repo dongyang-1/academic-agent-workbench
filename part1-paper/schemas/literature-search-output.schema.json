@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/economics-research-agent/literature-search-output.schema.json",
+  "title": "LiteratureSearchOutput",
+  "type": "object",
+  "required": [
+    "module_id",
+    "version",
+    "created_at",
+    "input_summary",
+    "source_ids",
+    "records",
+    "search_logs",
+    "coverage_notes",
+    "handoff"
+  ],
+  "properties": {
+    "module_id": {
+      "type": "string",
+      "const": "literature-search"
+    },
+    "version": { "type": "string" },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "input_summary": { "type": "string" },
+    "session_id": { "type": "string" },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "records": {
+      "type": "array",
+      "items": { "$ref": "literature-record.schema.json" }
+    },
+    "search_logs": {
+      "type": "array",
+      "items": { "$ref": "search-log.schema.json" }
+    },
+    "search_protocol": {
+      "type": "object",
+      "properties": {
+        "mode": { "type": "string" },
+        "working_query": { "type": "string" },
+        "concept_blocks": { "type": "array" },
+        "requested_methods": { "type": "array", "items": { "type": "string" } },
+        "inclusion_criteria": { "type": "array", "items": { "type": "string" } },
+        "exclusion_criteria": { "type": "array", "items": { "type": "string" } },
+        "ranking": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "search_parameters": {
+      "type": "object",
+      "description": "Normalized web input parameters retained for reproducibility.",
+      "additionalProperties": true
+    },
+    "search_metrics": {
+      "type": "object",
+      "properties": {
+        "records_retrieved": { "type": "integer", "minimum": 0 },
+        "records_after_deduplication": { "type": "integer", "minimum": 0 },
+        "duplicates_removed": { "type": "integer", "minimum": 0 },
+        "dedupe_reasons": { "type": "object", "additionalProperties": { "type": "integer" } },
+        "records_screened": { "type": "integer", "minimum": 0 },
+        "records_included": { "type": "integer", "minimum": 0 },
+        "records_excluded": { "type": "integer", "minimum": 0 },
+        "records_maybe": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "coverage_advisories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dimension": { "type": "string" },
+          "value": { "type": "string" },
+          "count": { "type": "integer" },
+          "known_count": { "type": "integer" },
+          "share": { "type": "number" },
+          "note": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "coverage_notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "verification_gaps": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "handoff": {
+      "type": "object",
+      "required": ["next_modules", "notes"],
+      "properties": {
+        "next_modules": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

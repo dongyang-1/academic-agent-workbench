@@ -1,0 +1,8 @@
+{
+  "id": "econpapers", "display_name": "EconPapers", "version": "0.1", "status": "enabled",
+  "provider_url": "https://econpapers.repec.org/", "docs_url": "https://econpapers.repec.org/",
+  "capabilities": {"keyword_search": true, "metadata": true, "abstracts": true, "citation_counts": false, "citation_graph": false, "author_lookup": true, "open_access_links": true},
+  "query": {"method": "GET", "base_url": "https://econpapers.repec.org", "endpoint": "/scripts/search.pf", "auth": "manual", "parameters": [{"name": "ft", "required": true, "description": "Free-text web search."}]},
+  "response_mapping": {}, "limits": {"automation": "disabled"},
+  "notes": "Manual RePEc web-search adapter; useful as a second presentation layer for RePEc metadata."
+}

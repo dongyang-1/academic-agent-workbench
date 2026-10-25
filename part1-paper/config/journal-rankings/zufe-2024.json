@@ -1,0 +1,6599 @@
+{
+  "scheme_id": "zufe-journal-ranking-2024",
+  "scheme_name": "浙江财经大学中外文学术期刊定级（2024年修订）",
+  "source_document": "(浙财大〔2024〕353号)关于印发《浙江财经大学中外文学术期刊定级管理办法（2024年修订）》的通知",
+  "effective_date": "2025-01-01",
+  "levels": [
+    "TOP",
+    "一级A",
+    "一级B",
+    "二级A",
+    "二级B",
+    "三级"
+  ],
+  "matching_policy": {
+    "priority": [
+      "ISSN/CN号精确匹配",
+      "期刊名称规范化精确匹配"
+    ],
+    "unmatched_level": "待核验",
+    "note": "本文件仅自动匹配通知附件明确列出的期刊。涉及 CSSCI、CSCD、北大核心、JCR 分区、A&HCI、CCF、AJG(ABS)、FMS、EI 等动态清单的期刊，须按论文发表时适用的最新正式清单核验；同一期刊符合多个等级时取最高等级。"
+  },
+  "dynamic_rules": [
+    {
+      "level": "二级A",
+      "scope": "中文",
+      "rule": "未列入更高等级的 CSSCI 来源期刊（不含扩展版）、CSCD 核心库及办法点名的期刊或报纸。"
+    },
+    {
+      "level": "二级B",
+      "scope": "中文",
+      "rule": "未列入更高等级的北大核心、CSSCI 集刊或扩展版、CSCD 扩展库等。"
+    },
+    {
+      "level": "三级",
+      "scope": "中文",
+      "rule": "其他公开发行的合法中文学术期刊。"
+    },
+    {
+      "level": "TOP",
+      "scope": "外文",
+      "rule": "附件 TOP 清单及最新 CCF A 类期刊。"
+    },
+    {
+      "level": "一级A",
+      "scope": "外文",
+      "rule": "附件清单，以及办法规定的 A&HCI Q1/Q2、CCF A 类会议与部分 B 类期刊、AJG(ABS) 4及以上、FMS A 类等。"
+    },
+    {
+      "level": "一级B",
+      "scope": "外文",
+      "rule": "未列入更高等级的 SSCI/SCI Q1/Q2 及 A&HCI Q3/Q4。"
+    },
+    {
+      "level": "二级A",
+      "scope": "外文",
+      "rule": "未列入更高等级的 SSCI Q3/Q4 及 SCI Q3。"
+    },
+    {
+      "level": "二级B",
+      "scope": "外文",
+      "rule": "未列入更高等级的 SCI Q4、EI 来源及港澳台期刊。"
+    },
+    {
+      "level": "三级",
+      "scope": "外文",
+      "rule": "其他公开发行的合法外文学术期刊。"
+    }
+  ],
+  "entries": [
+    {
+      "title": "中国社会科学（中文版）",
+      "level": "TOP",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1211/C"
+      ]
+    },
+    {
+      "title": "经济研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1081/F"
+      ]
+    },
+    {
+      "title": "管理世界",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1235/F"
+      ]
+    },
+    {
+      "title": "哲学研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1140/B"
+      ]
+    },
+    {
+      "title": "马克思主义研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-3591/A"
+      ]
+    },
+    {
+      "title": "法学研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1162/D"
+      ]
+    },
+    {
+      "title": "政治学研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1396/D"
+      ]
+    },
+    {
+      "title": "社会学研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1100/C"
+      ]
+    },
+    {
+      "title": "民族研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1217/C"
+      ]
+    },
+    {
+      "title": "中国语文",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1053/H"
+      ]
+    },
+    {
+      "title": "外语教学与研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1251/G4"
+      ]
+    },
+    {
+      "title": "文学评论",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1037"
+      ]
+    },
+    {
+      "title": "外国文学评论",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1068/I"
+      ]
+    },
+    {
+      "title": "文艺研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1672/J"
+      ]
+    },
+    {
+      "title": "历史研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1213/K"
+      ]
+    },
+    {
+      "title": "考古学报",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1209/K"
+      ]
+    },
+    {
+      "title": "新闻与传播研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-3320/G2"
+      ]
+    },
+    {
+      "title": "中国图书馆学报",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-2746/G2"
+      ]
+    },
+    {
+      "title": "教育研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1281/G4"
+      ]
+    },
+    {
+      "title": "心理学报",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1911/B"
+      ]
+    },
+    {
+      "title": "体育科学",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1295/G8"
+      ]
+    },
+    {
+      "title": "统计研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1302/C"
+      ]
+    },
+    {
+      "title": "美术研究",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1190/J"
+      ]
+    },
+    {
+      "title": "装饰",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1392/J"
+      ]
+    },
+    {
+      "title": "地理学报",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1856/P"
+      ]
+    },
+    {
+      "title": "数学学报",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-2038/O1"
+      ]
+    },
+    {
+      "title": "计算机学报",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1826/TP"
+      ]
+    },
+    {
+      "title": "管理科学学报",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN12-1275/G3"
+      ]
+    },
+    {
+      "title": "经济学(季刊)",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-6010/F"
+      ]
+    },
+    {
+      "title": "中国法学",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1030/D"
+      ]
+    },
+    {
+      "title": "新华文摘",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1187/Z"
+      ]
+    },
+    {
+      "title": "求是",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": [
+        "CN11-1000/D"
+      ]
+    },
+    {
+      "title": "中国科学（A-G辑)",
+      "level": "一级A",
+      "scope": "中文",
+      "category": "综合",
+      "identifiers": []
+    },
+    {
+      "title": "中共党史研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "马克思主义理论",
+      "identifiers": [
+        "CN11-1675/D"
+      ]
+    },
+    {
+      "title": "马克思主义与现实",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "马克思主义理论",
+      "identifiers": [
+        "CN11-3040/A"
+      ]
+    },
+    {
+      "title": "思想理论教育导刊",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "马克思主义理论",
+      "identifiers": [
+        "CN11-4062/G4"
+      ]
+    },
+    {
+      "title": "教学与研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "马克思主义理论",
+      "identifiers": [
+        "CN11-1454/G4"
+      ]
+    },
+    {
+      "title": "当代世界与社会主义",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "马克思主义理论",
+      "identifiers": [
+        "CN11-3404/D"
+      ]
+    },
+    {
+      "title": "毛泽东邓小平理论研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "马克思主义理论",
+      "identifiers": [
+        "CN31-1672/A"
+      ]
+    },
+    {
+      "title": "马克思主义理论学科研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "马克思主义理论",
+      "identifiers": [
+        "CN10-1351/A"
+      ]
+    },
+    {
+      "title": "自然辩证法通讯",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "哲学",
+      "identifiers": [
+        "CN11-1518/N"
+      ]
+    },
+    {
+      "title": "自然辩证法研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "哲学",
+      "identifiers": [
+        "CN11-1649/B"
+      ]
+    },
+    {
+      "title": "哲学动态",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "哲学",
+      "identifiers": [
+        "CN11-1141/B"
+      ]
+    },
+    {
+      "title": "世界哲学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "哲学",
+      "identifiers": [
+        "CN11-4748/B"
+      ]
+    },
+    {
+      "title": "中国哲学史",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "哲学",
+      "identifiers": [
+        "CN11-3042/B"
+      ]
+    },
+    {
+      "title": "道德与文明",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "哲学",
+      "identifiers": [
+        "CN12-1029/B"
+      ]
+    },
+    {
+      "title": "现代哲学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "哲学",
+      "identifiers": [
+        "CN44-1071/B"
+      ]
+    },
+    {
+      "title": "文学遗产",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "中国语言文学",
+      "identifiers": [
+        "CN11-1009/I"
+      ]
+    },
+    {
+      "title": "中国现代文学研究丛刊",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "中国语言文学",
+      "identifiers": [
+        "CN11-2589/I"
+      ]
+    },
+    {
+      "title": "文艺理论研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "中国语言文学",
+      "identifiers": [
+        "CN31-1152/I"
+      ]
+    },
+    {
+      "title": "中国比较文学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "中国语言文学",
+      "identifiers": [
+        "CN31-1694/I"
+      ]
+    },
+    {
+      "title": "语言研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "中国语言文学",
+      "identifiers": [
+        "CN42-1025/H"
+      ]
+    },
+    {
+      "title": "文史哲",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "中国语言文学",
+      "identifiers": [
+        "CN37-1101/C"
+      ]
+    },
+    {
+      "title": "文史（中华书局）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "中国语言文学",
+      "identifiers": [
+        "CN11-1678/K"
+      ]
+    },
+    {
+      "title": "中华文史论丛",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "中国语言文学",
+      "identifiers": [
+        "CN31-1984/K"
+      ]
+    },
+    {
+      "title": "古汉语研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "中国语言文学",
+      "identifiers": [
+        "CN43-1145/H"
+      ]
+    },
+    {
+      "title": "世界汉语教学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "中国语言文学",
+      "identifiers": [
+        "CN11-1473/H"
+      ]
+    },
+    {
+      "title": "外国文学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "外国语言文学",
+      "identifiers": [
+        "CN11-1248/I"
+      ]
+    },
+    {
+      "title": "中国翻译",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "外国语言文学",
+      "identifiers": [
+        "CN11-1354/H"
+      ]
+    },
+    {
+      "title": "外国文学研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "外国语言文学",
+      "identifiers": [
+        "CN42-1060/I"
+      ]
+    },
+    {
+      "title": "外国语",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "外国语言文学",
+      "identifiers": [
+        "CN31-1038/H"
+      ]
+    },
+    {
+      "title": "当代语言学（原：国外语言学）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "外国语言文学",
+      "identifiers": [
+        "CN11-3879/H"
+      ]
+    },
+    {
+      "title": "现代外语",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "外国语言文学",
+      "identifiers": [
+        "CN44-1165/H"
+      ]
+    },
+    {
+      "title": "外语教学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "外国语言文学",
+      "identifiers": [
+        "CN61-1023/H"
+      ]
+    },
+    {
+      "title": "中国外语",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "外国语言文学",
+      "identifiers": [
+        "CN11-5280/H"
+      ]
+    },
+    {
+      "title": "国外文学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "外国语言文学",
+      "identifiers": [
+        "CN11-1562/I"
+      ]
+    },
+    {
+      "title": "语言科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "外国语言文学",
+      "identifiers": [
+        "CN32-1687/G"
+      ]
+    },
+    {
+      "title": "外语界",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "外国语言文学",
+      "identifiers": [
+        "CN31-1040/H"
+      ]
+    },
+    {
+      "title": "新美术",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "艺术学",
+      "identifiers": [
+        "CN33-1068/J"
+      ]
+    },
+    {
+      "title": "艺术设计研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "艺术学",
+      "identifiers": [
+        "CN11-5869/J"
+      ]
+    },
+    {
+      "title": "中国音乐学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "艺术学",
+      "identifiers": [
+        "CN11-1316/J"
+      ]
+    },
+    {
+      "title": "美术观察",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "艺术学",
+      "identifiers": [
+        "CN11-3665/J"
+      ]
+    },
+    {
+      "title": "南京艺术学院学报（美术与设计版）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "艺术学",
+      "identifiers": [
+        "CN32-1557/J"
+      ]
+    },
+    {
+      "title": "中国书法",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "艺术学",
+      "identifiers": [
+        "CN11-1136/J"
+      ]
+    },
+    {
+      "title": "戏剧",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "艺术学",
+      "identifiers": [
+        "CN11-1159/J"
+      ]
+    },
+    {
+      "title": "美术",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "艺术学",
+      "identifiers": [
+        "CN11-1311/J"
+      ]
+    },
+    {
+      "title": "世界经济",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1138/F"
+      ]
+    },
+    {
+      "title": "金融研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1268/F"
+      ]
+    },
+    {
+      "title": "中国工业经济",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-3536/F"
+      ]
+    },
+    {
+      "title": "财贸经济",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1166/F"
+      ]
+    },
+    {
+      "title": "数量经济技术经济研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1087/F"
+      ]
+    },
+    {
+      "title": "经济理论与经济管理",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1517/F"
+      ]
+    },
+    {
+      "title": "经济社会体制比较",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1591/F"
+      ]
+    },
+    {
+      "title": "经济学家",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN51-1312/F"
+      ]
+    },
+    {
+      "title": "国际贸易问题",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1692/F"
+      ]
+    },
+    {
+      "title": "中国农村经济",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1262/F"
+      ]
+    },
+    {
+      "title": "中国经济史研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1082/F"
+      ]
+    },
+    {
+      "title": "经济地理",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN43-1126/K"
+      ]
+    },
+    {
+      "title": "农业经济问题",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1323/F"
+      ]
+    },
+    {
+      "title": "经济学动态",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1057/F"
+      ]
+    },
+    {
+      "title": "农业技术经济",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1883/S"
+      ]
+    },
+    {
+      "title": "财经研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN31-1012/F"
+      ]
+    },
+    {
+      "title": "国际金融研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1132/F"
+      ]
+    },
+    {
+      "title": "经济科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1564/F"
+      ]
+    },
+    {
+      "title": "经济管理",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1047/F"
+      ]
+    },
+    {
+      "title": "南开经济研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN12-1028/F"
+      ]
+    },
+    {
+      "title": "世界经济文汇",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN31-1139/F"
+      ]
+    },
+    {
+      "title": "财政研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1077/F"
+      ]
+    },
+    {
+      "title": "税务研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1011/F"
+      ]
+    },
+    {
+      "title": "保险研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "经济学",
+      "identifiers": [
+        "CN11-1632/F"
+      ]
+    },
+    {
+      "title": "系统工程理论与实践",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN11-2267/N"
+      ]
+    },
+    {
+      "title": "系统科学与数学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN11-2019/O1"
+      ]
+    },
+    {
+      "title": "控制理论与应用",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN44-1240/TP"
+      ]
+    },
+    {
+      "title": "控制与决策",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN21-1124/TP"
+      ]
+    },
+    {
+      "title": "中国机械工程",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN42-1294/TH"
+      ]
+    },
+    {
+      "title": "机械工程学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN11-2187/TH"
+      ]
+    },
+    {
+      "title": "中国管理科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN11-2835/G3"
+      ]
+    },
+    {
+      "title": "中国软科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN11-3036/G3"
+      ]
+    },
+    {
+      "title": "系统工程学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN12-1141/O1"
+      ]
+    },
+    {
+      "title": "运筹与管理",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN34-1133/G3"
+      ]
+    },
+    {
+      "title": "系统管理学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN31-1977/N"
+      ]
+    },
+    {
+      "title": "南开管理评论",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN12-1288/F"
+      ]
+    },
+    {
+      "title": "会计研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN11-1078/F"
+      ]
+    },
+    {
+      "title": "科研管理",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN11-1567/G3"
+      ]
+    },
+    {
+      "title": "管理工程学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN33-1136/N"
+      ]
+    },
+    {
+      "title": "科学学研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN11-1805/G3"
+      ]
+    },
+    {
+      "title": "审计研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN11-1024/F"
+      ]
+    },
+    {
+      "title": "管理评论",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN11-5057/F"
+      ]
+    },
+    {
+      "title": "管理科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN23-1510/C"
+      ]
+    },
+    {
+      "title": "科学学与科学技术管理",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN12-1117/G3"
+      ]
+    },
+    {
+      "title": "管理学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "管理学",
+      "identifiers": [
+        "CN42-1725/C"
+      ]
+    },
+    {
+      "title": "世界经济与政治",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "政治学",
+      "identifiers": [
+        "CN11-1343/F"
+      ]
+    },
+    {
+      "title": "国际问题研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "政治学",
+      "identifiers": [
+        "CN11-1504/D"
+      ]
+    },
+    {
+      "title": "中共中央党校（国家行政学院）学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "政治学",
+      "identifiers": [
+        "CN11-3847/C"
+      ]
+    },
+    {
+      "title": "外交评论",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "政治学",
+      "identifiers": [
+        "CN11-5370/D"
+      ]
+    },
+    {
+      "title": "欧洲研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "政治学",
+      "identifiers": [
+        "CN11-4899/C"
+      ]
+    },
+    {
+      "title": "江苏行政学院学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "政治学",
+      "identifiers": [
+        "CN32-1562/C"
+      ]
+    },
+    {
+      "title": "现代国际关系",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "政治学",
+      "identifiers": [
+        "CN11-1134/D"
+      ]
+    },
+    {
+      "title": "当代亚太",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "政治学",
+      "identifiers": [
+        "CN11-3706/C"
+      ]
+    },
+    {
+      "title": "中外法学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "法学",
+      "identifiers": [
+        "CN11-2447/D"
+      ]
+    },
+    {
+      "title": "政法论坛",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "法学",
+      "identifiers": [
+        "CN11-5608/D"
+      ]
+    },
+    {
+      "title": "法制与社会发展",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "法学",
+      "identifiers": [
+        "CN22-1243/D"
+      ]
+    },
+    {
+      "title": "法学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "法学",
+      "identifiers": [
+        "CN31-1050/D"
+      ]
+    },
+    {
+      "title": "法学家",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "法学",
+      "identifiers": [
+        "CN11-3212/D"
+      ]
+    },
+    {
+      "title": "现代法学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "法学",
+      "identifiers": [
+        "CN50-1020/D"
+      ]
+    },
+    {
+      "title": "法律科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "法学",
+      "identifiers": [
+        "CN61-1470/D"
+      ]
+    },
+    {
+      "title": "法商研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "法学",
+      "identifiers": [
+        "CN42-1664/D"
+      ]
+    },
+    {
+      "title": "清华法学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "法学",
+      "identifiers": [
+        "CN11-5594/D"
+      ]
+    },
+    {
+      "title": "法学评论",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "法学",
+      "identifiers": [
+        "CN42-1086/D"
+      ]
+    },
+    {
+      "title": "环球法律评论",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "法学",
+      "identifiers": [
+        "CN11-4560/D"
+      ]
+    },
+    {
+      "title": "中国人口科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "社会学",
+      "identifiers": [
+        "CN11-1043/C"
+      ]
+    },
+    {
+      "title": "人口研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "社会学",
+      "identifiers": [
+        "CN11-1489/C"
+      ]
+    },
+    {
+      "title": "社会",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "社会学",
+      "identifiers": [
+        "CN31-1123/C"
+      ]
+    },
+    {
+      "title": "人口学刊",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "社会学",
+      "identifiers": [
+        "CN22-1017/C"
+      ]
+    },
+    {
+      "title": "青年研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "社会学",
+      "identifiers": [
+        "CN11-3280/C"
+      ]
+    },
+    {
+      "title": "民族艺术",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "民族学",
+      "identifiers": [
+        "CN45-1052/J"
+      ]
+    },
+    {
+      "title": "世界民族",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "民族学",
+      "identifiers": [
+        "CN11-3673/C"
+      ]
+    },
+    {
+      "title": "中央民族大学学报（哲学社会科学版）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "民族学",
+      "identifiers": [
+        "CN11-3530/C"
+      ]
+    },
+    {
+      "title": "国际新闻界",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "新闻传播学",
+      "identifiers": [
+        "CN11-1523/G2"
+      ]
+    },
+    {
+      "title": "新闻大学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "新闻传播学",
+      "identifiers": [
+        "CN31-1157/G2"
+      ]
+    },
+    {
+      "title": "现代传播（中国传媒大学学报）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "新闻传播学",
+      "identifiers": [
+        "CN11-5363/G2"
+      ]
+    },
+    {
+      "title": "当代电影",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "新闻传播学",
+      "identifiers": [
+        "CN11-1447/G2"
+      ]
+    },
+    {
+      "title": "出版发行研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "新闻传播学",
+      "identifiers": [
+        "CN11-1537/G2"
+      ]
+    },
+    {
+      "title": "当代传播",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "新闻传播学",
+      "identifiers": [
+        "CN65-1201/G2"
+      ]
+    },
+    {
+      "title": "新闻记者",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "新闻传播学",
+      "identifiers": [
+        "CN31-1171/G2"
+      ]
+    },
+    {
+      "title": "情报学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "图书、情报与档案管理",
+      "identifiers": [
+        "CN11-2257/G3"
+      ]
+    },
+    {
+      "title": "大学图书馆学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "图书、情报与档案管理",
+      "identifiers": [
+        "CN11-2952/G2"
+      ]
+    },
+    {
+      "title": "档案学通讯",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "图书、情报与档案管理",
+      "identifiers": [
+        "CN11-1450/G2"
+      ]
+    },
+    {
+      "title": "图书情报工作",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "图书、情报与档案管理",
+      "identifiers": [
+        "CN11-1541/G2"
+      ]
+    },
+    {
+      "title": "档案学研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "图书、情报与档案管理",
+      "identifiers": [
+        "CN11-1226/G2"
+      ]
+    },
+    {
+      "title": "情报理论与实践",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "图书、情报与档案管理",
+      "identifiers": [
+        "CN11-1762/G3"
+      ]
+    },
+    {
+      "title": "图书情报知识",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "图书、情报与档案管理",
+      "identifiers": [
+        "CN42-1085/G2"
+      ]
+    },
+    {
+      "title": "高等教育研究(武汉)",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "教育学",
+      "identifiers": [
+        "CN42-1024/G4"
+      ]
+    },
+    {
+      "title": "中国高教研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "教育学",
+      "identifiers": [
+        "CN11-2962/G4"
+      ]
+    },
+    {
+      "title": "比较教育研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "教育学",
+      "identifiers": [
+        "CN11-2878/G4"
+      ]
+    },
+    {
+      "title": "教育发展研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "教育学",
+      "identifiers": [
+        "CN31-1772/G4"
+      ]
+    },
+    {
+      "title": "高等工程教育研究(武汉)",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "教育学",
+      "identifiers": [
+        "CN42-1026/G4"
+      ]
+    },
+    {
+      "title": "北京大学教育评论",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "教育学",
+      "identifiers": [
+        "CN11-4848/G4"
+      ]
+    },
+    {
+      "title": "华东师范大学学报（教育科学版）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "教育学",
+      "identifiers": [
+        "CN31-1007/G4"
+      ]
+    },
+    {
+      "title": "清华大学教育研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "教育学",
+      "identifiers": [
+        "CN11-1610/G4"
+      ]
+    },
+    {
+      "title": "中国教育学刊",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "教育学",
+      "identifiers": [
+        "CN11-2606/G4"
+      ]
+    },
+    {
+      "title": "课程.教材.教法",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "教育学",
+      "identifiers": [
+        "CN11-1278/G4"
+      ]
+    },
+    {
+      "title": "教育学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "教育学",
+      "identifiers": [
+        "CN11-5306/G4"
+      ]
+    },
+    {
+      "title": "教师教育研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "教育学",
+      "identifiers": [
+        "CN11-5147/G4"
+      ]
+    },
+    {
+      "title": "心理科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "心理学",
+      "identifiers": [
+        "CN31-1582/B"
+      ]
+    },
+    {
+      "title": "心理科学进展",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "心理学",
+      "identifiers": [
+        "CN11-4766/R"
+      ]
+    },
+    {
+      "title": "中国临床心理学杂志",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "心理学",
+      "identifiers": [
+        "CN43-1214/R"
+      ]
+    },
+    {
+      "title": "心理发展与教育",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "心理学",
+      "identifiers": [
+        "CN11-1608/B"
+      ]
+    },
+    {
+      "title": "北京体育大学学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "体育学",
+      "identifiers": [
+        "CN11-3785/G8"
+      ]
+    },
+    {
+      "title": "上海体育大学学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "体育学",
+      "identifiers": [
+        "CN31-2198/G8"
+      ]
+    },
+    {
+      "title": "中国体育科技",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "体育学",
+      "identifiers": [
+        "CN11-2284/G8"
+      ]
+    },
+    {
+      "title": "体育学刊",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "体育学",
+      "identifiers": [
+        "CN44-1404/G8"
+      ]
+    },
+    {
+      "title": "应用数学学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "数学、统计学",
+      "identifiers": [
+        "CN11-2040/O1"
+      ]
+    },
+    {
+      "title": "计算数学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "数学、统计学",
+      "identifiers": [
+        "CN11-2125/O1"
+      ]
+    },
+    {
+      "title": "数学年刊（A辑）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "数学、统计学",
+      "identifiers": [
+        "CN31-1328/O1"
+      ]
+    },
+    {
+      "title": "科学通报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "数学、统计学",
+      "identifiers": [
+        "CN11-1784/N"
+      ]
+    },
+    {
+      "title": "高校应用数学学报（A辑）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "数学、统计学",
+      "identifiers": [
+        "CN33-1110/O1"
+      ]
+    },
+    {
+      "title": "数学进展",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "数学、统计学",
+      "identifiers": [
+        "CN11-2312/O1"
+      ]
+    },
+    {
+      "title": "应用数学和力学（英文版）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "数学、统计学",
+      "identifiers": [
+        "CN31-1650/O1"
+      ]
+    },
+    {
+      "title": "数学物理学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "数学、统计学",
+      "identifiers": [
+        "CN42-1226/O"
+      ]
+    },
+    {
+      "title": "数理统计与管理",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "数学、统计学",
+      "identifiers": [
+        "CN11-2242/O1"
+      ]
+    },
+    {
+      "title": "统计与信息论坛",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "数学、统计学",
+      "identifiers": [
+        "CN61-1421/C"
+      ]
+    },
+    {
+      "title": "公共管理学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "公共管理",
+      "identifiers": [
+        "CN23-1523/F"
+      ]
+    },
+    {
+      "title": "中国行政管理",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "公共管理",
+      "identifiers": [
+        "CN11-1145/D"
+      ]
+    },
+    {
+      "title": "中华医院管理杂志",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "公共管理",
+      "identifiers": [
+        "CN11-1325/R"
+      ]
+    },
+    {
+      "title": "自然灾害学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "公共管理",
+      "identifiers": [
+        "CN23-1324/X"
+      ]
+    },
+    {
+      "title": "社会保障研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "公共管理",
+      "identifiers": [
+        "CN42-1792/F"
+      ]
+    },
+    {
+      "title": "地理研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN11-1848/P"
+      ]
+    },
+    {
+      "title": "中国环境科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN11-2201/X"
+      ]
+    },
+    {
+      "title": "中国人口·资源与环境",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN37-1196/N"
+      ]
+    },
+    {
+      "title": "自然资源学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN11-1912/N"
+      ]
+    },
+    {
+      "title": "环境科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN11-1895/X"
+      ]
+    },
+    {
+      "title": "环境科学学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN11-1843/X"
+      ]
+    },
+    {
+      "title": "城市规划",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN11-2378/TU"
+      ]
+    },
+    {
+      "title": "中国土地科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN11-2640/F"
+      ]
+    },
+    {
+      "title": "地理科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN22-1124/P"
+      ]
+    },
+    {
+      "title": "建筑学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN11-1930/TU"
+      ]
+    },
+    {
+      "title": "资源科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN11-3868/N"
+      ]
+    },
+    {
+      "title": "生态学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN11-2031/Q"
+      ]
+    },
+    {
+      "title": "应用生态学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "人文经济地理",
+      "identifiers": [
+        "CN21-1253/Q"
+      ]
+    },
+    {
+      "title": "软件学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "计算机科学与技术、软件工程",
+      "identifiers": [
+        "CN11-2560/TP"
+      ]
+    },
+    {
+      "title": "计算机研究与发展",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "计算机科学与技术、软件工程",
+      "identifiers": [
+        "CN11-1777/TP"
+      ]
+    },
+    {
+      "title": "自动化学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "计算机科学与技术、软件工程",
+      "identifiers": [
+        "CN11-2109/TP"
+      ]
+    },
+    {
+      "title": "电子学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "计算机科学与技术、软件工程",
+      "identifiers": [
+        "CN11-2087/TN"
+      ]
+    },
+    {
+      "title": "电子与信息学报(原：电子科学学刊)",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "计算机科学与技术、软件工程",
+      "identifiers": [
+        "CN11-4494/TN"
+      ]
+    },
+    {
+      "title": "通信学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "计算机科学与技术、软件工程",
+      "identifiers": [
+        "CN11-2102/TN"
+      ]
+    },
+    {
+      "title": "模式识别与人工智能",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "计算机科学与技术、软件工程",
+      "identifiers": [
+        "CN34-1089/TP"
+      ]
+    },
+    {
+      "title": "中国图象图形学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "计算机科学与技术、软件工程",
+      "identifiers": [
+        "CN11-3758/TB"
+      ]
+    },
+    {
+      "title": "计算机辅助设计与图形学学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "计算机科学与技术、软件工程",
+      "identifiers": [
+        "CN11-2925/TP"
+      ]
+    },
+    {
+      "title": "计算机集成制造系统",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "计算机科学与技术、软件工程",
+      "identifiers": [
+        "CN11-5946/TP"
+      ]
+    },
+    {
+      "title": "中国史研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN11-1039/K"
+      ]
+    },
+    {
+      "title": "近代史研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN11-1215/K"
+      ]
+    },
+    {
+      "title": "史学理论研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN11-2943/K"
+      ]
+    },
+    {
+      "title": "世界历史",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN11-1046/K"
+      ]
+    },
+    {
+      "title": "史学月刊",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN41-1016/K"
+      ]
+    },
+    {
+      "title": "中国边疆史地研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN11-2795/K"
+      ]
+    },
+    {
+      "title": "当代中国史研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN11-3200/K"
+      ]
+    },
+    {
+      "title": "清史研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN11-2765/K"
+      ]
+    },
+    {
+      "title": "抗日战争研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN11-2890/K"
+      ]
+    },
+    {
+      "title": "史学集刊",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN22-1064/K"
+      ]
+    },
+    {
+      "title": "文献",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN11-1588/G2"
+      ]
+    },
+    {
+      "title": "文物",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN11-1532/K"
+      ]
+    },
+    {
+      "title": "考古",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN11-1208/K"
+      ]
+    },
+    {
+      "title": "世界宗教研究",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "历史学、考古学、宗教学",
+      "identifiers": [
+        "CN11-1299/B"
+      ]
+    },
+    {
+      "title": "清华大学学报（自然科学版）、 （哲学社会科学版）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "高校综合性学报",
+      "identifiers": []
+    },
+    {
+      "title": "北京大学学报（自然科学版）、 （哲学社会科学版）、（医学版）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "高校综合性学报",
+      "identifiers": []
+    },
+    {
+      "title": "浙江大学学报（理学版）、 （人文社会科学版）、（医学版）、 （农业与生命科学版）、（工学版）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "高校综合性学报",
+      "identifiers": []
+    },
+    {
+      "title": "复旦学报（社会科学版）、 （自然科学版）、（医学版）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "高校综合性学报",
+      "identifiers": []
+    },
+    {
+      "title": "南京大学学报（自然科学版）、 （哲学、人文科学、社会科学版）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "高校综合性学报",
+      "identifiers": []
+    },
+    {
+      "title": "中国人民大学学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "高校综合性学报",
+      "identifiers": [
+        "CN11-1476/C"
+      ]
+    },
+    {
+      "title": "北京师范大学学报(社会科学版)",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "高校综合性学报",
+      "identifiers": [
+        "CN11-1514/C"
+      ]
+    },
+    {
+      "title": "中山大学学报（社会科学版）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "高校综合性学报",
+      "identifiers": [
+        "CN44-1158/C"
+      ]
+    },
+    {
+      "title": "武汉大学学报（人文科学版）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "高校综合性学报",
+      "identifiers": [
+        "CN42-1662/C"
+      ]
+    },
+    {
+      "title": "吉林大学社会科学学报",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "高校综合性学报",
+      "identifiers": [
+        "CN22-1063/C"
+      ]
+    },
+    {
+      "title": "人民日报 （理论版、学术版，1000字以上）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "综合性学术期刊",
+      "identifiers": []
+    },
+    {
+      "title": "光明日报（理论版，2000字以上）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "综合性学术期刊",
+      "identifiers": []
+    },
+    {
+      "title": "经济日报（理论版，2000字以上）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "综合性学术期刊",
+      "identifiers": []
+    },
+    {
+      "title": "浙江日报（理论版，2000字以上）",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "综合性学术期刊",
+      "identifiers": []
+    },
+    {
+      "title": "中国人民大学报刊复印资料 (全文复印)",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "综合性学术期刊",
+      "identifiers": []
+    },
+    {
+      "title": "中国社会科学评论(香港)",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "综合性学术期刊",
+      "identifiers": []
+    },
+    {
+      "title": "学术月刊",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "综合性学术期刊",
+      "identifiers": [
+        "CN31-1096/C"
+      ]
+    },
+    {
+      "title": "社会科学战线",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "综合性学术期刊",
+      "identifiers": [
+        "CN22-1002/C"
+      ]
+    },
+    {
+      "title": "中国社会科学文摘",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "综合性学术期刊",
+      "identifiers": [
+        "CN11-4116/C"
+      ]
+    },
+    {
+      "title": "浙江社会科学",
+      "level": "一级B",
+      "scope": "中文",
+      "category": "综合性学术期刊",
+      "identifiers": [
+        "CN33-1149/C"
+      ]
+    },
+    {
+      "title": "American Economic Review",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0002-8282"
+      ]
+    },
+    {
+      "title": "Quarterly Journal of Economics",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0033-5533"
+      ]
+    },
+    {
+      "title": "Journal of Political Economy",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0022-3808"
+      ]
+    },
+    {
+      "title": "Econometrica",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0012-9682"
+      ]
+    },
+    {
+      "title": "Review of Economic Studies",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0034-6527"
+      ]
+    },
+    {
+      "title": "Journal of Finance",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0022-1082"
+      ]
+    },
+    {
+      "title": "Journal of Financial Economics",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0304-405X"
+      ]
+    },
+    {
+      "title": "Review of Financial Studies",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0893-9454"
+      ]
+    },
+    {
+      "title": "Administrative Science Quarterly",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0001-8392"
+      ]
+    },
+    {
+      "title": "Academy of Management Review",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0363-7425"
+      ]
+    },
+    {
+      "title": "Academy of Management Journal",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0001-4273"
+      ]
+    },
+    {
+      "title": "Strategic Management Journal",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0143-2095"
+      ]
+    },
+    {
+      "title": "Journal of International Business Studies",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0047-2506"
+      ]
+    },
+    {
+      "title": "Organization Science",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "1047-7039"
+      ]
+    },
+    {
+      "title": "Journal of Consumer Research",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0093-5301"
+      ]
+    },
+    {
+      "title": "Journal of Marketing",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0022-2429"
+      ]
+    },
+    {
+      "title": "Journal of Marketing Research",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0022-2437"
+      ]
+    },
+    {
+      "title": "Marketing Science",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0732-2399"
+      ]
+    },
+    {
+      "title": "Journal of Accounting Research",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0021-8456"
+      ]
+    },
+    {
+      "title": "Journal of Accounting & Economics",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0165-4101"
+      ]
+    },
+    {
+      "title": "Accounting Review",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0001-4826"
+      ]
+    },
+    {
+      "title": "Management Science",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0025-1909"
+      ]
+    },
+    {
+      "title": "Operations Research",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0030-364X"
+      ]
+    },
+    {
+      "title": "Journal of Operations Management",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0272-6963"
+      ]
+    },
+    {
+      "title": "MIS Quarterly",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0276-7783"
+      ]
+    },
+    {
+      "title": "Information Systems Research",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "1047-7047"
+      ]
+    },
+    {
+      "title": "M&SOM-Manufacturing & Service Operations Management",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "1523-4614"
+      ]
+    },
+    {
+      "title": "Production and Operations Management",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "1059-1478"
+      ]
+    },
+    {
+      "title": "INFORMS Journal on Computing",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "1091-9856"
+      ]
+    },
+    {
+      "title": "Applied Linguistics",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0142-6001"
+      ]
+    },
+    {
+      "title": "Language",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0097-8507"
+      ]
+    },
+    {
+      "title": "Journal of Communication",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0021-9916"
+      ]
+    },
+    {
+      "title": "Harvard Law Review",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0017-811X"
+      ]
+    },
+    {
+      "title": "Annual Review of Sociology",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0360-0572"
+      ]
+    },
+    {
+      "title": "American Sociological Review",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0003-1224"
+      ]
+    },
+    {
+      "title": "Acta Mathematica",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0001-5962"
+      ]
+    },
+    {
+      "title": "Annals of Mathematics",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0003-486X"
+      ]
+    },
+    {
+      "title": "Inventiones Mathematicae",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0020-9910"
+      ]
+    },
+    {
+      "title": "Journal of the American Mathematical Society",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0894-0347"
+      ]
+    },
+    {
+      "title": "Communications on Pure and Applied Mathematics",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0010-3640"
+      ]
+    },
+    {
+      "title": "Journal of the Royal Statistical Society Series B-Statistical Methodology",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "1369-7412"
+      ]
+    },
+    {
+      "title": "Annals of Statistics",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0090-5364"
+      ]
+    },
+    {
+      "title": "Journal of the American Statistical Association",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0162-1459"
+      ]
+    },
+    {
+      "title": "Biometrika",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0006-3444"
+      ]
+    },
+    {
+      "title": "American Journal of Political Science",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0092-5853"
+      ]
+    },
+    {
+      "title": "American Political Science Review",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0003-0554"
+      ]
+    },
+    {
+      "title": "Governance-An International Journal of Policy Administration and Institutions",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0952-1895"
+      ]
+    },
+    {
+      "title": "Public Administration Review",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0033-3352"
+      ]
+    },
+    {
+      "title": "Journal of Public Administration Research and Theory",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "1053-1858"
+      ]
+    },
+    {
+      "title": "Public Administration",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0033-3298"
+      ]
+    },
+    {
+      "title": "Journal of Policy Analysis and Management",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0276-8739"
+      ]
+    },
+    {
+      "title": "Nature",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0028-0836"
+      ]
+    },
+    {
+      "title": "Science",
+      "level": "TOP",
+      "scope": "外文",
+      "category": "综合",
+      "identifiers": [
+        "0036-8075"
+      ]
+    },
+    {
+      "title": "American Economic Journal: Applied Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1945-7782"
+      ]
+    },
+    {
+      "title": "American Economic Journal: Economic Policy",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1945-7731"
+      ]
+    },
+    {
+      "title": "American Economic Journal: Macroeconomics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1945-7707"
+      ]
+    },
+    {
+      "title": "American Economic Journal: Microeconomics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1945-7669"
+      ]
+    },
+    {
+      "title": "Economic Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0013-0133"
+      ]
+    },
+    {
+      "title": "International Economic Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0020-6598"
+      ]
+    },
+    {
+      "title": "Journal of Development Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0304-3878"
+      ]
+    },
+    {
+      "title": "Journal of Econometrics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0304-4076"
+      ]
+    },
+    {
+      "title": "Journal of Economic Theory",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0022-0531"
+      ]
+    },
+    {
+      "title": "Journal of European Economic Association",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1542-4766"
+      ]
+    },
+    {
+      "title": "Journal of Financial and Quantitative Analysis",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0022-1090"
+      ]
+    },
+    {
+      "title": "Journal of International Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0022-1996"
+      ]
+    },
+    {
+      "title": "Journal of Labor Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0734-306X"
+      ]
+    },
+    {
+      "title": "Journal of Monetary Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0304-3932"
+      ]
+    },
+    {
+      "title": "Journal of Public Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0047-2727"
+      ]
+    },
+    {
+      "title": "RAND Journal of Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0741-6261"
+      ]
+    },
+    {
+      "title": "Review of Economics and Statistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0034-6535"
+      ]
+    },
+    {
+      "title": "Theoretical Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1933-6837"
+      ]
+    },
+    {
+      "title": "Canadian Journal of Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0008-3976"
+      ]
+    },
+    {
+      "title": "Games and Economic Behavior",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0899-8256"
+      ]
+    },
+    {
+      "title": "Journal of Banking and Finance",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0378-4266"
+      ]
+    },
+    {
+      "title": "Journal of Business & Economic Statistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0735-0015"
+      ]
+    },
+    {
+      "title": "Journal of Comparative Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0147-5967"
+      ]
+    },
+    {
+      "title": "Journal of Corporate Finance",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0929-1199"
+      ]
+    },
+    {
+      "title": "Journal of Economic Behavior and Organization",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0167-2681"
+      ]
+    },
+    {
+      "title": "Journal of Environmental Economics and Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0095-0696"
+      ]
+    },
+    {
+      "title": "Journal of Health Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0167-6296"
+      ]
+    },
+    {
+      "title": "Journal of Human Resources",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0022-166X"
+      ]
+    },
+    {
+      "title": "Journal of Industrial Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0022-1821"
+      ]
+    },
+    {
+      "title": "Review of Economic Dynamics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1094-2025"
+      ]
+    },
+    {
+      "title": "Review of Finance",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1572-3097"
+      ]
+    },
+    {
+      "title": "Review of International Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0965-7576"
+      ]
+    },
+    {
+      "title": "American Journal of Agricultural Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0002-9092"
+      ]
+    },
+    {
+      "title": "Brookings Papers on Economic Activity",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0007-2303"
+      ]
+    },
+    {
+      "title": "Econometric Theory",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0266-4666"
+      ]
+    },
+    {
+      "title": "Economic Theory",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0938-2259"
+      ]
+    },
+    {
+      "title": "European Economic Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0014-2921"
+      ]
+    },
+    {
+      "title": "Experimental Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1386-4157"
+      ]
+    },
+    {
+      "title": "Explorations in Economic History",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0014-4983"
+      ]
+    },
+    {
+      "title": "Financial Analysts Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0015-198X"
+      ]
+    },
+    {
+      "title": "Financial Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0046-3892"
+      ]
+    },
+    {
+      "title": "International Journal of Industrial Organization",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0167-7187"
+      ]
+    },
+    {
+      "title": "Journal of Applied Econometrics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0883-7252"
+      ]
+    },
+    {
+      "title": "Journal of Business Finance & Accounting",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0306-686X"
+      ]
+    },
+    {
+      "title": "Journal of Derivatives",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1074-1240"
+      ]
+    },
+    {
+      "title": "Journal of Economic Dynamics & Control",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0165-1889"
+      ]
+    },
+    {
+      "title": "Journal of Economic Education",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0022-0485"
+      ]
+    },
+    {
+      "title": "Journal of Economic Growth",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1381-4338"
+      ]
+    },
+    {
+      "title": "Journal of Economic History",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0022-0507"
+      ]
+    },
+    {
+      "title": "Journal of Economic Literature",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0022-0515"
+      ]
+    },
+    {
+      "title": "Journal of Economic Perspectives",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0895-3309"
+      ]
+    },
+    {
+      "title": "Journal of Economics and Management Strategy",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1058-6407"
+      ]
+    },
+    {
+      "title": "Journal of Empirical Finance",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0927-5398"
+      ]
+    },
+    {
+      "title": "Journal of Evolutionary Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0936-9937"
+      ]
+    },
+    {
+      "title": "Journal of Financial Econometrics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1479-8409"
+      ]
+    },
+    {
+      "title": "Journal of Financial Intermediation",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1042-9573"
+      ]
+    },
+    {
+      "title": "Journal of Financial Markets",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1386-4181"
+      ]
+    },
+    {
+      "title": "Journal of Futures Markets",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0270-7314"
+      ]
+    },
+    {
+      "title": "Journal of International Money and Finance",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0261-5606"
+      ]
+    },
+    {
+      "title": "Journal of Law & Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0022-2186"
+      ]
+    },
+    {
+      "title": "Journal of Mathematical Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0304-4068"
+      ]
+    },
+    {
+      "title": "Journal of Money Credit and Banking",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0022-2879"
+      ]
+    },
+    {
+      "title": "Journal of Population Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0933-1433"
+      ]
+    },
+    {
+      "title": "Journal of Urban Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0094-1190"
+      ]
+    },
+    {
+      "title": "Mathematical Finance",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0960-1627"
+      ]
+    },
+    {
+      "title": "National Tax Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0028-0283"
+      ]
+    },
+    {
+      "title": "Quantitative Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1759-7323"
+      ]
+    },
+    {
+      "title": "Regional Science and Urban Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0166-0462"
+      ]
+    },
+    {
+      "title": "Scandinavian journal of Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0347-0520"
+      ]
+    },
+    {
+      "title": "Journal of Regulatory Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0922-680X"
+      ]
+    },
+    {
+      "title": "Social Choice and Welfare",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0176-1714"
+      ]
+    },
+    {
+      "title": "Journal of Risk and Uncertainty",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0895-5646"
+      ]
+    },
+    {
+      "title": "Journal of Risk and Insurance",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0022-4367"
+      ]
+    },
+    {
+      "title": "Review of Asset Pricing Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "2045-9920"
+      ]
+    },
+    {
+      "title": "Review of Corporate Finance Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "2046-9128"
+      ]
+    },
+    {
+      "title": "Insurance:Mathematics and Economics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0167-6687"
+      ]
+    },
+    {
+      "title": "China Economic Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "1043-951X"
+      ]
+    },
+    {
+      "title": "World Development",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "ECONOMICS, BUSINESS FINANCE",
+      "identifiers": [
+        "0305-750X"
+      ]
+    },
+    {
+      "title": "Journal of Management Information Systems",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0742-1222"
+      ]
+    },
+    {
+      "title": "Accounting, Organizations and Society",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0361-3682"
+      ]
+    },
+    {
+      "title": "Auditing:A Journal of Practice and Theory",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0278-0380"
+      ]
+    },
+    {
+      "title": "Contemporary Accounting Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0823-9150"
+      ]
+    },
+    {
+      "title": "European Accounting Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0963-8180"
+      ]
+    },
+    {
+      "title": "Review of Accounting Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1380-6653"
+      ]
+    },
+    {
+      "title": "Journal of Management Accounting Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1049-2127"
+      ]
+    },
+    {
+      "title": "Accounting Horizons",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0888-7993"
+      ]
+    },
+    {
+      "title": "British Accounting Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0890-8389"
+      ]
+    },
+    {
+      "title": "Journal of Accounting & Public Policy",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0278-4254"
+      ]
+    },
+    {
+      "title": "Journal of Accounting, Auditing and Finance",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0148-558X"
+      ]
+    },
+    {
+      "title": "International Journal of Accounting",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1094-4060"
+      ]
+    },
+    {
+      "title": "Abacus",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0001-3072"
+      ]
+    },
+    {
+      "title": "Accounting & Business Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0001-4788"
+      ]
+    },
+    {
+      "title": "Entrepreneurship Theory and Practice",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1042-2587"
+      ]
+    },
+    {
+      "title": "Journal of Business Venturing",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0883-9026"
+      ]
+    },
+    {
+      "title": "Strategic Entrepreneurship Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1932-4391"
+      ]
+    },
+    {
+      "title": "Journal of Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0149-2063"
+      ]
+    },
+    {
+      "title": "Journal of Management Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0022-2380"
+      ]
+    },
+    {
+      "title": "Harvard Business Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0017-8012"
+      ]
+    },
+    {
+      "title": "Journal of Business Ethics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0167-4544"
+      ]
+    },
+    {
+      "title": "Annals of Tourism Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0160-7383"
+      ]
+    },
+    {
+      "title": "International Journal of Contemporary Hospitality Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0959-6119"
+      ]
+    },
+    {
+      "title": "Journal of Sustainable Tourism",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0966-9582"
+      ]
+    },
+    {
+      "title": "Journal of Travel Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0047-2875"
+      ]
+    },
+    {
+      "title": "Tourism Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0261-5177"
+      ]
+    },
+    {
+      "title": "Gender, Work and Organization",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0950-0170"
+      ]
+    },
+    {
+      "title": "Human Resource Management (USA)",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0090-4848"
+      ]
+    },
+    {
+      "title": "International Journal of Human Resource Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0958-5192"
+      ]
+    },
+    {
+      "title": "Management and Organization Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1740-8784"
+      ]
+    },
+    {
+      "title": "Journal of World Business",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1090-9516"
+      ]
+    },
+    {
+      "title": "Asia Pacific Journal of Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0217-4561"
+      ]
+    },
+    {
+      "title": "Decision Support Systems",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0167-9236"
+      ]
+    },
+    {
+      "title": "Information and Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0378-7206"
+      ]
+    },
+    {
+      "title": "Journal of Information Technology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0268-3962"
+      ]
+    },
+    {
+      "title": "Journal of the Association for Information Systems",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1536-9323"
+      ]
+    },
+    {
+      "title": "Journal of Product Innovation Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0737-6782"
+      ]
+    },
+    {
+      "title": "Research Policy",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0048-7333"
+      ]
+    },
+    {
+      "title": "Technovation",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0166-4972"
+      ]
+    },
+    {
+      "title": "International Journal of Research in Marketing",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0167-8116"
+      ]
+    },
+    {
+      "title": "Journal of Consumer Psychology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1057-7408"
+      ]
+    },
+    {
+      "title": "Journal of The Academy Of Marketing Science",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0092-0703"
+      ]
+    },
+    {
+      "title": "International Journal of Operations and Production Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0144-3577"
+      ]
+    },
+    {
+      "title": "International Journal of Production Econimics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0020-7543"
+      ]
+    },
+    {
+      "title": "Journal of Supply Chain Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1523-2409"
+      ]
+    },
+    {
+      "title": "Decision Sciences",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0011-7315"
+      ]
+    },
+    {
+      "title": "European Journal of Operational Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0377-2217"
+      ]
+    },
+    {
+      "title": "IISE Transactions",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "2472-5854"
+      ]
+    },
+    {
+      "title": "Transportation Science",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0041-1655"
+      ]
+    },
+    {
+      "title": "Human Relations",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0018-7267"
+      ]
+    },
+    {
+      "title": "Leadership Quarterly",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1048-9843"
+      ]
+    },
+    {
+      "title": "Organization Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0170-8406"
+      ]
+    },
+    {
+      "title": "Accident Analysis and Prevention",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0001-4575"
+      ]
+    },
+    {
+      "title": "Applied Psychology: An International Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0269-994X"
+      ]
+    },
+    {
+      "title": "Journal of Organizational Behavior",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0894-3796"
+      ]
+    },
+    {
+      "title": "Journal of Vocational Behavior",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0001-8791"
+      ]
+    },
+    {
+      "title": "Organizational Behavior and Human Decision Processes",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0749-5978"
+      ]
+    },
+    {
+      "title": "Personnel Psychology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0031-5826"
+      ]
+    },
+    {
+      "title": "Regional Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0034-3404"
+      ]
+    },
+    {
+      "title": "Transportation Research Part B: Methodological",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0191-2615"
+      ]
+    },
+    {
+      "title": "Economic Geography",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0013-0095"
+      ]
+    },
+    {
+      "title": "Journal of Economic Geography",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1468-2702"
+      ]
+    },
+    {
+      "title": "Global Strategy Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "2042-5805"
+      ]
+    },
+    {
+      "title": "Transportation Research Part A: Policy and Practice",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0965-8564"
+      ]
+    },
+    {
+      "title": "Journal of Interactive Marketing",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1094-9968"
+      ]
+    },
+    {
+      "title": "Marketing Letters",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0923-0645"
+      ]
+    },
+    {
+      "title": "Psychology & Marketing",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0742-6046"
+      ]
+    },
+    {
+      "title": "Journal of Business Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0148-2963"
+      ]
+    },
+    {
+      "title": "Naval Research Logistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0894-069X"
+      ]
+    },
+    {
+      "title": "International Journal of Production Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "1366-588X"
+      ]
+    },
+    {
+      "title": "Annals of Operations Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0254-5330"
+      ]
+    },
+    {
+      "title": "OMEGA-International Journal of Management Science",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "0305-0483"
+      ]
+    },
+    {
+      "title": "Nature Communications",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MANAGEMENT",
+      "identifiers": [
+        "2041-1723"
+      ]
+    },
+    {
+      "title": "British Journal of Political Science",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0007-1234"
+      ]
+    },
+    {
+      "title": "Journal of Peace Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0022-3433"
+      ]
+    },
+    {
+      "title": "Journal of Politics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0022-3816"
+      ]
+    },
+    {
+      "title": "Political Analysis",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "1047-1987"
+      ]
+    },
+    {
+      "title": "Annual Review of Political Science",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "1094-2939"
+      ]
+    },
+    {
+      "title": "Comparative Politics Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0010-4140"
+      ]
+    },
+    {
+      "title": "Public Opinion Quarterly",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0033-362X"
+      ]
+    },
+    {
+      "title": "European Journal of Political Economy",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0176-2680"
+      ]
+    },
+    {
+      "title": "Comparative Politics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0010-4159"
+      ]
+    },
+    {
+      "title": "New Political Economy",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "1356-3467"
+      ]
+    },
+    {
+      "title": "Global Environmental Politics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "1526-3800"
+      ]
+    },
+    {
+      "title": "Perspectives on Politics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "1537-5927"
+      ]
+    },
+    {
+      "title": "Political Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0032-3217"
+      ]
+    },
+    {
+      "title": "Journal of Political Philosophy",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0963-8016"
+      ]
+    },
+    {
+      "title": "Economic Development and Cultural Change",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0013-0079"
+      ]
+    },
+    {
+      "title": "Journal of Contemporary Asia",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0047-2336"
+      ]
+    },
+    {
+      "title": "Modern China",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0097-7004"
+      ]
+    },
+    {
+      "title": "China Quarterly",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0305-7410"
+      ]
+    },
+    {
+      "title": "Journal of Contemporary China",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "1067-0564"
+      ]
+    },
+    {
+      "title": "China Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "1324-9347"
+      ]
+    },
+    {
+      "title": "International Organization",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0020-8183"
+      ]
+    },
+    {
+      "title": "Journal of Conflict Resolution",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0022-0027"
+      ]
+    },
+    {
+      "title": "Review of International Political Economy",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0969-2290"
+      ]
+    },
+    {
+      "title": "International Studies Quarterly",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0020-8833"
+      ]
+    },
+    {
+      "title": "Foreign Affairs",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0015-7120"
+      ]
+    },
+    {
+      "title": "Marine Policy",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0308-597X"
+      ]
+    },
+    {
+      "title": "International Security",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0162-2889"
+      ]
+    },
+    {
+      "title": "World Politics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "POLITICAL SCIENCE, INTERNATIONAL RELATIONS",
+      "identifiers": [
+        "0043-8871"
+      ]
+    },
+    {
+      "title": "Yale Law Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0044-0094"
+      ]
+    },
+    {
+      "title": "Columbia Law Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0010-1958"
+      ]
+    },
+    {
+      "title": "Stanford Law Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0038-9765"
+      ]
+    },
+    {
+      "title": "California Law Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0008-1221"
+      ]
+    },
+    {
+      "title": "Texas Law Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0040-4411"
+      ]
+    },
+    {
+      "title": "Georgetown Law Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0016-8092"
+      ]
+    },
+    {
+      "title": "Michigan Law Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0026-2234"
+      ]
+    },
+    {
+      "title": "University of Pennsylvania Law Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0041-9907"
+      ]
+    },
+    {
+      "title": "Cornell Law Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0010-8847"
+      ]
+    },
+    {
+      "title": "Duke Law Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0012-7086"
+      ]
+    },
+    {
+      "title": "New York University Law Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0028-7881"
+      ]
+    },
+    {
+      "title": "Ucla Law Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0041-5650"
+      ]
+    },
+    {
+      "title": "Virginia Law Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0042-6601"
+      ]
+    },
+    {
+      "title": "Journal of Criminal Law and Criminology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LAW",
+      "identifiers": [
+        "0091-4169"
+      ]
+    },
+    {
+      "title": "Social Issues and Policy Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "1751-2395"
+      ]
+    },
+    {
+      "title": "American Journal of Sociology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0002-9602"
+      ]
+    },
+    {
+      "title": "Sociological Methods & Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0049-1241"
+      ]
+    },
+    {
+      "title": "British Journal of Sociology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0007-1315"
+      ]
+    },
+    {
+      "title": "Social Networks",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0378-8733"
+      ]
+    },
+    {
+      "title": "Sociological Methodology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0081-1750"
+      ]
+    },
+    {
+      "title": "Journal of Marriage and Family",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0022-2445"
+      ]
+    },
+    {
+      "title": "Sociological Theory",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0735-2751"
+      ]
+    },
+    {
+      "title": "European Sociological Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0266-7215"
+      ]
+    },
+    {
+      "title": "Social Forces",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0037-7732"
+      ]
+    },
+    {
+      "title": "Trauma Violence & Abuse",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "1524-8380"
+      ]
+    },
+    {
+      "title": "Child Maltreatment",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "1077-5595"
+      ]
+    },
+    {
+      "title": "Child Abuse & Neglect",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0145-2134"
+      ]
+    },
+    {
+      "title": "Health & Social Care in the Community",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0966-0410"
+      ]
+    },
+    {
+      "title": "Ethics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0014-1704"
+      ]
+    },
+    {
+      "title": "American Journal of Bioethics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "1526-5161"
+      ]
+    },
+    {
+      "title": "Current Anthropology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0011-3204"
+      ]
+    },
+    {
+      "title": "Journal of Human Evolution",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0047-2484"
+      ]
+    },
+    {
+      "title": "Annual Review of Anthropology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0084-6570"
+      ]
+    },
+    {
+      "title": "Evolutionary Anthropology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "1060-1538"
+      ]
+    },
+    {
+      "title": "American Journal of Biological Anthropology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "2692-7691"
+      ]
+    },
+    {
+      "title": "Cultural Anthropology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0886-7356"
+      ]
+    },
+    {
+      "title": "Journal of Anthropological Sciences",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "1827-4765"
+      ]
+    },
+    {
+      "title": "American Anthropologist",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0002-7294"
+      ]
+    },
+    {
+      "title": "Population and Development Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0098-7921"
+      ]
+    },
+    {
+      "title": "Population Studies-A Journal of Demography",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0032-4728"
+      ]
+    },
+    {
+      "title": "Population, Space and Place",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "1544-8444"
+      ]
+    },
+    {
+      "title": "Gender & Society",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "0891-2432"
+      ]
+    },
+    {
+      "title": "Journal of Consumer Culture",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SOCIOLOGY, ANTHROPOLOGY, DEMOGRAPHY",
+      "identifiers": [
+        "1469-5405"
+      ]
+    },
+    {
+      "title": "Regulation & Governance",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PUBLIC ADMINISTRATION",
+      "identifiers": [
+        "1748-5983"
+      ]
+    },
+    {
+      "title": "Public Management Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PUBLIC ADMINISTRATION",
+      "identifiers": [
+        "1471-9037"
+      ]
+    },
+    {
+      "title": "Social Science & Medicine",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PUBLIC ADMINISTRATION",
+      "identifiers": [
+        "0277-9536"
+      ]
+    },
+    {
+      "title": "Policy Sciences",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PUBLIC ADMINISTRATION",
+      "identifiers": [
+        "0032-2687"
+      ]
+    },
+    {
+      "title": "Policy Studies Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PUBLIC ADMINISTRATION",
+      "identifiers": [
+        "0190-292X"
+      ]
+    },
+    {
+      "title": "Journal of European Public Policy",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PUBLIC ADMINISTRATION",
+      "identifiers": [
+        "1350-1763"
+      ]
+    },
+    {
+      "title": "Climate Policy",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PUBLIC ADMINISTRATION",
+      "identifiers": [
+        "1469-3062"
+      ]
+    },
+    {
+      "title": "Health Affairs",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PUBLIC ADMINISTRATION",
+      "identifiers": [
+        "0278-2715"
+      ]
+    },
+    {
+      "title": "Health Policy and Planning",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PUBLIC ADMINISTRATION",
+      "identifiers": [
+        "0268-1080"
+      ]
+    },
+    {
+      "title": "Health Services Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PUBLIC ADMINISTRATION",
+      "identifiers": [
+        "0017-9124"
+      ]
+    },
+    {
+      "title": "Quality of Life Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PUBLIC ADMINISTRATION",
+      "identifiers": [
+        "0962-9343"
+      ]
+    },
+    {
+      "title": "American Journal of Public Health",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PUBLIC ADMINISTRATION",
+      "identifiers": [
+        "0090-0036"
+      ]
+    },
+    {
+      "title": "Landscape and Urban Planning",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0169-2046"
+      ]
+    },
+    {
+      "title": "Global Environmental Change：Human and Policy Dimensions",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0959-3780"
+      ]
+    },
+    {
+      "title": "Progress in Human Geography",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0309-1325"
+      ]
+    },
+    {
+      "title": "Progress in Planning",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0305-9006"
+      ]
+    },
+    {
+      "title": "Journal of Peasant Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0306-6150"
+      ]
+    },
+    {
+      "title": "Journal of Rural Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0743-0167"
+      ]
+    },
+    {
+      "title": "Journal of the American Oriental Society",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0003-0279"
+      ]
+    },
+    {
+      "title": "Journal of Asian Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0021-9118"
+      ]
+    },
+    {
+      "title": "Journal of the Royal Asiatic Society",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "1356-1863"
+      ]
+    },
+    {
+      "title": "Harvard Journal of Asiatic Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0073-0548"
+      ]
+    },
+    {
+      "title": "Sustainable Development",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0968-0802"
+      ]
+    },
+    {
+      "title": "Journal of the American Planning Association",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0194-4363"
+      ]
+    },
+    {
+      "title": "Cities",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0264-2751"
+      ]
+    },
+    {
+      "title": "Urban Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0042-0980"
+      ]
+    },
+    {
+      "title": "Habitat International",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0197-3975"
+      ]
+    },
+    {
+      "title": "Journal of Planning Education and Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0739-456X"
+      ]
+    },
+    {
+      "title": "Land Use Policy",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0264-8377"
+      ]
+    },
+    {
+      "title": "Remote Sensing of Environment",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0034-4257"
+      ]
+    },
+    {
+      "title": "Journal of Hazardous Materials",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0304-3894"
+      ]
+    },
+    {
+      "title": "Ecosystem Services",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "2212-0416"
+      ]
+    },
+    {
+      "title": "Renewable & Sustainable Energy Reviews",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "1364-0321"
+      ]
+    },
+    {
+      "title": "Environmental Science & Technology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0013-936X"
+      ]
+    },
+    {
+      "title": "Environment and Planning D: society and space",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0263-7758"
+      ]
+    },
+    {
+      "title": "Risk Analysis:An International Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PLANNING & DEVELOPMENT, URBAN STUDIES",
+      "identifiers": [
+        "0272-4332"
+      ]
+    },
+    {
+      "title": "Acta Numerica",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0962-4929"
+      ]
+    },
+    {
+      "title": "Advances in Computational Mathematics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1019-7168"
+      ]
+    },
+    {
+      "title": "Advances in Mathematics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0001-8708"
+      ]
+    },
+    {
+      "title": "American Journal of Mathematics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0002-9327"
+      ]
+    },
+    {
+      "title": "Annales de l'Institut Henri Poincaré C, Analyse non linéaire",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0294-1449"
+      ]
+    },
+    {
+      "title": "Annales Scientifiques de l'École Normale Supérieure",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0012-9593"
+      ]
+    },
+    {
+      "title": "Applied and Computational Harmonic Analysis",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1063-5203"
+      ]
+    },
+    {
+      "title": "Archive for Rational Mechanics and Analysis",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0003-9527"
+      ]
+    },
+    {
+      "title": "Bioinformatics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1367-4803"
+      ]
+    },
+    {
+      "title": "BMC Bioinformatics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1471-2105"
+      ]
+    },
+    {
+      "title": "Calculus of Variations and Partial Differential Equations",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0944-2669"
+      ]
+    },
+    {
+      "title": "Communications in Mathematical Physics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0010-3616"
+      ]
+    },
+    {
+      "title": "Communications in Partial Differential Equations",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0360-5302"
+      ]
+    },
+    {
+      "title": "Compositio Mathematica",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0010-437X"
+      ]
+    },
+    {
+      "title": "Computer Methods in Applied Mechanics and Engineering",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0045-7825"
+      ]
+    },
+    {
+      "title": "Discrete and Continuous Dynamical Systems",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1078-0947"
+      ]
+    },
+    {
+      "title": "Discrete and Continuous Dynamical Systems - Series B",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1531-3492"
+      ]
+    },
+    {
+      "title": "Duke Mathematical Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0012-7094"
+      ]
+    },
+    {
+      "title": "Ergodic Theory and Dynamical Systems",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0143-3857"
+      ]
+    },
+    {
+      "title": "Foundations of Computational Mathematics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1615-3375"
+      ]
+    },
+    {
+      "title": "Geometric And Functional Analysis",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1016-443X"
+      ]
+    },
+    {
+      "title": "Geometry & Topology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1465-3060"
+      ]
+    },
+    {
+      "title": "International Mathematics Research Notices",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1073-7928"
+      ]
+    },
+    {
+      "title": "Inverse Problems",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0266-5611"
+      ]
+    },
+    {
+      "title": "Journal de Mathématiques Pures et Appliquées",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0021-7824"
+      ]
+    },
+    {
+      "title": "Journal Fur Die Reine Und Angewandte Mathematik",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0075-4102"
+      ]
+    },
+    {
+      "title": "Journal of Algebra",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0021-8693"
+      ]
+    },
+    {
+      "title": "Journal of Algebraic Geometry",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1056-3911"
+      ]
+    },
+    {
+      "title": "Journal of Cryptology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0933-2790"
+      ]
+    },
+    {
+      "title": "Journal of Differential Geometry",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0022-040X"
+      ]
+    },
+    {
+      "title": "Journal of Functional Analysis",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0022-1236"
+      ]
+    },
+    {
+      "title": "Journal of Mathematical Physics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0022-2488"
+      ]
+    },
+    {
+      "title": "Journal of Nonlinear Science",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0938-8974"
+      ]
+    },
+    {
+      "title": "Journal of Physics A: Mathematical and Theoretical",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1751-8113"
+      ]
+    },
+    {
+      "title": "Journal of Scientific Computing",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0885-7474"
+      ]
+    },
+    {
+      "title": "Journal of the American Mathematical Society",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0894-0347"
+      ]
+    },
+    {
+      "title": "Journal of the European Mathematical Society",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1435-9855"
+      ]
+    },
+    {
+      "title": "Mathematical Programming",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0025-5610"
+      ]
+    },
+    {
+      "title": "Mathematische Annalen",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0025-5831"
+      ]
+    },
+    {
+      "title": "Mathematische Zeitschrift",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0025-5874"
+      ]
+    },
+    {
+      "title": "Memoirs of the AMS - American Mathematical Society",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0065-9266"
+      ]
+    },
+    {
+      "title": "Numerische Mathematik",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0029-599X"
+      ]
+    },
+    {
+      "title": "Physica D: Nonlinear Phenomena",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0167-2789"
+      ]
+    },
+    {
+      "title": "Physical Review E",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1539-3755"
+      ]
+    },
+    {
+      "title": "Proceedings of the London Mathematical Society",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0024-6115"
+      ]
+    },
+    {
+      "title": "Publications mathématiques de l'IHÉS",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0073-8301"
+      ]
+    },
+    {
+      "title": "Quantum Information & Computation",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1533-7146"
+      ]
+    },
+    {
+      "title": "Science China Mathematics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1674-7283"
+      ]
+    },
+    {
+      "title": "Selecta Mathematica, New Series",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1022-1824"
+      ]
+    },
+    {
+      "title": "SIAM Journal on Applied Mathematics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0036-1399"
+      ]
+    },
+    {
+      "title": "SIAM Journal on Computing",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0097-5397"
+      ]
+    },
+    {
+      "title": "SIAM Journal on Control and Optimization",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0363-0129"
+      ]
+    },
+    {
+      "title": "SIAM Journal on Imaging Sciences",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1936-4954"
+      ]
+    },
+    {
+      "title": "SIAM Journal on Mathematical Analysis",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0036-1410"
+      ]
+    },
+    {
+      "title": "SIAM Journal on Matrix Analysis and Applications",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0895-4798"
+      ]
+    },
+    {
+      "title": "SIAM Journal on Numerical Analysis",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0036-1429"
+      ]
+    },
+    {
+      "title": "SIAM Journal on Optimization",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1052-6234"
+      ]
+    },
+    {
+      "title": "SIAM Journal on Scientific Computing",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1064-8275"
+      ]
+    },
+    {
+      "title": "SIAM-ASA Journal on Uncertainty Quantification",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "2166-2525"
+      ]
+    },
+    {
+      "title": "SIAM Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0036-1445"
+      ]
+    },
+    {
+      "title": "Transactions of the American Mathematical Society",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0002-9947"
+      ]
+    },
+    {
+      "title": "Journal of Computational Biology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "1066-5277"
+      ]
+    },
+    {
+      "title": "Journal of Computational Physics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0021-9991"
+      ]
+    },
+    {
+      "title": "Mathematics of Computation",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0025-5718"
+      ]
+    },
+    {
+      "title": "Automatica",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0005-1098"
+      ]
+    },
+    {
+      "title": "Information and Computation",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "MATHEMATICS",
+      "identifiers": [
+        "0890-5401"
+      ]
+    },
+    {
+      "title": "Biostatistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "1465-4644"
+      ]
+    },
+    {
+      "title": "Biometrics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0006-341X"
+      ]
+    },
+    {
+      "title": "Annals Of Probability",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0091-1798"
+      ]
+    },
+    {
+      "title": "Probability Theory and Related Fields",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0178-8051"
+      ]
+    },
+    {
+      "title": "Annals of Applied Probability",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "1050-5164"
+      ]
+    },
+    {
+      "title": "Annals of Applied Statistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "1932-6157"
+      ]
+    },
+    {
+      "title": "Statistics in Medicine",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0277-6715"
+      ]
+    },
+    {
+      "title": "Statistical Methods in Medical Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0962-2802"
+      ]
+    },
+    {
+      "title": "Finance and Stochastics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0949-2984"
+      ]
+    },
+    {
+      "title": "Oxford Bulletin of Economics and Statistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0305-9049"
+      ]
+    },
+    {
+      "title": "Statistics and Computing",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0960-3174"
+      ]
+    },
+    {
+      "title": "Statistical Science",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0883-4237"
+      ]
+    },
+    {
+      "title": "Journal of Multivariate Analysis",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0047-259X"
+      ]
+    },
+    {
+      "title": "Statistica Sinica",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "1017-0405"
+      ]
+    },
+    {
+      "title": "Journal of Computational and Graphical Statistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "1061-8600"
+      ]
+    },
+    {
+      "title": "Electronic Journal of Statistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "1935-7524"
+      ]
+    },
+    {
+      "title": "Canadian Journal of Statistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0319-5724"
+      ]
+    },
+    {
+      "title": "Bayesian Analysis",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "1931-6690"
+      ]
+    },
+    {
+      "title": "Journal of the Royal Statistical Society Series C-Applied Statistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0035-9254"
+      ]
+    },
+    {
+      "title": "Journal of Statistical Planning and Inference",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0378-3758"
+      ]
+    },
+    {
+      "title": "Scandinavian Journal of Statistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0303-6898"
+      ]
+    },
+    {
+      "title": "Stochastic Processes and Their Applications",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "STATISTICS & PROBABILITY",
+      "identifiers": [
+        "0304-4149"
+      ]
+    },
+    {
+      "title": "Communication Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "COMMUNICATION",
+      "identifiers": [
+        "0093-6502"
+      ]
+    },
+    {
+      "title": "New Media & Society",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "COMMUNICATION",
+      "identifiers": [
+        "1461-4448"
+      ]
+    },
+    {
+      "title": "Journal of Advertising Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "COMMUNICATION",
+      "identifiers": [
+        "0021-8499"
+      ]
+    },
+    {
+      "title": "Journal of Computer-Mediated Communication",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "COMMUNICATION",
+      "identifiers": [
+        "1083-6101"
+      ]
+    },
+    {
+      "title": "Human Communication Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "COMMUNICATION",
+      "identifiers": [
+        "0360-3989"
+      ]
+    },
+    {
+      "title": "Health Communication",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "COMMUNICATION",
+      "identifiers": [
+        "1041-0236"
+      ]
+    },
+    {
+      "title": "Journal of Health Communication",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "COMMUNICATION",
+      "identifiers": [
+        "1081-0730"
+      ]
+    },
+    {
+      "title": "International Journal of Press-Politics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "COMMUNICATION",
+      "identifiers": [
+        "1940-1612"
+      ]
+    },
+    {
+      "title": "Journal of Advertising",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "COMMUNICATION",
+      "identifiers": [
+        "0091-3367"
+      ]
+    },
+    {
+      "title": "Modern Language Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0026-7902"
+      ]
+    },
+    {
+      "title": "Research on Language and Social Interaction",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0835-1813"
+      ]
+    },
+    {
+      "title": "Bilingualism- Language and Cognition",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "1366-7289"
+      ]
+    },
+    {
+      "title": "Language And Speech",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0023-8309"
+      ]
+    },
+    {
+      "title": "Language Learning",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0023-8333"
+      ]
+    },
+    {
+      "title": "Applied Psycholinguistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0142-7164"
+      ]
+    },
+    {
+      "title": "Second Language Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0267-6583"
+      ]
+    },
+    {
+      "title": "Studies in Second Language Acquisition",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0272-2631"
+      ]
+    },
+    {
+      "title": "English for Specific Purposes",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0889-4906"
+      ]
+    },
+    {
+      "title": "Language Learning & Technology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "1094-3501"
+      ]
+    },
+    {
+      "title": "Language Teaching Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "1362-1688"
+      ]
+    },
+    {
+      "title": "Interaction Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "1572-0373"
+      ]
+    },
+    {
+      "title": "International Journal of Speech-Language Pathology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "1754-9507"
+      ]
+    },
+    {
+      "title": "Journal of Second Language Writing",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "1060-3743"
+      ]
+    },
+    {
+      "title": "American Journal Of Speech-Language Pathology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "1058-0360"
+      ]
+    },
+    {
+      "title": "Language in Society",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0047-4045"
+      ]
+    },
+    {
+      "title": "Journal of Semantics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0167-5133"
+      ]
+    },
+    {
+      "title": "Mind & Language",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0268-1064"
+      ]
+    },
+    {
+      "title": "Topics in Language Disorders",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0271-8294"
+      ]
+    },
+    {
+      "title": "International Journal of Language & Communication Disorders",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "1368-2822"
+      ]
+    },
+    {
+      "title": "System",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0346-251X"
+      ]
+    },
+    {
+      "title": "International Journal of Bilingualism",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "1367-0069"
+      ]
+    },
+    {
+      "title": "Literary and Linguistic Computing",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0268-1145"
+      ]
+    },
+    {
+      "title": "Poetica-Zeitschrift Fur Sprach-Und Literaturwissenschaft",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0303-4178"
+      ]
+    },
+    {
+      "title": "Beiträge zur Geschichte der deutschen Sprache und Literatur",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "LINGUISTICS",
+      "identifiers": [
+        "0005-8076"
+      ]
+    },
+    {
+      "title": "Educational Researcher",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "0013-189X"
+      ]
+    },
+    {
+      "title": "Review of Educational Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "0034-6543"
+      ]
+    },
+    {
+      "title": "Internet and Higher Education",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "1096-7516"
+      ]
+    },
+    {
+      "title": "Educational Research Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "1747-938X"
+      ]
+    },
+    {
+      "title": "American Educational Research Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "0002-8312"
+      ]
+    },
+    {
+      "title": "British Journal of Educational Technology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "0007-1013"
+      ]
+    },
+    {
+      "title": "Educational Administration Quarterly",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "0003-161X"
+      ]
+    },
+    {
+      "title": "Sociology of Education",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "0038-0407"
+      ]
+    },
+    {
+      "title": "American Journal of Education",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "0195-6744"
+      ]
+    },
+    {
+      "title": "Teaching and Teacher Education",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "0742-051X"
+      ]
+    },
+    {
+      "title": "School Effectiveness and School Improvement",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "0924-3453"
+      ]
+    },
+    {
+      "title": "Journal of Educational and Behavioral Statistics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "1076-9986"
+      ]
+    },
+    {
+      "title": "Vocations and Learning",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "1874-785X"
+      ]
+    },
+    {
+      "title": "Journal of Research on Educational Effectiveness",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "1934-5747"
+      ]
+    },
+    {
+      "title": "Journal of Teacher Education",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "EDUCATION & EDUCATIONAL RESEARCH",
+      "identifiers": [
+        "0022-4871"
+      ]
+    },
+    {
+      "title": "Psychological Science",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PSYCHOLOGY",
+      "identifiers": [
+        "0956-7976"
+      ]
+    },
+    {
+      "title": "Cognitive Psychology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PSYCHOLOGY",
+      "identifiers": [
+        "0010-0285"
+      ]
+    },
+    {
+      "title": "Annual Review of Psychology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PSYCHOLOGY",
+      "identifiers": [
+        "0066-4308"
+      ]
+    },
+    {
+      "title": "Journal of Personality and Social Psychology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PSYCHOLOGY",
+      "identifiers": [
+        "0022-3514"
+      ]
+    },
+    {
+      "title": "Personality and Social Psychology Bulletin",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PSYCHOLOGY",
+      "identifiers": [
+        "0146-1672"
+      ]
+    },
+    {
+      "title": "Personality and Social Psychology Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PSYCHOLOGY",
+      "identifiers": [
+        "1088-8683"
+      ]
+    },
+    {
+      "title": "Journal of Experimental Social Psychology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PSYCHOLOGY",
+      "identifiers": [
+        "0022-1031"
+      ]
+    },
+    {
+      "title": "Journal of Health and Social Behavior",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PSYCHOLOGY",
+      "identifiers": [
+        "0022-1465"
+      ]
+    },
+    {
+      "title": "Journal of Applied Psychology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PSYCHOLOGY",
+      "identifiers": [
+        "0021-9010"
+      ]
+    },
+    {
+      "title": "Journal of Happiness Studies",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "PSYCHOLOGY",
+      "identifiers": [
+        "1389-4978"
+      ]
+    },
+    {
+      "title": "Sports Medicine",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SPORT SCIENCES",
+      "identifiers": [
+        "0112-1642"
+      ]
+    },
+    {
+      "title": "Medicine and Science in Sports and Exercise",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SPORT SCIENCES",
+      "identifiers": [
+        "0195-9131"
+      ]
+    },
+    {
+      "title": "Journal of Sports Sciences",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SPORT SCIENCES",
+      "identifiers": [
+        "0264-0414"
+      ]
+    },
+    {
+      "title": "British Journal of Sports Medicine",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SPORT SCIENCES",
+      "identifiers": [
+        "0306-3674"
+      ]
+    },
+    {
+      "title": "Exercise Immunology Review",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SPORT SCIENCES",
+      "identifiers": [
+        "1077-5552"
+      ]
+    },
+    {
+      "title": "American Journal of Sports Medicine",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "SPORT SCIENCES",
+      "identifiers": [
+        "0363-5465"
+      ]
+    },
+    {
+      "title": "Government Information Quarterly",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
+      "identifiers": [
+        "0740-624X"
+      ]
+    },
+    {
+      "title": "Journal of Strategic Information Systems",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
+      "identifiers": [
+        "0963-8687"
+      ]
+    },
+    {
+      "title": "International Journal of Information Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
+      "identifiers": [
+        "0268-4012"
+      ]
+    },
+    {
+      "title": "Information Systems Journal",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
+      "identifiers": [
+        "1350-1917"
+      ]
+    },
+    {
+      "title": "Journal of Knowledge Management",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
+      "identifiers": [
+        "1367-3270"
+      ]
+    },
+    {
+      "title": "Journal of Informetrics",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
+      "identifiers": [
+        "1751-1577"
+      ]
+    },
+    {
+      "title": "Journal of the Association for Information Science and Technology",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
+      "identifiers": [
+        "2330-1635"
+      ]
+    },
+    {
+      "title": "Journal of Documentation",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
+      "identifiers": [
+        "0022-0418"
+      ]
+    },
+    {
+      "title": "Library & Information Science Research",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
+      "identifiers": [
+        "0740-8188"
+      ]
+    },
+    {
+      "title": "Journal of Information Science",
+      "level": "一级A",
+      "scope": "外文",
+      "category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
+      "identifiers": [
+        "0165-5515"
+      ]
+    }
+  ]
+}

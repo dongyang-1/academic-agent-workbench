@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学术全流程因果实证与全文写作多智能体协作平台</title>
+  <link rel="stylesheet" href="/static/style.css?v=20261024_ui14">
+</head>
+<body>
+
+<!-- 图标系统：线性 SVG，颜色继承 currentColor，全站不再使用 emoji 充当图标 -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+  <symbol id="i-tree" viewBox="0 0 24 24"><path d="M4 6.5A1.5 1.5 0 0 1 5.5 5h3.2L10.4 7H18.5A1.5 1.5 0 0 1 20 8.5v9A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5z"/><path d="M8 11.5h8M8 15h5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 7a2.5 2.5 0 0 1 2.5-2.5h11A2.5 2.5 0 0 1 20 7v7a2.5 2.5 0 0 1-2.5 2.5H9.5L4.8 20z"/><path d="M8.5 9.5h7M8.5 12.5h4.5"/></symbol>
+  <symbol id="i-library" viewBox="0 0 24 24"><path d="M5 4.5h2.6v15H5zM9.4 4.5H12v15H9.4z"/><path d="M14.2 5.7l2.5-.7 3.2 13.6-2.5.7z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.2"/><path d="M15.6 15.6L20 20"/></symbol>
+  <symbol id="i-projects" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.6"/><rect x="13" y="4" width="7" height="7" rx="1.6"/><rect x="4" y="13" width="7" height="7" rx="1.6"/><rect x="13" y="13" width="7" height="7" rx="1.6"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 7.5h8M17.5 7.5H20M4 16.5h4M13.5 16.5H20"/><circle cx="14.5" cy="7.5" r="2.2"/><circle cx="10.5" cy="16.5" r="2.2"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6.5 3.5h7l4.5 4.5v12.5h-11.5z"/><path d="M13.5 3.5V8H18"/><path d="M9.5 12.5h5M9.5 16h5"/></symbol>
+  <symbol id="i-table" viewBox="0 0 24 24"><rect x="4" y="4.5" width="16" height="15" rx="2"/><path d="M4 10h16M10.5 10v9.5"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19.5h16"/><path d="M7.5 16.5V10M12 16.5V5.5M16.5 16.5v-4"/></symbol>
+  <symbol id="i-nodes" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.1"/><circle cx="6" cy="18.5" r="2.1"/><circle cx="18" cy="18.5" r="2.1"/><path d="M12 7.1v4.4M10.4 12.2L7.4 16.6M13.6 12.2l3 4.4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5.5v13M5.5 12h13"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 7h15"/><path d="M9.5 7V4.5h5V7"/><path d="M6.5 7l1 13h9l1-13"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4.5 19.5h4l10-10-4-4-10 10z"/><path d="M13.5 5.5l4 4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 19.5V5M12 5l-6 6M12 5l6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9.5l6 6 6-6"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.2" r="3.6"/><path d="M5.2 20c0-3.6 3.1-5.6 6.8-5.6s6.8 2 6.8 5.6"/></symbol>
+  <symbol id="i-log" viewBox="0 0 24 24"><path d="M5 6.5h14M5 12h14M5 17.5h9"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15.5V4.5M12 4.5L7.5 9M12 4.5L16.5 9"/><path d="M4.5 16.5v3h15v-3"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10.2 13.4a3.6 3.6 0 0 0 5.3.3l1.8-1.8a3.6 3.6 0 0 0-5.1-5.1l-1 1"/><path d="M13.8 10.6a3.6 3.6 0 0 0-5.3-.3l-1.8 1.8a3.6 3.6 0 0 0 5.1 5.1l1-1"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3"/><path d="M19.8 4.8v4.4h-4.4"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3.8l8 4.2-8 4.2-8-4.2z"/><path d="M4 12.4l8 4.2 8-4.2"/><path d="M4 16.6l8 4.2 8-4.2"/></symbol>
+</svg>
+
+  <!-- 顶部状态栏 -->
+  <header class="header-bar">
+    <div class="brand-section">
+      <div class="brand-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 18.5V10M12 18.5V5.5M18.5 18.5v-6" stroke="#fff" stroke-width="1.9" stroke-linecap="round" fill="none"/><circle cx="5.5" cy="8.6" r="2" fill="#fff"/><circle cx="12" cy="4.2" r="2" fill="#fff"/><circle cx="18.5" cy="10.6" r="2" fill="#fff"/></svg></div>
+      <div>
+        <div class="brand-title">学术全流程因果实证分析与全文写作智能体工作台</div>
+        <div class="brand-subtitle">简约明亮学术版 · 多智能体协同 · IDE 多标签页 · 资料库与 Part 3 写作全贯通</div>
+      </div>
+    </div>
+    <div class="status-badge-group">
+      <div class="badge badge-project" id="currentProjectBadge" onclick="openProjectsModal()" style="cursor: pointer;" title="点击切换或新建项目">
+        <svg class="ic" aria-hidden="true"><use href="#i-projects"></use></svg><span id="currentProjectNameDisplay">国家碳交易试点政策研究</span> ▾
+      </div>
+      <div class="badge">
+        <span class="badge-dot" id="remeStatusDot"></span>
+        <span id="remeStatusText">ReMe 记忆连接正常</span>
+      </div>
+      <div class="badge" style="font-family: var(--font-mono); font-size: 0.7rem;">
+        会话: <span id="currentSessionIdDisplay">初始化中...</span>
+      </div>
+      <button class="btn-header btn-with-icon" onclick="openProjectsModal()"><svg class="ic" aria-hidden="true"><use href="#i-plus"></use></svg>新建项目</button>
+    </div>
+  </header>
+
+  <!-- 主工作台框架 -->
+  <div class="app-main-layout">
+
+    <!-- ======================================================================
+         最左侧竖向目录主导航栏 (#navSidebar)
+         ====================================================================== -->
+    <nav class="nav-sidebar" id="navSidebar">
+      <!-- 导航 1: 对话工作台 -->
+      <button class="nav-item active" id="navBtnChat" onclick="openIdeTab('chat')" title="对话工作台 (多智能体交互对话核心界面)">
+        <span class="nav-icon"><svg class="ic" aria-hidden="true"><use href="#i-chat"></use></svg></span>
+        <span class="nav-label">对话</span>
+      </button>
+
+      <!-- 导航块 3: 资料库 -->
+      <button class="nav-item" id="navBtnLibrary" onclick="openIdeTab('library')" title="资料库 (存放检索保存与上传文献，供 Part 3 全文写作调用)">
+        <span class="nav-icon"><svg class="ic" aria-hidden="true"><use href="#i-library"></use></svg></span>
+        <span class="nav-label">资料库</span>
+        <span class="nav-badge-dot" id="libraryUpdateDot" style="display: none;"></span>
+      </button>
+
+      <!-- 导航块 4: 文献检索 (Part 1 - EconLit Workspace) -->
+      <button class="nav-item" id="navBtnEconLit" onclick="openIdeTab('econlit')" title="文献检索 (Part 1 EconLit 工作台，IDE 标签页展示)">
+        <span class="nav-icon"><svg class="ic" aria-hidden="true"><use href="#i-search"></use></svg></span>
+        <span class="nav-label">文献检索</span>
+      </button>
+
+      <!-- 导航 4: 数据处理（数据集上传与列角色映射） -->
+      <button class="nav-item" id="navBtnDataMap" onclick="openIdeTab('datamap')" title="数据处理：上传数据集、识别列角色、生成分析规格">
+        <span class="nav-icon"><svg class="ic" aria-hidden="true"><use href="#i-table"></use></svg></span>
+        <span class="nav-label">数据处理</span>
+      </button>
+
+      <!-- 导航 5: 草稿箱（按期刊格式排版与导出） -->
+      <button class="nav-item" id="navBtnDrafts" onclick="openIdeTab('drafts')" title="草稿箱：存草稿、选期刊格式、导出 Word">
+        <span class="nav-icon"><svg class="ic" aria-hidden="true"><use href="#i-doc"></use></svg></span>
+        <span class="nav-label">草稿</span>
+      </button>
+
+      <!-- 导航 6: 项目库切换 -->
+      <button class="nav-item" id="navBtnProjects" onclick="openProjectsModal()" title="项目库 (管理与新建研究项目)">
+        <span class="nav-icon"><svg class="ic" aria-hidden="true"><use href="#i-projects"></use></svg></span>
+        <span class="nav-label">项目库</span>
+      </button>
+
+      <div class="nav-spacer"></div>
+
+      <!-- 底部辅助配置 -->
+      <button class="nav-item" onclick="openLLMConfigModal()" title="大模型 API 与网络配置">
+        <span class="nav-icon"><svg class="ic" aria-hidden="true"><use href="#i-settings"></use></svg></span>
+        <span class="nav-label">配置</span>
+      </button>
+    </nav>
+
+    <!-- ======================================================================
+         三栏可自由拖拽调整宽度工作区容器
+         ====================================================================== -->
+    <div class="workspace-container" id="workspaceContainer">
+
+      <!-- --------------------------------------------------------------------
+           左栏：IDE 资源管理器 / 文件目录树 (参考 VS Code Explorer)
+           -------------------------------------------------------------------- -->
+      <section class="col-panel explorer-panel" id="colLeft" style="width: 272px; min-width: 220px; max-width: 600px;">
+        
+        <!-- Explorer 顶栏：标题与全局操作按钮 -->
+        <div class="explorer-header">
+          <div class="explorer-header-title">
+            <span class="explorer-icon"></span>
+            <span>资源管理器</span>
+          </div>
+          <div class="explorer-header-actions">
+            <button class="btn-icon" onclick="loadFileTree(true)" title="刷新目录结构"><svg class="ic" aria-hidden="true"><use href="#i-refresh"></use></svg></button>
+            <button class="btn-icon" onclick="toggleAllFolders()" title="折叠/展开所有文件夹"><svg class="ic" aria-hidden="true"><use href="#i-down"></use></svg></button>
+          </div>
+        </div>
+
+        <!-- 当前活动项目根节点 -->
+        <div class="tree-project-root" id="treeProjectRoot" title="当前活动项目工作区">
+          <span class="tree-root-icon"></span>
+          <span class="tree-root-name" id="treeRootProjectName">国家碳交易试点政策研究</span>
+          <span class="tree-root-badge">当前项目</span>
+        </div>
+
+        <!-- 树形文件夹与文件列表容器 (JS 动态渲染并自带完整语义结构) -->
+        <div class="explorer-tree-body" id="projectFileTreeContainer">
+          <!-- 树形结构由 loadFileTree() 动态渲染 -->
+        </div>
+
+        <!-- 底部快捷提示卡片 -->
+        <div class="explorer-footer-hint">
+          <span>提示：点击文件即在中间 IDE 编辑区加页浏览与操作</span>
+        </div>
+
+      </section>
+
+      <!-- 拖拽手柄 1：调节左栏与中栏 -->
+      <div class="resizer" id="resizerLeft" title="拖动调节左侧目录树宽度"></div>
+
+      <!-- --------------------------------------------------------------------
+           中栏：IDE 多标签页编辑器工作台 (#colCenter)
+           -------------------------------------------------------------------- -->
+      <main class="col-panel ide-workspace" id="colCenter" style="flex: 1; min-width: 380px;">
+        
+        <!-- 顶部标签栏：只承载动态打开的文件标签，没有标签时自动隐藏 -->
+        <div class="ide-tab-bar" id="ideTabBar" hidden></div>
+
+        <!-- IDE 视图内容容器 -->
+        <div class="ide-view-container" id="ideViewContainer">
+
+          <!-- 视图 1: 智能体对话核心工作台 (#viewChat) -->
+          <div class="ide-view-page active" id="viewChat">
+
+            <!-- 对话目标：分段切换当前对话的智能体 -->
+            <div class="chat-head">
+              <span class="chat-head-label">对话目标</span>
+              <div class="chat-agent-switch">
+                <button class="agent-pill-btn active" data-agent="coordinator" onclick="switchChatAgent(this, 'coordinator')">
+                  <svg class="ic" aria-hidden="true"><use href="#i-nodes"></use></svg>协同总控
+                </button>
+                <button class="agent-pill-btn" data-agent="literature_search" onclick="switchChatAgent(this, 'literature_search')">
+                  <svg class="ic" aria-hidden="true"><use href="#i-library"></use></svg>文献检索
+                </button>
+                <button class="agent-pill-btn" data-agent="empirical_research" onclick="switchChatAgent(this, 'empirical_research')">
+                  <svg class="ic" aria-hidden="true"><use href="#i-chart"></use></svg>因果实证
+                </button>
+                <button class="agent-pill-btn" data-agent="academic_writing" onclick="switchChatAgent(this, 'academic_writing')">
+                  <svg class="ic" aria-hidden="true"><use href="#i-doc"></use></svg>全文写作
+                </button>
+              </div>
+            </div>
+
+            <!-- 消息流（唯一滚动区域） -->
+            <div class="chat-message-list" id="chatMessageList"></div>
+
+            <!-- 回到底部：上翻历史时出现 -->
+            <button type="button" id="chatJumpBottom" class="chat-jump-bottom"
+                    onclick="scrollChatToBottom(true)">
+              <svg class="ic" aria-hidden="true"><use href="#i-down"></use></svg>回到最新
+            </button>
+
+            <!-- 输入区：固定在底部，不随消息滚动 -->
+            <div class="chat-composer">
+              <div class="prompt-chips">
+                <button class="chip-btn" onclick="sendQuickPrompt('帮我调取资料库全部文献并结合实证结果撰写期刊级论文全文初稿')">结合资料库撰写整篇论文</button>
+                <button class="chip-btn" onclick="sendQuickPrompt('请为当前课题推导基准假说 H1 与调节效应假说 H2')">推导 H1 / H2 假说</button>
+                <button class="chip-btn" onclick="sendQuickPrompt('请严格排查控制变量中是否存在衍生形态引发的多重共线性')">排查共线性风险</button>
+                <button class="chip-btn" onclick="sendQuickPrompt('请打开 EconLit 检索面板为我检索前沿高水平顶刊文献')">启动文献多源检索</button>
+              </div>
+              <div class="composer-box">
+                <textarea id="chatInputText" class="chat-textarea" rows="1"
+                          placeholder="向当前智能体提问，或直接下达执行指令…"></textarea>
+                <button type="button" class="btn-send btn-chat-send" id="btnSendChat"
+                        onclick="sendChatMessage()" title="发送（Enter）">
+                  <svg class="ic" aria-hidden="true"><use href="#i-send"></use></svg>
+                </button>
+              </div>
+              <div class="composer-hint">Enter 发送 · Shift + Enter 换行</div>
+            </div>
+
+          </div>
+
+          <!-- 视图：草稿箱（草稿 + 六刊格式 + 导出） -->
+          <div class="ide-view-page" id="viewDrafts">
+            <div class="drafts-layout">
+              <aside class="drafts-side">
+                <div class="drafts-side-head">
+                  <span>草稿</span>
+                  <button class="icon-btn" onclick="createDraft()" title="新建草稿">
+                    <svg class="ic" aria-hidden="true"><use href="#i-plus"></use></svg>
+                  </button>
+                </div>
+                <div class="drafts-list" id="draftsList"></div>
+              </aside>
+
+              <section class="drafts-main">
+                <div class="drafts-toolbar">
+                  <input id="draftTitle" class="drafts-title-input" placeholder="草稿标题">
+                  <select id="draftJournal" class="drafts-journal-select" title="目标期刊"></select>
+                  <button class="btn-header btn-with-icon" onclick="saveDraft()">
+                    <svg class="ic" aria-hidden="true"><use href="#i-check"></use></svg>保存
+                  </button>
+                  <button class="btn-header btn-with-icon" onclick="previewDraft()">
+                    <svg class="ic" aria-hidden="true"><use href="#i-layers"></use></svg>按格式预览
+                  </button>
+                  <button class="btn-header btn-with-icon" onclick="exportDraft()">
+                    <svg class="ic" aria-hidden="true"><use href="#i-doc"></use></svg>导出 Word
+                  </button>
+                  <button class="icon-btn danger" onclick="deleteDraft()" title="删除当前草稿">
+                    <svg class="ic" aria-hidden="true"><use href="#i-trash"></use></svg>
+                  </button>
+                </div>
+
+                <div class="drafts-body">
+                  <textarea id="draftContent" class="drafts-editor" spellcheck="false"
+                    placeholder="用 # 标题分章节，例如：&#10;# 摘要&#10;本文利用……&#10;# 引言&#10;……&#10;# 实证结果&#10;……"></textarea>
+                  <div class="drafts-preview" id="draftPreview" hidden></div>
+                </div>
+
+                <div class="drafts-status" id="draftStatus">未选择草稿</div>
+              </section>
+            </div>
+          </div>
+
+          <!-- 视图 2: EconLit 文献检索工作台 (#viewEconLit) - 基于 part1-paper/web 精髓打造 -->
+          <div class="ide-view-page" id="viewEconLit">
+            <div class="econlit-container">
+              
+              <!-- 左侧检索条件配置表单 -->
+              <aside class="econlit-aside">
+                <div class="econlit-section">
+                  <div class="econlit-section-title">
+                    <span>研究范围与检索式</span>
+                    <small style="color: var(--text-light); font-weight: normal;">SEARCH BRIEF</small>
+                  </div>
+                  <div class="econlit-field">
+                    <label>经济学核心问题</label>
+                    <textarea id="econlitQuestion" class="econlit-textarea" rows="3" placeholder="例如：国家碳排放权交易试点(ETS)对企业数字化转型的政策效应"></textarea>
+                  </div>
+                  <div class="econlit-field">
+                    <label>英文工作检索式 (自动同步)</label>
+                    <input id="econlitQuery" class="econlit-input" type="text" placeholder="carbon emission trading AND digital transformation">
+                  </div>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                    <div class="econlit-field">
+                      <label>起始年份</label>
+                      <input id="econlitStartYear" class="econlit-input" type="number" value="2015">
+                    </div>
+                    <div class="econlit-field">
+                      <label>结束年份</label>
+                      <input id="econlitEndYear" class="econlit-input" type="number" value="2026">
+                    </div>
+                  </div>
+                  <div class="econlit-field">
+                    <label>每来源上限条数</label>
+                    <input id="econlitLimit" class="econlit-input" type="number" value="10" min="1" max="50">
+                  </div>
+                </div>
+
+                <div class="econlit-section">
+                  <div class="econlit-section-title">
+                    <span>数据来源选择</span>
+                    <button class="btn-header" style="font-size: 0.65rem; padding: 1px 5px;" onclick="toggleAllSources()">全选/反选</button>
+                  </div>
+                  <div class="source-checkbox-grid">
+                    <label class="source-checkbox-item"><input type="checkbox" checked value="semantic_scholar"> Semantic Scholar</label>
+                    <label class="source-checkbox-item"><input type="checkbox" checked value="crossref"> Crossref</label>
+                    <label class="source-checkbox-item"><input type="checkbox" checked value="openalex"> OpenAlex</label>
+                    <label class="source-checkbox-item"><input type="checkbox" checked value="arxiv"> arXiv Econ</label>
+                    <label class="source-checkbox-item"><input type="checkbox" checked value="nber"> NBER Papers</label>
+                    <label class="source-checkbox-item"><input type="checkbox" checked value="ssrn"> SSRN</label>
+                  </div>
+                </div>
+
+                <div class="econlit-section" style="margin-top: auto;">
+                  <button type="button" class="btn-primary-action" id="btnEconlitSearch" onclick="runEconLitDirectSearch()">
+                    <span></span> 开始多源检索与清洗
+                  </button>
+                  <p style="text-align: center; font-size: 0.68rem; color: var(--text-muted); margin-top: 8px;">
+                    本地异步抓取 · 自动完成期刊权威定级与去重
+                  </p>
+                </div>
+              </aside>
+
+              <!-- 右侧结果浏览与操作区 -->
+              <main class="econlit-main">
+                <!-- 概览指标卡片条 -->
+                <div class="metric-strip-modern">
+                  <div class="metric-card-modern">
+                    <span>去重文献</span>
+                    <strong id="econlitMetricRecords">0</strong>
+                    <small>records</small>
+                  </div>
+                  <div class="metric-card-modern">
+                    <span>成功来源</span>
+                    <strong id="econlitMetricSources">6</strong>
+                    <small>academic sources</small>
+                  </div>
+                  <div class="metric-card-modern">
+                    <span>开放全文</span>
+                    <strong id="econlitMetricPdfs">0</strong>
+                    <small>PDF links</small>
+                  </div>
+                  <div class="metric-card-modern">
+                    <span>年份范围</span>
+                    <strong id="econlitMetricYears">2015-2026</strong>
+                    <small>coverage</small>
+                  </div>
+                  <div class="metric-card-modern">
+                    <span>平均评分</span>
+                    <strong id="econlitMetricScore">88.5</strong>
+                    <small>quality score</small>
+                  </div>
+                  <div class="metric-card-modern">
+                    <span>已保存资料库</span>
+                    <strong id="econlitMetricSaved">0</strong>
+                    <small>in library</small>
+                  </div>
+                </div>
+
+                <!-- 结果表格与高级筛选工具栏 -->
+                <div class="econlit-table-card">
+                  <div class="econlit-toolbar">
+                    <input id="econlitFilterText" class="econlit-input" style="width: 220px;" type="search" placeholder="筛选题名、作者、期刊、方法..." oninput="filterEconLitTable()">
+                    
+                    <select id="filterSource" class="econlit-select" onchange="filterEconLitTable()" title="按数据来源筛选">
+                      <option value="">全部来源</option>
+                    </select>
+
+                    <select id="filterJournalLevel" class="econlit-select" onchange="filterEconLitTable()" title="按期刊等级筛选">
+                      <option value="">全部期刊等级</option>
+                    </select>
+
+                    <select id="filterScreening" class="econlit-select" onchange="filterEconLitTable()" title="按人工筛选决策筛选">
+                      <option value="">全部筛选状态</option>
+                      <option value="include">纳入</option>
+                      <option value="maybe">待定</option>
+                      <option value="exclude">排除</option>
+                      <option value="unscreened">未筛选</option>
+                    </select>
+
+                    <label class="switch-label" title="仅查看包含免费开放全文 PDF 的文献">
+                      <input type="checkbox" id="filterOa" onchange="filterEconLitTable()">
+                      <span>仅开放全文</span>
+                    </label>
+
+                    <select id="sortResults" class="econlit-select" onchange="filterEconLitTable()" title="候选排序模式">
+                      <option value="score">综合评分最高</option>
+                      <option value="latest">最新发表优先</option>
+                      <option value="citations">引用量优先</option>
+                      <option value="title">题名 A-Z</option>
+                    </select>
+
+                    <div style="flex: 1;"></div>
+
+                    <button class="btn-header" onclick="saveAllSelectedToLibrary()" title="将选中文献存入资料库供 Part 3 全文写作调用">存入资料库</button>
+                    <button class="btn-header" onclick="saveSelectedToZotero()" title="保存选中文献至本机 Zotero 选中收藏夹">存至 Zotero</button>
+                    <button class="btn-header" onclick="batchOpenPdfs()" title="新标签页批量打开已选中的开放 PDF">打开 PDF</button>
+                    <button class="btn-header" onclick="exportEconLitBibtex()" title="导出 BibTeX 引用文件">BibTeX</button>
+                  </div>
+
+                  <div style="overflow-x: auto; max-height: calc(100vh - 290px);">
+                    <table class="econlit-table">
+                      <thead>
+                        <tr>
+                          <th style="width: 32px;"><input type="checkbox" id="econlitCheckAll" onchange="toggleCheckAllRecords(this)" title="全选当前筛选结果"></th>
+                          <th>文献题名 / 摘要简评</th>
+                          <th>作者</th>
+                          <th>年份</th>
+                          <th>期刊来源 / 等级</th>
+                          <th>数据源</th>
+                          <th>综合分</th>
+                          <th>获取 / 直达</th>
+                          <th>筛选</th>
+                          <th>操作</th>
+                        </tr>
+                      </thead>
+                      <tbody id="econlitTableBody">
+                        <tr>
+                          <td colspan="10" style="text-align: center; color: var(--text-muted); padding: 40px;">
+                            请在左侧确认检索问题并点击“开始多源检索与清洗”，或从左侧直接载入。
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div style="padding: 8px 16px; background: var(--bg-subtle); border-top: 1px solid var(--border-color); font-size: 0.72rem; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
+                    <span id="econlitVisibleCount">显示 0 / 0 条</span>
+                    <span id="econlitStatusText">准备就绪</span>
+                  </div>
+                </div>
+
+              </main>
+
+            </div>
+          </div>
+
+          <!-- 视图 3: 课题资料库管理工作台 (#viewLibrary) -->
+          <div class="ide-view-page" id="viewLibrary">
+            <div class="library-view">
+
+              <header class="library-head">
+                <div class="library-head-main">
+                  <h2 class="library-title">资料库<span class="library-count" id="libraryItemCount">0</span></h2>
+                  <p class="library-sub">
+                    Part 1 检索保存的文献，以及你上传的数据、政策文本；Part 3 撰写全文时会引用这里的全部内容。
+                  </p>
+                </div>
+                <div class="library-head-actions">
+                  <button class="btn-header btn-with-icon" onclick="openUploadAssetModal()">
+                    <svg class="ic" aria-hidden="true"><use href="#i-upload"></use></svg>上传资料
+                  </button>
+                  <button class="btn-primary-action btn-with-icon" onclick="triggerPart3FromLibrary()">
+                    <svg class="ic" aria-hidden="true"><use href="#i-doc"></use></svg>据此撰写全文
+                  </button>
+                </div>
+              </header>
+
+              <div class="library-toolbar">
+                <div class="library-filters">
+                  <button class="lib-chip active" data-filter="all" onclick="setLibraryFilter('all', this)">
+                    全部<span class="lib-chip-num" id="libCountAll">0</span>
+                  </button>
+                  <button class="lib-chip" data-filter="search_saved" onclick="setLibraryFilter('search_saved', this)">
+                    检索保存<span class="lib-chip-num" id="libCountSaved">0</span>
+                  </button>
+                  <button class="lib-chip" data-filter="user_uploaded" onclick="setLibraryFilter('user_uploaded', this)">
+                    我自己上传<span class="lib-chip-num" id="libCountUpload">0</span>
+                  </button>
+                </div>
+                <div class="library-search">
+                  <svg class="ic" aria-hidden="true"><use href="#i-search"></use></svg>
+                  <input id="librarySearchInput" type="search" placeholder="搜索题名、作者或期刊"
+                         oninput="applyLibraryFilter()">
+                </div>
+              </div>
+
+              <div class="library-grid" id="libraryGridContainer">
+                <!-- 卡片由 app.js 渲染 -->
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ==============================================================
+               视图 4: 实证数据列角色映射 (#viewDataMap)
+               说明：上传数据集 → 读取真实列 → 指定列角色 → 校验后随任务提交
+               ============================================================== -->
+          <div class="ide-view-page" id="viewDataMap">
+            <div class="dp-view">
+
+              <header class="dp-head">
+                <div>
+                  <h2 class="dp-title">数据处理</h2>
+                  <p class="dp-sub">抓取或上传数据集，确认列角色，再交给实证智能体出结果。</p>
+                </div>
+              </header>
+
+              <div class="dp-scroll">
+
+                <section class="dp-section">
+                  <div class="dp-section-head">
+                    <h3>数据搜集</h3>
+                    <span id="collectState" class="verdict-chip verdict-grey">未开始</span>
+                  </div>
+                  <div class="dp-form">
+                    <div class="dp-field">
+                      <label for="collectProvider">数据源</label>
+                      <select id="collectProvider" class="collect-input" onchange="onCollectProviderChange()"></select>
+                    </div>
+                    <div class="dp-field">
+                      <label for="collectIndicator">指标</label>
+                      <select id="collectIndicator" class="collect-input"></select>
+                    </div>
+                    <div class="dp-field" id="collectCountryRow">
+                      <label for="collectCountry">国家 / 地区</label>
+                      <select id="collectCountry" class="collect-input">
+                        <option value="CHN">中国</option>
+                        <option value="USA">美国</option>
+                        <option value="JPN">日本</option>
+                        <option value="DEU">德国</option>
+                        <option value="IND">印度</option>
+                        <option value="GBR">英国</option>
+                      </select>
+                    </div>
+                    <div class="dp-field">
+                      <label>年份区间</label>
+                      <div class="dp-year">
+                        <input id="collectStart" class="collect-input" type="number" value="2010" min="1960" max="2100">
+                        <span class="dp-year-sep">—</span>
+                        <input id="collectEnd" class="collect-input" type="number" value="2023" min="1960" max="2100">
+                      </div>
+                    </div>
+                    <div class="dp-field dp-field-wide" id="collectUrlRow" style="display: none;">
+                      <label for="collectUrl">CSV 直链</label>
+                      <input id="collectUrl" class="collect-input" type="text" placeholder="https://example.com/data.csv">
+                    </div>
+                  </div>
+                  <div class="dp-actions">
+                    <button class="btn-primary-action btn-with-icon" style="padding: 6px 14px;" onclick="runDataCollect()">
+                      <svg class="ic" aria-hidden="true"><use href="#i-refresh"></use></svg>开始抓取
+                    </button>
+                    <span class="dp-hint" id="collectHint">抓取结果会自动登记为数据集，可直接用于列角色映射。</span>
+                  </div>
+                </section>
+
+                <section class="dp-section">
+                  <div class="dp-section-head">
+                    <h3>数据集</h3>
+                    <button class="btn-header" onclick="loadDatasetList()">历史数据集</button>
+                  </div>
+                  <div class="data-dropzone" id="dataDropzone" onclick="document.getElementById('dataFileInput').click()">
+                    <svg class="ic dz-ico" aria-hidden="true"><use href="#i-upload"></use></svg>
+                    <div class="dz-main">点击或拖入数据文件</div>
+                    <div class="dz-hint">CSV · TSV · Excel · Parquet · Stata(.dta) · JSON</div>
+                  </div>
+                  <input type="file" id="dataFileInput" accept=".csv,.tsv,.xlsx,.xls,.parquet,.dta,.json,.txt"
+                         style="display: none;" onchange="onDatasetFileChosen(event)">
+                  <div id="dataFileRow" style="display: none;"></div>
+                </section>
+
+                <section class="dp-section">
+                  <div class="dp-section-head">
+                    <h3>列角色映射</h3>
+                    <span id="mappingStateChip" class="verdict-chip verdict-grey">未配置</span>
+                  </div>
+                  <div class="role-map-list" id="roleMapList">
+                    <div class="empty-hint">先选一个数据集，系统会读取真实列名供你指定被解释变量、处理变量与聚类维度。</div>
+                  </div>
+
+                  <div class="dp-subhead">
+                    <h4>列画像<span id="colProfileCount"></span></h4>
+                  </div>
+                  <div class="col-profile-list" id="colProfileList">
+                    <div class="empty-hint">暂无列信息。</div>
+                  </div>
+                </section>
+
+                <section class="dp-section">
+                  <div class="dp-section-head">
+                    <h3>数据预览</h3>
+                    <button class="btn-header" onclick="previewDatasetRows()">重新预览</button>
+                  </div>
+                  <div class="table-preview-box" id="dataPreviewBox">
+                    <div class="empty-hint">暂无预览数据。</div>
+                  </div>
+                </section>
+
+                <div class="dp-footer">
+                  <button class="btn-primary-action btn-with-icon" onclick="applyMappingAndClose()">
+                    <svg class="ic" aria-hidden="true"><use href="#i-check"></use></svg>应用映射并返回对话
+                  </button>
+                  <button class="btn-header" onclick="clearMapping()">清空映射</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ==============================================================
+               视图 5: 运行留痕与回环时间线 (#viewRunTrace)
+               ============================================================== -->
+          <div class="ide-view-page" id="viewRunTrace">
+            <div class="run-view">
+              <div class="md-section-label" style="padding-left: 0;">
+                <span>运行留痕</span>
+                <span style="flex:1;"></span>
+                <button class="btn-header" style="font-size: 0.68rem; padding: 2px 8px;" onclick="exportPaperDocx()" id="btnExportDocx">导出 Word</button>
+                <button class="btn-header" style="font-size: 0.68rem; padding: 2px 8px;" onclick="loadRunTrace()">刷新</button>
+              </div>
+              <div id="runTraceBody">
+                <div class="empty-hint">尚无运行记录。启动一次实证分析后，这里会显示每次策略尝试与审稿判定。</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==============================================================
+               视图 6: Part 1 文献检索工作台 (#viewLitSearch)
+               原 :8765 独立前端的能力已并入本页，:8088 为唯一入口
+               ============================================================== -->
+          <div class="ide-view-page" id="viewLitSearch">
+            <div class="run-view">
+
+              <div class="md-section-label" style="padding-left: 0;">
+                <span>检索方案</span>
+                <button class="btn-header" style="font-size: 0.68rem; padding: 2px 8px;" onclick="refreshLitStatus()">Zotero 状态</button>
+              </div>
+
+              <div class="econlit-field">
+                <label>研究问题</label>
+                <textarea id="litQuestion" class="econlit-textarea" rows="2"
+                          placeholder="例如：碳排放权交易试点对企业全要素生产率的因果效应"></textarea>
+              </div>
+
+              <div style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 12px;">
+                <button class="btn-primary-action" style="width: auto; padding: 6px 14px;" onclick="generateLitProtocol()">生成检索方案</button>
+                <button class="btn-screen" onclick="runLitSearch()">执行多源检索</button>
+              </div>
+
+              <div class="md-section-label" style="padding-left: 0;">
+                <span>中文文献通道</span>
+                <span class="verdict-chip verdict-grey">联网检索覆盖有限</span>
+              </div>
+              <div class="cn-lit-panel">
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                  <input id="cnLitQuery" class="econlit-input" style="flex: 1; min-width: 220px;"
+                         placeholder="中文检索式，如：成本预算绩效管理 市政管养">
+                  <button class="btn-primary-action" style="width: auto; padding: 6px 14px;" onclick="runCnLitSearch()">中文检索</button>
+                </div>
+                <div id="cnLitCoverage" class="cn-lit-note">
+                  联网中文检索走 OpenAlex / Crossref，二者对中文期刊收录有限，多数 CSSCI 期刊未分配 DOI。
+                  要覆盖《经济研究》《管理世界》等中文顶刊，请用下方「中文库直达」检索后导出题录，再回导到本页统一管理。
+                </div>
+                <div class="md-section-label" style="padding-left: 0; margin-top: 10px;">
+                  <span>中文库直达（带预填检索式）</span>
+                </div>
+                <ul class="cn-lib-list" id="cnLibList">
+                  <li class="empty-hint">填入检索式后点击「中文检索」，这里会列出 CNKI / 万方 / 维普 / 国家哲社文献中心的直达链接。</li>
+                </ul>
+                <div class="md-section-label" style="padding-left: 0; margin-top: 10px;">
+                  <span>题录回导</span>
+                </div>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                  <label class="btn-screen" style="cursor: pointer; margin: 0;">
+                    选择 .ris / .bib / .enw 文件
+                    <input type="file" id="cnLitImportFile" accept=".ris,.bib,.enw,.txt,.nbib"
+                           style="display: none;" onchange="importCnLitFile(this)">
+                  </label>
+                  <span id="cnLitImportHint" class="detail-meta">把在上述中文库导出的题录文件回导进来，与联网检索结果合并管理。</span>
+                </div>
+              </div>
+
+              <div id="litProtocolBox" class="empty-hint">尚未生成检索方案。填入研究问题后点击「生成检索方案」，可查看中英文检索概念块与纳入/排除标准。</div>
+
+              <div class="md-section-label" style="padding-left: 0;">
+                <span>检索结果 <span id="litResultCount" style="font-weight: 400;"></span></span>
+                <span id="litZoteroChip" class="verdict-chip verdict-grey">Zotero 未检测</span>
+              </div>
+
+              <div class="lit-result-list" id="litResultList">
+                <div class="empty-hint">检索结果将以列表形式列在这里（可勾选后导出或写入 Zotero）。</div>
+              </div>
+
+              <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
+                <button class="btn-screen" onclick="exportLitRecords('ris')">导出 RIS</button>
+                <button class="btn-screen" onclick="exportLitRecords('bibtex')">导出 BibTeX</button>
+                <button class="btn-screen" onclick="saveLitRecordsToZotero()">写入 Zotero</button>
+                <button class="btn-screen" onclick="saveLitRecordsToLibrary()">存入课题资料库</button>
+              </div>
+
+              <div class="md-section-label" style="padding-left: 0;">
+                <span>Zotero 接线</span>
+                <span id="zoteroModeChip" class="verdict-chip verdict-grey">未检测</span>
+              </div>
+              <div class="cn-lit-panel">
+                <div id="zoteroSetupGuide" class="cn-lit-note">正在检测本机 Zotero…</div>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                  <select id="zoteroCollection" class="econlit-select" style="flex: 1; min-width: 180px;">
+                    <option value="">写入库根（或 Zotero 当前选中分类）</option>
+                  </select>
+                  <button class="btn-screen" onclick="loadZoteroCollections()">刷新分类库</button>
+                </div>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                  <input id="zoteroApiKey" class="econlit-input" type="password" style="flex: 1; min-width: 200px;"
+                         placeholder="Zotero 本地 API key（设置 → 高级 → 本地 API 里生成）">
+                  <button class="btn-screen" onclick="saveZoteroConfig()">保存 key</button>
+                </div>
+                <div id="zoteroConfigHint" class="detail-meta"></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+      <!-- 拖拽手柄 2：调节中栏与右栏 -->
+      <div class="resizer" id="resizerRight" title="拖动调节右侧控制台宽度"></div>
+
+      <!-- --------------------------------------------------------------------
+           右栏：模块勾选、内置可视 Skills 管理与 Token 消耗监控 (默认宽 380px)
+           -------------------------------------------------------------------- -->
+      <aside class="col-panel control-panel" id="colRight" style="width: 380px; min-width: 270px; max-width: 620px;">
+        <div class="panel-header">
+          <span class="panel-title-text">研究设置</span>
+          <div class="panel-header-actions">
+            <button class="btn-header" style="font-size:0.66rem;padding:2px 8px;" onclick="openLLMConfigModal()">模型配置</button>
+            <button class="icon-btn" onclick="toggleRightPanel()" title="收起 / 展开右栏">
+              <svg class="ic" aria-hidden="true"><use href="#i-down"></use></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="panel-scroll-body">
+
+          <!-- 板块 0: 研究设置（课题 / 期刊 / 识别策略 / 数据源） -->
+          <div class="md-section-label">
+            <span>研究设置</span>
+          </div>
+
+          <div style="padding: 0 16px;">
+            <div class="econlit-field">
+              <label>研究课题</label>
+              <input id="cfgResearchTopic" class="econlit-input" type="text"
+                     placeholder="例如：碳交易试点对企业数字化转型的因果效应">
+            </div>
+            <div class="econlit-field">
+              <label>目标期刊</label>
+              <select id="cfgTargetJournal" class="econlit-select">
+                <option value="经济研究">《经济研究》</option>
+                <option value="管理世界">《管理世界》</option>
+              </select>
+            </div>
+            <div class="econlit-field">
+              <label>识别策略</label>
+              <select id="cfgStrategy" class="econlit-select">
+                <option value="auto">auto（自动，失败可回环换策略）</option>
+                <option value="cs_did">cs_did（错位多期 DID，Callaway-Sant'Anna）</option>
+                <option value="twfe">twfe（双向固定效应）</option>
+                <option value="event_study">event_study（事件研究）</option>
+                <option value="iv">iv（工具变量）</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 数据源状态：一行列表，点击进入映射 -->
+          <div class="md-section-label">
+            <span>数据源</span>
+            <button class="btn-header" style="font-size: 0.68rem; padding: 2px 8px;" onclick="openIdeTab('datamap')">映射</button>
+          </div>
+          <div class="data-file-row" id="dataSourceRow">
+            <span class="df-meta" id="dataSourceSummary">未选择数据集（将使用内置演示数据）</span>
+          </div>
+          <label style="display: flex; align-items: center; gap: 8px; padding: 6px 16px 10px; font-size: 0.75rem; color: var(--text-muted);">
+            <input type="checkbox" id="checkDemoMode" onchange="onDemoModeToggle()">
+            使用内置演示数据（结果不可用于论文，会打水印）
+          </label>
+
+          <!-- 板块 1: 智能体模块自由勾选 -->
+          <div class="right-section-title">
+            <span>智能体模块勾选</span>
+          </div>
+
+          <label class="agent-checkbox-card">
+            <input type="checkbox" id="checkSearch" checked>
+            <div>
+              <div class="checkbox-title">Part 1: 文献检索与定级智能体</div>
+              <div class="checkbox-desc">多源检索、自动去重与期刊权威定级（自动注入资料库）</div>
+            </div>
+          </label>
+
+          <label class="agent-checkbox-card">
+            <input type="checkbox" id="checkEmpirical" checked>
+            <div>
+              <div class="checkbox-title">Part 2: 因果实证分析智能体</div>
+              <div class="checkbox-desc">严格防共线性排查、DAG审查、CS-DID回归与三线表图表</div>
+            </div>
+          </label>
+
+          <label class="agent-checkbox-card">
+            <input type="checkbox" id="checkWriting" checked>
+            <div>
+              <div class="checkbox-title">Part 3: 学术综述与论文全文写作智能体</div>
+              <div class="checkbox-desc">深度调取资料库文献与实证数据，撰写 6 大标准章节论文大作</div>
+            </div>
+          </label>
+
+          <!-- 启动按钮 -->
+          <button type="button" id="btnRunWorkflow" class="btn-primary-action" style="margin-top: 8px;" onclick="submitCustomWorkflow()">
+            <span></span> 启动所选智能体协同
+          </button>
+
+          <hr style="border: none; border-top: 1px solid var(--border-color); margin: 18px 0;">
+
+          <!-- 板块 3: 内置可视 Skills 库管理 -->
+          <div class="right-section-title">
+            <span>内置可视 Skills 库（<span id="skillsTotalCount">…</span> 个技能）</span>
+            <button class="btn-header" style="font-size: 0.68rem; padding: 2px 6px;" onclick="openUploadSkillModal()">上传 Skill</button>
+          </div>
+
+          <div class="skills-tree-container" id="skillsTreeContainer">
+            <div style="color: var(--text-muted); font-size: 0.74rem;">正在加载技能树...</div>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       模态弹窗系统 (Modals)
+       ====================================================================== -->
+
+  <!-- 弹窗 1: 项目库管理与新建项目 -->
+  <div class="modal-overlay" id="modalProjects">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span class="modal-title"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-projects"></use></svg>项目库</span>
+        <button class="modal-close-btn" onclick="closeProjectsModal()" aria-label="关闭"><svg class="ic" aria-hidden="true"><use href="#i-x"></use></svg></button>
+      </div>
+      <div class="modal-body">
+        <div style="margin-bottom: 16px;">
+          <div style="font-size: 0.76rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 8px;">新建学术研究项目</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <input id="newProjectName" class="econlit-input" type="text" placeholder="输入项目名称，例如：碳交易试点对数字化转型的因果效应">
+            <textarea id="newProjectTopic" class="econlit-textarea" rows="2" placeholder="输入核心研究问题或政策冲击说明..."></textarea>
+            <button class="btn-primary-action btn-with-icon" style="align-self: flex-start; padding: 7px 15px;" onclick="createNewProject()"><svg class="ic" aria-hidden="true"><use href="#i-plus"></use></svg>创建项目</button>
+          </div>
+        </div>
+
+        <div class="section-label">已有项目<span class="section-label-hint">可重命名、修改研究问题或删除</span></div>
+        <div id="projectsListContainer" style="display: flex; flex-direction: column; gap: 8px; max-height: 260px; overflow-y: auto;">
+          <!-- 动态项目列表 -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-header" onclick="closeProjectsModal()">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 弹窗 2: 上传文献/数据资料至资料库 -->
+  <div class="modal-overlay" id="modalUploadAsset">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span class="modal-title"><svg class="ic ic-lg" aria-hidden="true"><use href="#i-upload"></use></svg>上传文献或数据资产</span>
+        <button class="modal-close-btn" onclick="closeUploadAssetModal()" aria-label="关闭"><svg class="ic" aria-hidden="true"><use href="#i-x"></use></svg></button>
+      </div>
+      <div class="modal-body">
+        <form id="uploadAssetForm" onsubmit="submitUploadAsset(event)">
+          <div class="econlit-field">
+            <label>资料标题 / 题名 *</label>
+            <input id="assetTitle" class="econlit-input" type="text" required placeholder="例如：国家碳交易试点政策红头文件与控制变量集说明">
+          </div>
+          <div class="econlit-field">
+            <label>核心要点 / 摘要备注 (Part 3 全文写作将直接引用)</label>
+            <textarea id="assetNotes" class="econlit-textarea" rows="3" placeholder="总结该文献的核心结论、机制路径或关键数据特征..."></textarea>
+          </div>
+          <div class="econlit-field">
+            <label>上传文件附件 (支持 PDF / Markdown / BibTeX / Excel / Word)</label>
+            <input id="assetFile" class="econlit-input" type="file" style="padding: 6px;">
+          </div>
+          <div style="margin-top: 16px; display: flex; justify-content: flex-end; gap: 8px;">
+            <button type="button" class="btn-header" onclick="closeUploadAssetModal()">取消</button>
+            <button type="submit" class="btn-primary-action" style="width: auto; padding: 6px 16px;">确认并纳入资料库</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 弹窗 3: Skill 在线修改与查看 -->
+  <div class="modal-overlay" id="modalSkillEditor" role="dialog" aria-modal="true" aria-labelledby="skillEditorTitle">
+    <div class="modal-card modal-card--wide">
+      <div class="modal-header">
+        <span class="modal-title" id="skillEditorTitle">内置技能编辑与配置 (SKILL.md)</span>
+        <button class="modal-close-btn" onclick="closeSkillEditorModal()"></button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 8px;">
+          文件路径: <code id="skillEditorPath" style="font-family: var(--font-mono); color: var(--primary);"></code>
+        </div>
+        <textarea id="skillEditorContent" class="modal-code-area" spellcheck="false"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-header" style="color: var(--accent-amber-text);" onclick="resetCurrentSkill()">恢复出厂默认</button>
+        <button class="btn-header" onclick="closeSkillEditorModal()">取消</button>
+        <button class="btn-primary-action" style="width: auto; padding: 6px 16px;" onclick="saveCurrentSkill()">保存修改</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 弹窗 4: 上传自定义 Skill -->
+  <div class="modal-overlay" id="modalUploadSkill">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span class="modal-title">上传或新建自定义 Skill</span>
+        <button class="modal-close-btn" onclick="closeUploadSkillModal()"></button>
+      </div>
+      <div class="modal-body">
+        <div class="econlit-field">
+          <label>所属类别 *</label>
+          <select id="newSkillCategory" class="econlit-select">
+            <option value="part1_search">Part 1: 文献检索与定级技能</option>
+            <option value="part2_empirical">Part 2: 因果实证与计量技能</option>
+            <option value="part3_writing">Part 3: 综述与论文写作技能</option>
+          </select>
+        </div>
+        <div class="econlit-field">
+          <label>技能文件夹名称 (英文字符，如 synthetic_did) *</label>
+          <input id="newSkillName" class="econlit-input" type="text" placeholder="例如：synthetic_did">
+        </div>
+        <div class="econlit-field">
+          <label>SKILL.md 技能定义内容 (Markdown) *</label>
+          <textarea id="newSkillContent" class="econlit-textarea" rows="8" placeholder="---\nname: synthetic_did\ndescription: 合成双重差分法\n---\n# Synthetic DID 规范..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-header" onclick="closeUploadSkillModal()">取消</button>
+        <button class="btn-primary-action" style="width: auto; padding: 6px 16px;" onclick="submitNewSkill()">确认上传</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 弹窗 5: 大模型与网络配置 -->
+  <div class="modal-overlay" id="modalLLMConfig">
+    <div class="modal-card">
+      <div class="modal-header">
+        <span class="modal-title">学术大模型推理引擎与 API 激活配置</span>
+        <button class="modal-close-btn" onclick="closeLLMConfigModal()"></button>
+      </div>
+      <div class="modal-body">
+        <div style="font-size: 0.78rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 14px; background: var(--primary-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--primary-border);">
+          <strong>关于大模型配置与学术深度思考说明：</strong><br>
+          1. <strong>内置规则引擎：</strong>系统离线搭载全套计量经济学前沿算法与经管论文规范，无 API Key 时依然可用；<br>
+          2. <strong>深度思考 (Reasoning Chain)：</strong>若填入支持深度推理的大模型 API（强烈推荐 <strong>DeepSeek-R1 / deepseek-reasoner</strong>、GPT-4o、Qwen-Max 等），对话时将实时展现完整的<strong>学术思维链、坏控制排查与因果推导</strong>，生成千人千面的极具创造性学术洞见！<br>
+          3. <strong>一键验活：</strong>填写后可点击左下角【测试连接】即时检验 Key 与网络连通性。
+        </div>
+        <div class="econlit-field">
+          <label>模型提供商</label>
+          <select id="configProvider" class="econlit-select" onchange="onProviderChange()">
+            <option value="deepseek">DeepSeek (deepseek-reasoner 思考模型 / deepseek-chat)</option>
+            <option value="qwen">通义千问 (Qwen-Max / Qwen-Plus / QwQ-32B)</option>
+            <option value="openai">OpenAI (o1 / GPT-4o / GPT-4o-mini)</option>
+            <option value="custom">自定义兼容 OpenAI 协议接口 (如自建 Ollama / vLLM)</option>
+            <option value="builtin">内置离线规则引擎 (无思考链推理)</option>
+          </select>
+        </div>
+        <div class="econlit-field">
+          <label>API Base URL</label>
+          <input id="configBaseUrl" class="econlit-input" type="text" placeholder="例如：https://api.deepseek.com/v1">
+        </div>
+        <div class="econlit-field">
+          <label>API Key</label>
+          <input id="configApiKey" class="econlit-input" type="password" placeholder="sk-..." autocomplete="off">
+        </div>
+        <div class="econlit-field">
+          <label>模型名称 (Model Name)</label>
+          <input id="configModelName" class="econlit-input" type="text" placeholder="例如：deepseek-reasoner 或 deepseek-chat">
+        </div>
+
+        <!-- 连通性测试状态展示区 -->
+        <div id="testConnStatus" style="display: none; margin-top: 10px; font-size: 0.8rem; padding: 10px 14px; border-radius: var(--radius-sm); line-height: 1.5; transition: all 0.2s ease;"></div>
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <button class="btn-header" id="btnTestConn" onclick="testLLMConnection()" style="border-color: var(--primary-color); color: var(--primary-color); font-weight: 600;">
+            测试连接
+          </button>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn-header" onclick="closeLLMConfigModal()">取消</button>
+          <button class="btn-primary-action" id="btnSaveLLMConfig" style="width: auto; padding: 6px 20px;" onclick="saveLLMConfig()">
+            保存并生效
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 文献详情右侧滑出抽屉 (Detail Drawer) -->
+  <aside class="detail-drawer" id="detailDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <strong id="drawerHeaderTitle">文献详情与质量审计</strong>
+      <button class="btn-header" style="padding: 2px 8px; font-size: 0.8rem;" onclick="closeRecordDetail()"></button>
+    </div>
+    <div class="drawer-content" id="detailDrawerContent">
+      <!-- 动态渲染抽屉内容 -->
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="detailBackdrop" onclick="closeRecordDetail()"></div>
+
+  <script src="/static/app.js?v=20261024_ui12"></script>
+  <script src="/static/views.js?v=20261024_ui12"></script>
+</body>
+</html>
+

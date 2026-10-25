@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/economics-research-agent/source-adapter.schema.json",
+  "title": "SourceAdapter",
+  "type": "object",
+  "required": [
+    "id",
+    "display_name",
+    "version",
+    "status",
+    "docs_url",
+    "capabilities",
+    "query",
+    "response_mapping"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "display_name": { "type": "string" },
+    "version": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["enabled", "planned", "deprecated"]
+    },
+    "provider_url": {
+      "type": ["string", "null"],
+      "format": "uri"
+    },
+    "docs_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "capabilities": {
+      "type": "object",
+      "required": ["keyword_search", "metadata", "abstracts", "citation_counts"],
+      "properties": {
+        "keyword_search": { "type": "boolean" },
+        "metadata": { "type": "boolean" },
+        "abstracts": { "type": "boolean" },
+        "citation_counts": { "type": "boolean" },
+        "citation_graph": { "type": "boolean" },
+        "author_lookup": { "type": "boolean" },
+        "open_access_links": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "query": {
+      "type": "object",
+      "required": ["method", "base_url", "endpoint", "parameters"],
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": ["GET", "POST"]
+        },
+        "base_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "endpoint": { "type": "string" },
+        "auth": {
+          "type": "string",
+          "enum": ["none", "api-key", "oauth", "manual"]
+        },
+        "api_key_env_var": {
+          "type": ["string", "null"]
+        },
+        "api_key_header": {
+          "type": ["string", "null"]
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "required"],
+            "properties": {
+              "name": { "type": "string" },
+              "required": { "type": "boolean" },
+              "description": { "type": ["string", "null"] }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "response_mapping": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "notes": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}

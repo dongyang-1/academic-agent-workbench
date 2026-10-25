@@ -1,0 +1,8 @@
+{
+  "id": "google-scholar", "display_name": "Google Scholar", "version": "0.1", "status": "enabled",
+  "provider_url": "https://scholar.google.com/", "docs_url": "https://scholar.google.com/intl/en/scholar/about.html",
+  "capabilities": {"keyword_search": true, "metadata": true, "abstracts": false, "citation_counts": true, "citation_graph": true, "author_lookup": true, "open_access_links": true},
+  "query": {"method": "GET", "base_url": "https://scholar.google.com", "endpoint": "/scholar", "auth": "manual", "parameters": [{"name": "q", "required": true, "description": "Search terms opened in the official web interface."}]},
+  "response_mapping": {}, "limits": {"automation": "disabled"},
+  "notes": "Manual web-search adapter. Google Scholar has no supported public search API; do not scrape or bypass rate limits."
+}

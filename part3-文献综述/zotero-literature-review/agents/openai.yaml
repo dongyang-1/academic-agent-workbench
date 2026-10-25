@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zotero Literature Review"
+  short_description: "Evidence-traceable reviews from scoped Zotero collections"
+  default_prompt: "Use $zotero-literature-review to build an evidence-traceable literature review from my scoped Zotero collection."

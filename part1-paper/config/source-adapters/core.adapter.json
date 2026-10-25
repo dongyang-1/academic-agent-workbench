@@ -1,0 +1,47 @@
+{
+  "id": "core",
+  "display_name": "CORE",
+  "version": "0.1",
+  "status": "enabled",
+  "provider_url": "https://core.ac.uk/",
+  "docs_url": "https://api.core.ac.uk/docs/v3",
+  "capabilities": {
+    "keyword_search": true,
+    "metadata": true,
+    "abstracts": true,
+    "citation_counts": true,
+    "citation_graph": false,
+    "author_lookup": true,
+    "open_access_links": true
+  },
+  "query": {
+    "method": "GET",
+    "base_url": "https://api.core.ac.uk/v3",
+    "endpoint": "/search/works/",
+    "auth": "api-key",
+    "api_key_env_var": "CORE_API_KEY",
+    "api_key_header": "Authorization: Bearer",
+    "parameters": [
+      {"name": "q", "required": true, "description": "CORE works keyword query."},
+      {"name": "limit", "required": false, "description": "Number of records requested."}
+    ]
+  },
+  "response_mapping": {
+    "id": "source_record_ids.core",
+    "title": "title",
+    "authors[].name": "authors",
+    "yearPublished": "year",
+    "journals[].title": "venue",
+    "doi": "doi",
+    "abstract": "abstract",
+    "citationCount": "citation_count",
+    "links": "url",
+    "downloadUrl": "open_access_pdf_url",
+    "fieldOfStudy": "fields_of_study"
+  },
+  "limits": {
+    "default_limit": 20,
+    "api_key_note": "Read from CORE_API_KEY and send only in the Authorization Bearer header."
+  },
+  "notes": "Authenticated CORE v3 adapter for open-access metadata and lawful full-text links. Never write the API key to files or logs."
+}

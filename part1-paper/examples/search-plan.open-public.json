@@ -1,0 +1,38 @@
+{
+  "research_question": "监管沙盒与创新的关系",
+  "scope": {
+    "field": "financial economics, regulation, innovation economics",
+    "time_range": "2015-2026",
+    "geography": null,
+    "methods": ["policy evaluation", "difference-in-differences", "panel data"]
+  },
+  "concept_blocks": [
+    { "concept": "regulatory_sandbox", "terms": ["regulatory sandbox", "fintech regulatory sandbox"] },
+    { "concept": "innovation", "terms": ["innovation", "financial innovation", "fintech innovation"] }
+  ],
+  "sources": [
+    "crossref", "nber", "datacite", "arxiv", "core", "openalex",
+    "google-scholar", "ssrn", "ideas-repec", "econpapers",
+    "cepr", "iza", "cnki", "wanfang"
+  ],
+  "source_policy": {
+    "preferred_sources": ["crossref", "nber"],
+    "allowed_sources": [
+      "crossref", "nber", "datacite", "arxiv", "core", "openalex",
+      "google-scholar", "ssrn", "ideas-repec", "econpapers",
+      "cepr", "iza", "cnki", "wanfang"
+    ],
+    "excluded_sources": ["semantic-scholar"],
+    "max_records_per_source": 20,
+    "require_search_log": true
+  },
+  "adapter_options": {
+    "crossref": { "limit": 20, "ranking_policy": "latest-first" },
+    "nber": { "limit": 20, "cache_ttl_days": 7, "ranking_policy": "latest-first" },
+    "datacite": { "limit": 20, "ranking_policy": "latest-first" },
+    "arxiv": { "limit": 20, "ranking_policy": "latest-first" },
+    "core": { "limit": 20, "ranking_policy": "latest-first", "api_key_env_var": "CORE_API_KEY" },
+    "openalex": { "limit": 20, "ranking_policy": "latest-first", "api_key_env_var": "OPENALEX_API_KEY" }
+  },
+  "output_requirements": ["candidate papers", "search log", "coverage notes", "latest literature first"]
+}

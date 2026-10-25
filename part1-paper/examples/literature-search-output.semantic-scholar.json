@@ -1,0 +1,81 @@
+{
+  "module_id": "literature-search",
+  "version": "0.1",
+  "created_at": "2026-07-06T00:00:00+08:00",
+  "input_summary": "Example output shape for a Semantic Scholar search about regulatory sandboxes and innovation.",
+  "source_ids": ["semantic-scholar"],
+  "records": [
+    {
+      "record_id": "lit-semantic-scholar-example-001",
+      "title": "Example record about regulatory sandboxes and innovation",
+      "authors": ["Author One", "Author Two"],
+      "year": null,
+      "venue": null,
+      "source": "Semantic Scholar",
+      "doi": null,
+      "external_ids": {},
+      "source_record_ids": {
+        "semantic-scholar": "example-paper-id"
+      },
+      "url": null,
+      "abstract": null,
+      "abstract_snippet": null,
+      "jel_codes": [],
+      "methods": [],
+      "publication_types": [],
+      "fields_of_study": [],
+      "data_context": null,
+      "citation_count": null,
+      "reference_count": null,
+      "influential_citation_count": null,
+      "is_open_access": null,
+      "open_access_pdf_url": null,
+      "retrieval_source": "semantic-scholar",
+      "retrieval_sources": ["semantic-scholar"],
+      "retrieval_query": "regulatory sandbox innovation fintech",
+      "dedupe_key": "example-record-about-regulatory-sandboxes-and-innovation-author-one",
+      "relevance_note": "Example placeholder record. Replace with real metadata during execution.",
+      "verification_status": "metadata-only",
+      "source_specific": {
+        "example_record": true,
+        "ranking_policy": "latest-first"
+      }
+    }
+  ],
+  "search_logs": [
+    {
+      "search_log_id": "search-log-example-001",
+      "source_id": "semantic-scholar",
+      "source_adapter_version": "0.1",
+      "query": "regulatory sandbox innovation fintech",
+      "query_parameters": {
+        "limit": 20,
+        "ranking_policy": "latest-first",
+        "fields": "paperId,title,authors,year,venue,abstract,url,externalIds,citationCount"
+      },
+      "executed_at": "2026-07-06T00:00:00+08:00",
+      "execution_status": "planned",
+      "records_returned": 0,
+      "records_kept": null,
+      "error_message": null,
+      "notes": "Example log only. No live API call was executed."
+    }
+  ],
+  "coverage_notes": [
+    "Semantic Scholar is configured as the only active source in version 0.1.",
+    "The default result count is 20 and can be changed later without schema changes.",
+    "Economics-specific sources such as IDEAS/RePEc, NBER, and EconLit remain planned adapters."
+  ],
+  "verification_gaps": [
+    "Replace placeholder records with real metadata after API execution.",
+    "Verify whether the literature is specifically about fintech regulatory sandboxes or broader regulatory experimentation.",
+    "Verify DOI, publication venue, and working paper versus journal versions."
+  ],
+  "handoff": {
+    "next_modules": ["tbd"],
+    "notes": [
+      "Downstream module is not decided yet.",
+      "Downstream modules should use records and search_logs rather than provider-specific fields."
+    ]
+  }
+}

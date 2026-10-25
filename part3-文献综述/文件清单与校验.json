@@ -1,0 +1,49 @@
+{
+  "package": "zotero-literature-review",
+  "date": "2026-10-18",
+  "note": "清单不包含自身；仅SKILL.md增加迁移说明入口，原有配套文件保持原样。",
+  "files": [
+    {
+      "path": "zotero-literature-review/agents/openai.yaml",
+      "bytes": 268,
+      "sha256": "319efdd99c5b7e9266fb4a0308ffe8d59d12d3cb8ee247aae2d2ee1ee2559e5c",
+      "unchanged_from_source": true
+    },
+    {
+      "path": "zotero-literature-review/references/access-and-portability.md",
+      "bytes": 3919,
+      "sha256": "750246dc2dc44a1fb4a4aee93ab37a8fd2ac9d0ca099cba8de79a5cbe6920dd1",
+      "unchanged_from_source": null
+    },
+    {
+      "path": "zotero-literature-review/references/deliverables.md",
+      "bytes": 3135,
+      "sha256": "fe33a16a26a7cfb6845f29891dfefaaec20e339199732d1049e8ac59f26cf000",
+      "unchanged_from_source": true
+    },
+    {
+      "path": "zotero-literature-review/references/research-workflow.md",
+      "bytes": 5563,
+      "sha256": "f8985616883c818e076b51ea118f6e6b2d1f58c91cb0890fdfcae67fdad9638a",
+      "unchanged_from_source": true
+    },
+    {
+      "path": "zotero-literature-review/references/zotero-word-integration.md",
+      "bytes": 3092,
+      "sha256": "dda1fa0a3003a62cfa42c2a3e83e042fb2ff05f6079e79cc99a174b9cb7f1a1b",
+      "unchanged_from_source": true
+    },
+    {
+      "path": "zotero-literature-review/SKILL.md",
+      "bytes": 6214,
+      "sha256": "2238938a9650e3ad3ab12537a4dcc8faac1cb48dad502ad7253e8c389743892d",
+      "unchanged_from_source": false
+    },
+    {
+      "path": "先读我_打包内容与使用说明.md",
+      "bytes": 5338,
+      "sha256": "17ecc0b41c5326ca40f67b2feb462b9436a22b1e5acd8ccf77ca87984d44fef3",
+      "unchanged_from_source": null
+    }
+  ]
+}

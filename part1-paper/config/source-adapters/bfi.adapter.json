@@ -1,0 +1,8 @@
+{
+  "id": "bfi", "display_name": "University of Chicago BFI", "version": "0.1", "status": "enabled",
+  "provider_url": "https://bfi.uchicago.edu/working-papers/", "docs_url": "https://bfi.uchicago.edu/working-papers/",
+  "capabilities": {"keyword_search": true, "metadata": true, "abstracts": true, "citation_counts": false, "citation_graph": false, "author_lookup": false, "open_access_links": true},
+  "query": {"method": "GET", "base_url": "https://bfi.uchicago.edu/", "endpoint": "/", "auth": "manual", "parameters": [{"name": "s", "required": true, "description": "Official site search."}]},
+  "response_mapping": {}, "limits": {"mode": "manual-web"},
+  "notes": "Official university working-paper source. Kept as a manual verification link because many records overlap SSRN and RePEc."
+}

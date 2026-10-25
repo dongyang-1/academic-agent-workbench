@@ -1,0 +1,8 @@
+{
+  "id": "ideas-repec", "display_name": "IDEAS/RePEc", "version": "0.1", "status": "enabled",
+  "provider_url": "https://ideas.repec.org/", "docs_url": "https://ideas.repec.org/",
+  "capabilities": {"keyword_search": true, "metadata": true, "abstracts": true, "citation_counts": true, "citation_graph": true, "author_lookup": true, "open_access_links": true},
+  "query": {"method": "GET", "base_url": "https://ideas.repec.org", "endpoint": "/cgi-bin/htsearch", "auth": "manual", "parameters": [{"name": "q", "required": true, "description": "Keywords for IDEAS web search."}]},
+  "response_mapping": {}, "limits": {"automation": "disabled"},
+  "notes": "Manual economics search. The restricted RePEc API does not provide general keyword search."
+}

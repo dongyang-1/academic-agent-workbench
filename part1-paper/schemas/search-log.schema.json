@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/economics-research-agent/search-log.schema.json",
+  "title": "SearchLog",
+  "type": "object",
+  "required": [
+    "search_log_id",
+    "source_id",
+    "query",
+    "executed_at",
+    "execution_status",
+    "records_returned"
+  ],
+  "properties": {
+    "search_log_id": { "type": "string" },
+    "source_id": { "type": "string" },
+    "source_adapter_version": { "type": ["string", "null"] },
+    "query": { "type": "string" },
+    "query_parameters": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "executed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "execution_status": {
+      "type": "string",
+      "enum": ["planned", "success", "partial", "failed", "manual-check-needed"]
+    },
+    "records_returned": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "records_kept": {
+      "type": ["integer", "null"],
+      "minimum": 0
+    },
+    "error_message": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] }
+  },
+  "additionalProperties": false
+}

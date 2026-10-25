@@ -1,0 +1,38 @@
+{
+  "id": "world-bank",
+  "display_name": "World Bank Documents & Reports",
+  "version": "0.1",
+  "status": "enabled",
+  "provider_url": "https://documents.worldbank.org/",
+  "docs_url": "https://documents.worldbank.org/en/publication/documents-reports/api",
+  "capabilities": {
+    "keyword_search": true,
+    "metadata": true,
+    "abstracts": true,
+    "citation_counts": false,
+    "citation_graph": false,
+    "author_lookup": false,
+    "open_access_links": true
+  },
+  "query": {
+    "method": "GET",
+    "base_url": "https://search.worldbank.org/api/v3",
+    "endpoint": "/wds",
+    "auth": "none",
+    "parameters": [
+      {"name": "qterm", "required": true, "description": "Full-text and metadata query."},
+      {"name": "format", "required": false, "description": "Response format."},
+      {"name": "rows", "required": false, "description": "Number of results."},
+      {"name": "sort", "required": false, "description": "Sort by document date."}
+    ]
+  },
+  "response_mapping": {
+    "documents.*.display_title": "title",
+    "documents.*.docdt": "year",
+    "documents.*.majdocty": "venue",
+    "documents.*.abstracts": "abstract",
+    "documents.*.pdfurl": "open_access_pdf_url"
+  },
+  "limits": {"default_limit": 20},
+  "notes": "Public policy, development economics, regulatory and institutional research."
+}

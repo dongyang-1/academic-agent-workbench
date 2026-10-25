@@ -1,0 +1,393 @@
+version: "1.5"
+last_updated: "2026-10-12"
+description: >
+  经济学/社科实证分析智能体技能注册表 (Skill Registry)。
+  包含了四层架构 (L0 数据采集/政策爬虫/年报文本挖掘 3 个, L1 核心决策层 6 个, L2 计量方法层 11 个, L3 工具分析组件层 8 个, 共 28 个 Skill)
+  的完整元数据、依赖关系 (depends_on)、可调用子技能 (can_invoke) 及打回重选防死循环接口。
+
+skills:
+  # ---------------- L0: 数据准备/政策爬虫/文本挖掘层 (3) ----------------
+  - id: data-acquisition
+    name_zh: 联网实证数据采集与面板构建
+    layer: L0
+    role: collector
+    description: >
+      联网获取开源宏观经济、行业与微观企业财务数据，并自动清洗规整为标准计量经济学面板/时间序列数据。
+    depends_on: []
+    can_invoke: [data-audit]
+    gate_authority: none
+    source: Self-developed
+    license: MIT
+    status: active
+
+  - id: policy-pilot-crawler
+    name_zh: 政策试点名单与事件时序爬虫
+    layer: L0
+    role: crawler
+    description: >
+      联网检索或调取中央部委政策试点名录 (低碳城市、智慧城市、碳交易ETS等)，自动为既有面板数据注入 DID / Staggered DID 因果推断核心变量 (is_treated, first_treat, post, did, rel_year)。
+    depends_on: []
+    can_invoke: [data-audit]
+    gate_authority: none
+    source: Self-developed
+    license: MIT
+    status: active
+
+  - id: annual-report-text-miner
+    name_zh: 上市公司年报文本与词频挖掘爬虫
+    layer: L0
+    role: miner
+    description: >
+      针对上市公司年报 (MD&A 章节) 开展非结构化文本挖掘，基于经管顶刊权威词库自动构建数字化转型、绿色创新、管理层短视等微观实证核心指标 (词频、对数与词频密度)。
+    depends_on: []
+    can_invoke: [data-audit]
+    gate_authority: none
+    source: Self-developed
+    license: MIT
+    status: active
+
+  # ---------------- L1: 核心决策层 (6) ----------------
+  - id: empirical-router
+    name_zh: 实证分析全局路由
+    layer: L1
+    role: orchestrator
+    description: >
+      控制全局状态机闭环、维护 rejected_strategies 否决历史,
+      编排 L0/L1/L2/L3 技能调用与降级重新路由。
+    depends_on: [data-acquisition, policy-pilot-crawler, annual-report-text-miner, data-audit, identification-strategy, baseline-regression, robustness-router, econometric-reviewer]
+    can_invoke: [data-acquisition, policy-pilot-crawler, annual-report-text-miner, data-audit, identification-strategy, baseline-regression, robustness-router, econometric-reviewer, tables-and-figures, sensitivity-bounds]
+    gate_authority: ultimate
+    source: Self-developed / AER (aer-workflow)
+    license: MIT
+    status: active
+
+  - id: data-audit
+    name_zh: 实证数据结构审计
+    layer: L1
+    role: auditor
+    description: >
+      审计数据维度、面板/截面特征、处理变量时序分布、断点/斜率特征、候选 IV、高维特征及高频序列,
+      输出覆盖全套 11 大识别方法的结构化元数据 (is_panel, is_staggered, has_running_var_cutoff, has_slope_kink, has_bunching_threshold, has_candidate_iv, has_donor_pool, has_shift_share_structure, has_high_dim_controls, has_time_series_lags)。
+    depends_on: []
+    can_invoke: []
+    gate_authority: none
+    source: AERS (00.1~00.3)
+    license: CC-BY-SA-4.0
+    status: active
+
+  - id: identification-strategy
+    name_zh: 因果识别策略选择器
+    layer: L1
+    role: selector
+    description: >
+      读取 data-audit 产出的结构化数据元数据,在全套 11 个 L2 估计器之间做优先级匹配;
+      若接收到 rejected_strategies,自动排除已被否决的策略防范死循环。
+    depends_on: [data-audit]
+    can_invoke: [did, staggered-did, iv, rdd, synthetic-control, matching, shift-share, double-machine-learning, bunching-design, regression-kink-design, local-projections]
+    gate_authority: none
+    source: AER (aer-identification)
+    license: MIT
+    status: active
+
+  - id: baseline-regression
+    name_zh: 基准回归估计器
+    layer: L1
+    role: estimator
+    description: >
+      确定模型类型、高维固定效应设定与聚类标准误层级,产出基准估计结果;
+      排查完全共线与冗余变量,保留模型必要的项。
+    depends_on: [identification-strategy]
+    can_invoke: [clustering]
+    gate_authority: none
+    source: AERS (00.1~00.3)
+    license: CC-BY-SA-4.0
+    status: active
+
+  - id: robustness-router
+    name_zh: 稳健性检验路由器
+    layer: L1
+    role: orchestrator
+    description: >
+      根据 identification-strategy 选定的识别设计,路由到对应的 L3
+      稳健性组件(placebo / clustering / alternative-specification /
+      heterogeneity / mechanism),组合成该识别设计专属的检验清单。
+    depends_on: [baseline-regression]
+    can_invoke: [placebo, clustering, alternative-specification, heterogeneity, mechanism]
+    gate_authority: none
+    source: AER (aer-robustness)
+    license: MIT
+    status: active
+
+  - id: econometric-reviewer
+    name_zh: 计量审稿人综合审查器
+    layer: L1
+    role: gate
+    description: >
+      以顶级期刊审稿人视角综合评估识别假定与结果,输出 🟢/🟡/🔴 判定。
+      对 🔴 判定拥有否决权,将 rejected_strategy 写入接口打回 Router 重新选择策略;
+      对 🟡 判定可调用 sensitivity-bounds 生成补救路线图。
+    depends_on: [robustness-router]
+    can_invoke: [sensitivity-bounds, tables-and-figures]
+    gate_authority: veto
+    source: Self-developed / AER (referee-sim)
+    license: MIT
+    status: active
+
+  # ---------------- L2: 计量方法层 (11) ----------------
+  - id: did
+    name_zh: 基础双向固定效应DID
+    layer: L2
+    role: estimator
+    description: >
+      标准 2×2 DID 与齐期处理下的基础 TWFE 回归。仅适用于单一处理时点,
+      若检测到错位处理必须转交 staggered-did。
+    depends_on: [identification-strategy]
+    can_invoke: []
+    gate_authority: none
+    source: AERS / Mixtape
+    license: CC-BY-SA-4.0
+    status: active
+
+  - id: staggered-did
+    name_zh: 错位/多期实施DID
+    layer: L2
+    role: estimator
+    description: >
+      多期/错位实施场景下的现代 DID 估计量:Callaway-Sant'Anna、
+      Sun-Abraham、Imputation。硬性质量门:严禁将传统 TWFE 作为唯一核心因果结论。
+    depends_on: [identification-strategy]
+    can_invoke: []
+    gate_authority: none
+    source: AER (methods-reference)
+    license: MIT
+    status: active
+
+  - id: iv
+    name_zh: 工具变量与弱工具推断
+    layer: L2
+    role: estimator
+    description: >
+      2SLS 估计,含 Kleibergen-Paap rk F、Effective F(Montiel
+      Olea-Pflueger)、Anderson-Rubin 弱工具稳健置信区间,以及排他性约束论证。
+    depends_on: [identification-strategy]
+    can_invoke: []
+    gate_authority: none
+    source: AER / AERS
+    license: MIT / CC-BY-SA-4.0
+    status: active
+
+  - id: rdd
+    name_zh: 断点回归设计
+    layer: L2
+    role: estimator
+    description: >
+      精确/模糊 RDD、局部线性回归、RBC 置信区间、McCrary/Cattaneo
+      密度检验与协变量连续性检验的综合研判。
+    depends_on: [identification-strategy]
+    can_invoke: []
+    gate_authority: none
+    source: AER / AERS
+    license: MIT
+    status: active
+
+  - id: synthetic-control
+    name_zh: 合成控制与SDID
+    layer: L2
+    role: estimator
+    description: >
+      合成控制法 (SCM) 与 Synthetic DID,含空间/时间安慰剂排列推断。
+    depends_on: [identification-strategy]
+    can_invoke: [placebo]
+    gate_authority: none
+    source: AER / CausalPy
+    license: Apache-2.0 / MIT
+    status: active
+
+  - id: matching
+    name_zh: 倾向得分与精确匹配
+    layer: L2
+    role: estimator
+    description: >
+      PSM、精确匹配、共同范围检验及协变量平衡性检验 (Love Plot)。
+    depends_on: [identification-strategy]
+    can_invoke: []
+    gate_authority: none
+    source: AERS
+    license: CC-BY-SA-4.0
+    status: active
+
+  - id: shift-share
+    name_zh: Bartik/份额移动IV
+    layer: L2
+    role: estimator
+    description: >
+      Bartik/Shift-Share 工具变量法,区分份额外生 (shares exogeneity)
+      与冲击外生 (shocks exogeneity) 两类识别假设并实施冲击层级标准误校正。
+    depends_on: [identification-strategy]
+    can_invoke: []
+    gate_authority: none
+    source: AER (methods-reference)
+    license: MIT
+    status: active
+
+  - id: double-machine-learning
+    name_zh: 双重机器学习 (DML)
+    layer: L2
+    role: estimator
+    description: >
+      基于 Chernozhukov 等 (2018) 框架,通过 Neyman 正交化与交叉拟合在
+      高维复杂协变量下估计无偏因果效应 (ATE/ATT)。
+    depends_on: [identification-strategy]
+    can_invoke: []
+    gate_authority: none
+    source: AER (examples/dml-plr-demo)
+    license: MIT
+    status: active
+
+  - id: bunching-design
+    name_zh: 行为聚束分析设计
+    layer: L2
+    role: estimator
+    description: >
+      基于 Saez(2010) 与 Kleven(2016) 框架,通过估计反事实无堆积密度分布,
+      利用阈值处的行为聚束 (Bunching) 估计结构弹性与超额堆积量 B。
+    depends_on: [identification-strategy]
+    can_invoke: []
+    gate_authority: none
+    source: AERS / Saez(2010)
+    license: CC-BY-SA-4.0
+    status: active
+
+  - id: regression-kink-design
+    name_zh: 斜率断点回归设计 (RKD)
+    layer: L2
+    role: estimator
+    description: >
+      基于 Card 等 (2015) 框架,利用政策在断点 (Cutoff) 处的斜率转折/折角
+      (Kink in Slope) 进行边际因果效应估计。
+    depends_on: [identification-strategy]
+    can_invoke: []
+    gate_authority: none
+    source: AER (methods-reference) / Card(2015)
+    license: MIT
+    status: active
+
+  - id: local-projections
+    name_zh: 局部投影法与 LP-DiD
+    layer: L2
+    role: estimator
+    description: >
+      基于 Jordà(2005) 与 Dube 等(2023) 框架,采用局部投影法 (LP & LP-DiD)
+      估计动态脉冲响应带与多期政策冲击。
+    depends_on: [identification-strategy]
+    can_invoke: []
+    gate_authority: none
+    source: AER (methods-reference) / Jordà(2005)
+    license: MIT
+    status: active
+
+  # ---------------- L3: 工具/分析组件层 (8) ----------------
+  - id: placebo
+    name_zh: 安慰剂检验组件
+    layer: L3
+    role: diagnostic
+    description: >
+      处理时间/个体随机化安慰剂检验、假 cutoff 检验。
+    depends_on: []
+    can_invoke: []
+    gate_authority: none
+    source: AER / AERS
+    license: MIT
+    status: active
+
+  - id: clustering
+    name_zh: 聚类层级与Wild Bootstrap
+    layer: L3
+    role: diagnostic
+    description: >
+      标准误聚类层级选择,少数 cluster 场景下的 Wild Cluster Bootstrap。
+    depends_on: []
+    can_invoke: []
+    gate_authority: none
+    source: AER / AERS
+    license: MIT
+    status: active
+
+  - id: alternative-specification
+    name_zh: 替代规格与敏感性分析
+    layer: L3
+    role: diagnostic
+    description: >
+      替代模型设定、替代样本、Oster(2019) 遗漏变量偏差敏感性 delta 计算与共线性审查。
+    depends_on: []
+    can_invoke: []
+    gate_authority: none
+    source: AER
+    license: MIT
+    status: active
+
+  - id: heterogeneity
+    name_zh: 异质性分析组件
+    layer: L3
+    role: analysis
+    description: >
+      理论与制度背景驱动的分组异质性分析、交互效应估计与组间系数差异检验。
+    depends_on: []
+    can_invoke: []
+    gate_authority: none
+    source: AER / AERS
+    license: MIT
+    status: active
+
+  - id: mechanism
+    name_zh: 因果机制诊断组件
+    layer: L3
+    role: analysis
+    description: >
+      因果机制与替代解释排除。严禁将简单中介三步法直接称为因果机制。
+    depends_on: []
+    can_invoke: []
+    gate_authority: none
+    source: AER (aer-robustness)
+    license: MIT
+    status: active
+
+  - id: tables-and-figures
+    name_zh: 论文级表格与图表生成
+    layer: L3
+    role: output
+    description: >
+      生成 AER/AEJ 风格的 Publication-ready LaTeX booktabs / Markdown 表格与事件研究矢量图。
+    depends_on: []
+    can_invoke: []
+    gate_authority: none
+    source: AER (aer-tables-figures)
+    license: MIT
+    status: active
+
+  - id: replication-tools
+    name_zh: 实证复现与差异比对工具
+    layer: L3
+    role: utility
+    description: >
+      对照已发表论文/既有代码进行复现,并输出数值差异比对报告。
+    depends_on: []
+    can_invoke: []
+    gate_authority: none
+    source: 自研
+    license: MIT
+    status: active
+
+  - id: sensitivity-bounds
+    name_zh: 平行趋势敏感性边界分析 (HonestDiD)
+    layer: L3
+    role: diagnostic
+    description: >
+      当 econometric-reviewer 判定平行趋势假定受挫 (🟡/🔴) 时被调用,基于 Rambachan-Roth (HonestDiD)
+      框架计算相对幅度敏感性崩溃点 M*, 产出补救路线图。
+    depends_on: []
+    can_invoke: []
+    gate_authority: none
+    source: AER (methods-reference)
+    license: MIT
+    status: active

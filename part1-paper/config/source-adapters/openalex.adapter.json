@@ -1,0 +1,52 @@
+{
+  "id": "openalex",
+  "display_name": "OpenAlex",
+  "version": "0.1",
+  "status": "enabled",
+  "provider_url": "https://openalex.org/",
+  "docs_url": "https://developers.openalex.org/api-reference/introduction",
+  "capabilities": {
+    "keyword_search": true,
+    "metadata": true,
+    "abstracts": true,
+    "citation_counts": true,
+    "citation_graph": true,
+    "author_lookup": true,
+    "open_access_links": true
+  },
+  "query": {
+    "method": "GET",
+    "base_url": "https://api.openalex.org",
+    "endpoint": "/works",
+    "auth": "api-key",
+    "api_key_env_var": "OPENALEX_API_KEY",
+    "api_key_header": null,
+    "parameters": [
+      {"name": "search", "required": true, "description": "Full-text search query."},
+      {"name": "filter", "required": false, "description": "Publication date and metadata filters."},
+      {"name": "sort", "required": false, "description": "Sort order such as publication_date:desc."},
+      {"name": "per_page", "required": false, "description": "Number of records, up to 100."},
+      {"name": "api_key", "required": true, "description": "Read from OPENALEX_API_KEY; never log or persist."}
+    ]
+  },
+  "response_mapping": {
+    "id": "source_record_ids.openalex",
+    "title": "title",
+    "authorships[].author.display_name": "authors",
+    "publication_year": "year",
+    "primary_location.source.display_name": "venue",
+    "doi": "doi",
+    "primary_location.landing_page_url": "url",
+    "abstract_inverted_index": "abstract",
+    "cited_by_count": "citation_count",
+    "referenced_works_count": "reference_count",
+    "open_access.is_oa": "is_open_access",
+    "best_oa_location.pdf_url": "open_access_pdf_url",
+    "topics[].display_name": "fields_of_study"
+  },
+  "limits": {
+    "default_limit": 20,
+    "api_key_note": "Send as api_key only in the live request. Return and log a sanitized URL without the key."
+  },
+  "notes": "OpenAlex works adapter with citation metadata, reconstructed abstracts, topics, and open-access links."
+}

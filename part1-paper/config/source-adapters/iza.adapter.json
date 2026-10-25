@@ -1,0 +1,8 @@
+{
+  "id": "iza", "display_name": "IZA", "version": "0.1", "status": "enabled",
+  "provider_url": "https://www.iza.org/publications/dp", "docs_url": "https://www.iza.org/publications/dp",
+  "capabilities": {"keyword_search": true, "metadata": true, "abstracts": true, "citation_counts": false, "citation_graph": false, "author_lookup": true, "open_access_links": true},
+  "query": {"method": "GET", "base_url": "https://www.iza.org", "endpoint": "/publications/dp", "auth": "manual", "parameters": [{"name": "term", "required": true, "description": "IZA keyword-search term."}, {"name": "search", "required": false, "description": "Search field; use keywords."}]},
+  "response_mapping": {}, "limits": {"automation": "disabled"},
+  "notes": "Manual web-search adapter, especially useful for labor economics. Many IZA papers expose direct PDFs."
+}

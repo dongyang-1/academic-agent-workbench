@@ -1,0 +1,27 @@
+# 学术全流程智能体 · 后端依赖
+
+fastapi>=0.110
+uvicorn>=0.27
+pydantic>=2.6
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+matplotlib>=3.8
+openpyxl>=3.1
+
+# Web 平台运行必需（缺一即启动失败）
+requests>=2.31
+networkx>=3.0
+python-docx>=1.1
+python-multipart>=0.0.9
+
+# P1 新增：技能注册表解析（缺失时注册表不参与路由，其余功能不受影响）
+PyYAML>=6.0
+
+# 可选：读取 Stata 数据文件
+# pyreadstat>=1.2
+
+# 可选：更严谨的计量实现（未安装时自动降级到内置 econ_core）
+# pyfixest>=0.24
+# linearmodels>=4.31
+# statsmodels>=0.14

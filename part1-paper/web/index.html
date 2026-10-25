@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EconLit 文献检索工作台</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="query-panel">
+      <header class="brand">
+        <div class="brand-mark"><i data-lucide="library-big"></i></div>
+        <div><strong>EconLit Workspace</strong><span>经济学文献检索模块</span></div>
+      </header>
+
+      <form id="search-form">
+        <section class="form-section">
+          <div class="section-heading"><span>研究范围</span><small>SEARCH BRIEF</small></div>
+          <label>经济学问题
+            <textarea id="research-question" rows="3" required></textarea>
+          </label>
+          <div class="query-translation-field">
+            <div class="field-label-row">
+              <label for="working-query">英文工作检索式</label>
+              <label class="auto-translate-control"><input id="auto-translate" type="checkbox" checked><span></span>自动同步</label>
+            </div>
+            <div class="input-with-icon translate-input"><i data-lucide="languages"></i><input id="working-query" type="text" required><button id="translate-button" type="button" title="根据经济学问题重新生成检索式与协议"><i data-lucide="refresh-cw"></i></button></div>
+          </div>
+          <div class="field-grid">
+            <label>起始年份<input id="start-year" type="number" min="1900" max="2100"></label>
+            <label>结束年份<input id="end-year" type="number" min="1900" max="2100"></label>
+          </div>
+          <label>每个自动来源上限
+            <div class="stepper"><button type="button" data-step="-5" title="减少 5 条"><i data-lucide="minus"></i></button><input id="result-limit" type="number" min="1" max="100"><button type="button" data-step="5" title="增加 5 条"><i data-lucide="plus"></i></button></div>
+          </label>
+        </section>
+
+        <section class="form-section protocol-section">
+          <div class="section-heading"><span>检索协议</span><small>REPRODUCIBLE</small></div>
+          <div class="field-grid">
+            <label>检索模式<select id="search-mode"><option value="exploratory">探索检索</option><option value="systematic">系统检索</option></select></label>
+            <label>候选排序<select id="ranking-mode"><option value="combined">综合评分</option><option value="latest">最新优先</option><option value="relevance">相关性优先</option><option value="citations">引用量优先</option></select></label>
+          </div>
+          <label>政策 / 处理概念<input id="concept-policy" type="text" placeholder="regulatory sandbox, innovation sandbox"></label>
+          <label>结果 / 机制概念<input id="concept-outcome" type="text" placeholder="innovation, fintech innovation"></label>
+          <label>目标方法<input id="requested-methods" type="text" placeholder="difference-in-differences, event study"></label>
+          <label>纳入标准<textarea id="inclusion-criteria" rows="3" placeholder="每行一条"></textarea></label>
+          <label>排除标准<textarea id="exclusion-criteria" rows="3" placeholder="每行一条"></textarea></label>
+          <label class="protocol-confirm"><input id="protocol-confirmed" type="checkbox"><span></span><span>已确认检索边界与纳排标准</span></label>
+        </section>
+
+        <section class="form-section source-section">
+          <div class="section-heading"><span>数据来源</span><button type="button" id="toggle-sources">取消全选</button></div>
+          <div id="source-list" class="source-list"></div>
+        </section>
+
+        <div class="submit-zone">
+          <button class="primary-button" id="search-button" type="submit"><i data-lucide="search"></i><span>开始多源检索</span></button>
+          <p><i data-lucide="shield-check"></i> API Key 仅由本地服务读取</p>
+        </div>
+      </form>
+    </aside>
+
+    <main class="workspace">
+      <header class="workspace-header">
+        <div>
+          <p class="eyebrow">LITERATURE INTELLIGENCE</p>
+          <h1>文献检索工作台</h1>
+          <p id="result-context">配置检索范围，建立可核验的文献候选集。</p>
+        </div>
+        <div class="header-actions">
+          <button class="icon-button" id="load-sample" title="载入最近结果"><i data-lucide="history"></i></button>
+          <div class="run-status"><span id="status-dot"></span><div><small>当前状态</small><strong id="run-status">准备就绪</strong></div></div>
+        </div>
+      </header>
+
+      <nav class="tabs" aria-label="工作区视图">
+        <button class="active" data-tab="results"><i data-lucide="list-filter"></i>检索结果 <span id="result-count-badge">0</span></button>
+        <button data-tab="logs"><i data-lucide="scroll-text"></i>来源日志 <span id="log-count-badge">0</span></button>
+        <button data-tab="coverage"><i data-lucide="chart-no-axes-column-increasing"></i>覆盖与交接</button>
+        <button data-tab="sessions"><i data-lucide="database"></i>检索会话 <span id="session-count-badge">0</span></button>
+      </nav>
+
+      <section class="metric-strip" aria-label="检索概览">
+        <div><span>去重文献</span><strong id="metric-records">0</strong><small>records</small></div>
+        <div><span>成功来源</span><strong id="metric-sources">0</strong><small>automated</small></div>
+        <div><span>开放全文</span><strong id="metric-pdfs">0</strong><small>PDF links</small></div>
+        <div><span>年份范围</span><strong id="metric-years">-</strong><small>coverage</small></div>
+        <div><span>平均评分</span><strong id="metric-score">-</strong><small>quality / 100</small></div>
+        <div><span>已筛选</span><strong id="metric-screened">0</strong><small>decisions</small></div>
+      </section>
+
+      <section class="tab-view active" id="view-results">
+        <div class="toolbar">
+          <div class="filter-search"><i data-lucide="search"></i><input id="filter-text" type="search" placeholder="在当前结果中筛选题名、作者、期刊"></div>
+          <select id="filter-source" aria-label="按来源筛选"><option value="">全部来源</option></select>
+          <select id="filter-journal-level" aria-label="按期刊等级筛选"><option value="">全部期刊等级</option></select>
+          <label class="switch"><input id="filter-oa" type="checkbox"><span></span>仅开放全文</label>
+          <select id="filter-screening" aria-label="按筛选状态筛选"><option value="">全部筛选状态</option><option value="include">纳入</option><option value="maybe">待定</option><option value="exclude">排除</option><option value="unscreened">未筛选</option></select>
+          <select id="sort-results" aria-label="结果排序"><option value="score">综合评分</option><option value="latest">最新优先</option><option value="citations">引用量优先</option><option value="title">题名 A-Z</option></select>
+          <div class="toolbar-spacer"></div>
+          <button class="zotero-button" id="save-zotero" type="button" title="保存选中文献到本机 Zotero" disabled><i data-lucide="library"></i><span>保存到本机 Zotero 0</span></button>
+          <button class="batch-download-button" id="batch-download" type="button" title="下载选中的开放PDF" disabled><i data-lucide="download"></i><span>批量下载 0</span></button>
+          <input id="corpus-file" type="file" accept=".json,application/json" hidden>
+          <button class="icon-button" id="import-corpus" title="导入已有 JSON 文献语料"><i data-lucide="file-input"></i></button>
+          <button class="icon-button" id="export-json" title="导出 JSON"><i data-lucide="braces"></i></button>
+          <button class="icon-button" id="export-csv" title="导出 CSV"><i data-lucide="sheet"></i></button>
+          <select id="citation-format" aria-label="引用导出格式"><option value="ris">RIS</option><option value="bibtex">BibTeX</option><option value="enw">EndNote</option></select>
+          <button class="icon-button" id="export-citation" title="导出引用文件"><i data-lucide="download"></i></button>
+        </div>
+
+        <div class="table-wrap">
+          <table class="results-table">
+            <thead><tr><th class="select-column"><input id="select-visible-records" type="checkbox" aria-label="选择当前结果" title="选择当前结果"></th><th>文献</th><th>年份</th><th>期刊来源</th><th>数据源</th><th>评分</th><th>引用</th><th>获取</th><th>筛选</th><th><span class="sr-only">操作</span></th></tr></thead>
+            <tbody id="results-body"></tbody>
+          </table>
+          <div class="empty-state" id="empty-state">
+            <div><i data-lucide="book-open"></i></div>
+            <h2>还没有载入文献</h2>
+            <p>左侧设置研究问题和数据源，或载入最近一次检索结果。</p>
+          </div>
+        </div>
+        <footer class="table-footer"><span id="visible-count">显示 0 条</span><span>元数据候选集，仍需人工筛选与核验</span></footer>
+      </section>
+
+      <section class="tab-view" id="view-logs">
+        <div class="section-title"><div><h2>来源执行日志</h2><p>查看每个适配器的状态、命中量与人工检索入口。</p></div></div>
+        <div class="table-wrap"><table class="logs-table"><thead><tr><th>数据源</th><th>模式 / 状态</th><th>返回</th><th>检索式</th><th>执行时间</th><th>入口</th></tr></thead><tbody id="logs-body"></tbody></table></div>
+      </section>
+
+      <section class="tab-view" id="view-coverage">
+        <div class="coverage-layout">
+          <div class="coverage-main"><div class="section-title"><div><h2>来源覆盖</h2><p>去重后记录在各数据源中的覆盖情况。</p></div></div><div id="coverage-bars"></div></div>
+          <aside class="handoff-panel"><div class="section-title"><div><h2>协议、偏斜与交接</h2><p>检查检索边界、分布集中和下游状态。</p></div></div><div id="handoff-content"></div></aside>
+        </div>
+      </section>
+
+      <section class="tab-view" id="view-sessions">
+        <div class="section-title"><div><h2>可复现检索会话</h2><p>每次检索保存参数、结果数量和内容哈希，可重新载入。</p></div><button class="icon-button" id="refresh-sessions" title="刷新会话"><i data-lucide="refresh-cw"></i></button></div>
+        <div class="table-wrap"><table class="sessions-table"><thead><tr><th>时间</th><th>研究问题</th><th>模式 / 排序</th><th>来源</th><th>文献 / PDF</th><th>载入</th></tr></thead><tbody id="sessions-body"></tbody></table></div>
+      </section>
+    </main>
+  </div>
+
+  <aside class="detail-drawer" id="detail-drawer" aria-hidden="true">
+    <div class="drawer-header"><span>文献详情</span><button class="icon-button" id="close-drawer" title="关闭"><i data-lucide="x"></i></button></div>
+    <div id="detail-content" class="drawer-content"></div>
+  </aside>
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <div class="loading-overlay" id="loading-overlay" aria-hidden="true"><div class="loading-box"><span class="spinner"></span><div><strong>正在检索多个数据源</strong><p id="loading-message">不同来源响应时间可能不同，请稍候。</p></div></div></div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

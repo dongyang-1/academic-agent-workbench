@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/economics-research-agent/search-plan.schema.json",
+  "title": "SearchPlan",
+  "type": "object",
+  "required": ["research_question", "scope", "concept_blocks", "sources", "output_requirements"],
+  "properties": {
+    "research_question": { "type": "string" },
+    "mode": {
+      "type": "string",
+      "enum": ["exploratory", "systematic"],
+      "default": "exploratory"
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "field": { "type": ["string", "null"] },
+        "time_range": { "type": ["string", "null"] },
+        "geography": { "type": ["string", "null"] },
+        "methods": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "concept_blocks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["concept", "terms"],
+        "properties": {
+          "concept": { "type": "string" },
+          "terms": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "source_policy": {
+      "type": "object",
+      "properties": {
+        "preferred_sources": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "allowed_sources": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "excluded_sources": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "max_records_per_source": {
+          "type": ["integer", "null"],
+          "minimum": 1
+        },
+        "require_search_log": { "type": "boolean" }
+        ,
+        "ranking": {
+          "type": "string",
+          "enum": ["combined", "latest", "citations", "relevance"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "screening": {
+      "type": "object",
+      "properties": {
+        "inclusion_criteria": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "exclusion_criteria": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "protocol_confirmed": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "adapter_options": {
+      "type": "object",
+      "description": "Source-specific options keyed by source id. Keep optional to preserve merge compatibility.",
+      "additionalProperties": true
+    },
+    "output_requirements": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}

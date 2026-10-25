@@ -1,0 +1,32 @@
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Runtime data and downloaded materials
+_ai_temp/
+*.log
+*.sqlite3
+*.db
+downloads/
+
+# Build and editor files
+build/
+dist/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

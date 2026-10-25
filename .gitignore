@@ -1,0 +1,29 @@
+# 密钥与本地配置：绝不入库
+_llm_config.json
+config.local.json
+*.key
+.env
+.env.*
+!.env.example
+secrets.json
+
+# 运行期产物
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite*
+outputs/
+_ai_temp/
+__pycache__/
+*.pyc
+.DS_Store
+logs/
+data/
+
+# 交付物与缓存
+part2-empirical-research/deliverables/
+web_platform/uploads/
+part2-empirical-research/data/
+_skills_backup/
+orchestrator/_local_memory/

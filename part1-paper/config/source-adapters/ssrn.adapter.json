@@ -1,0 +1,8 @@
+{
+  "id": "ssrn", "display_name": "SSRN", "version": "0.1", "status": "enabled",
+  "provider_url": "https://www.ssrn.com/", "docs_url": "https://papers.ssrn.com/",
+  "capabilities": {"keyword_search": true, "metadata": true, "abstracts": true, "citation_counts": true, "citation_graph": false, "author_lookup": true, "open_access_links": true},
+  "query": {"method": "GET", "base_url": "https://papers.ssrn.com", "endpoint": "/sol3/results.cfm", "auth": "manual", "parameters": [{"name": "txtKey_Words", "required": true, "description": "Keywords for the SSRN web search."}]},
+  "response_mapping": {}, "limits": {"automation": "disabled"},
+  "notes": "Manual web-search adapter for social-science working papers. Download only when SSRN exposes a lawful download link."
+}

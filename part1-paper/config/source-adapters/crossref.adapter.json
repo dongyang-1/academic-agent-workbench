@@ -1,0 +1,44 @@
+{
+  "id": "crossref",
+  "display_name": "Crossref",
+  "version": "0.1",
+  "status": "enabled",
+  "provider_url": "https://www.crossref.org/",
+  "docs_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+  "capabilities": {
+    "keyword_search": true,
+    "metadata": true,
+    "abstracts": true,
+    "citation_counts": true,
+    "citation_graph": false,
+    "author_lookup": false,
+    "open_access_links": true
+  },
+  "query": {
+    "method": "GET",
+    "base_url": "https://api.crossref.org/v1",
+    "endpoint": "/works",
+    "auth": "none",
+    "parameters": [
+      { "name": "query.bibliographic", "required": true, "description": "Bibliographic keyword query." },
+      { "name": "rows", "required": false, "description": "Number of records." },
+      { "name": "filter", "required": false, "description": "Publication date filters." },
+      { "name": "mailto", "required": false, "description": "Contact email for the polite pool." }
+    ]
+  },
+  "response_mapping": {
+    "DOI": "doi",
+    "title[0]": "title",
+    "author": "authors",
+    "container-title[0]": "venue",
+    "abstract": "abstract",
+    "is-referenced-by-count": "citation_count",
+    "reference-count": "reference_count",
+    "URL": "url"
+  },
+  "limits": {
+    "default_limit": 20,
+    "rate_limit_note": "Use a descriptive User-Agent, cache responses, and add a contact email in production."
+  },
+  "notes": "No API key required. Abstract and citation metadata are not complete for every publisher."
+}
